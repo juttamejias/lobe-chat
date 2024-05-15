@@ -163,7 +163,7 @@ const OpenAI: ModelProviderCard = {
     {
       description:
         'Ideal balance of intelligence and speed for enterprise workloads. Maximum utility at a lower price, dependable, balanced for scaled deployments',
-      displayName: 'Claude 3 Sonnet',
+      displayName: 'Claude 3 Sonnet 20240229',
       enabled: true,
       functionCall: true,
       id: 'claude-3-sonnet-20240229',
@@ -174,7 +174,7 @@ const OpenAI: ModelProviderCard = {
     {
       description:
         'Most powerful model for highly complex tasks. Top-level performance, intelligence, fluency, and understanding',
-      displayName: 'Claude 3 Opus',
+      displayName: 'Claude 3 Opus 20240229',
       enabled: true,
       functionCall: true,
       id: 'claude-3-opus-20240229',
@@ -185,10 +185,43 @@ const OpenAI: ModelProviderCard = {
     {
       description:
         'Fastest and most compact model for near-instant responsiveness. Quick and accurate targeted performance',
-      displayName: 'Claude 3 Haiku',
+      displayName: 'Claude 3 Haiku 20240307',
       enabled: true,
       functionCall: true,
       id: 'claude-3-haiku-20240307',
+      maxOutput: 4096,
+      tokens: 200_000,
+      vision: true,
+    },
+    {
+      description:
+        'Ideal balance of intelligence and speed for enterprise workloads. Maximum utility at a lower price, dependable, balanced for scaled deployments',
+      displayName: 'Claude 3 Sonnet',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-sonnet',
+      maxOutput: 4096,
+      tokens: 200_000,
+      vision: true,
+    },
+    {
+      description:
+        'Most powerful model for highly complex tasks. Top-level performance, intelligence, fluency, and understanding',
+      displayName: 'Claude 3 Opus',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-opus',
+      maxOutput: 4096,
+      tokens: 200_000,
+      vision: true,
+    },
+    {
+      description:
+        'Fastest and most compact model for near-instant responsiveness. Quick and accurate targeted performance',
+      displayName: 'Claude 3 Haiku',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-haiku',
       maxOutput: 4096,
       tokens: 200_000,
       vision: true,
@@ -218,6 +251,7 @@ const OpenAI: ModelProviderCard = {
       description: 'A legacy text-only model optimized for chat conversations',
       displayName: 'PaLM 2 Chat (Legacy)',
       id: 'chat-bison-001',
+      legacy: true,
       maxOutput: 1024,
       // tokens: 4096 + 1024, // none tokens test
     },
@@ -225,13 +259,13 @@ const OpenAI: ModelProviderCard = {
       description: 'A legacy model that understands text and generates text as an output',
       displayName: 'PaLM 2 (Legacy)',
       id: 'text-bison-001',
+      legacy: true,
       maxOutput: 1024,
       tokens: 8196 + 1024,
     },
     {
       description: 'The best model for scaling across a wide range of tasks',
       displayName: 'Gemini 1.0 Pro',
-      enabled: true,
       functionCall: true,
       id: 'gemini-pro',
       maxOutput: 2048,
@@ -248,7 +282,6 @@ const OpenAI: ModelProviderCard = {
     {
       description: 'The best image understanding model to handle a broad range of applications',
       displayName: 'Gemini 1.0 Pro Vision',
-      enabled: true,
       id: 'gemini-pro-vision',
       maxOutput: 4096,
       tokens: 12_288 + 4096,
@@ -278,6 +311,16 @@ const OpenAI: ModelProviderCard = {
       id: 'gemini-1.0-pro-latest',
       maxOutput: 2048,
       tokens: 30_720 + 2048,
+    },
+    {
+      description: 'Fast and versatile multimodal model for scaling across diverse tasks',
+      displayName: 'Gemini 1.5 Flash',
+      enabled: true,
+      functionCall: true,
+      id: 'gemini-1.5-flash-latest',
+      maxOutput: 8192,
+      tokens: 1_048_576 + 8192,
+      vision: true,
     },
     {
       description: 'Mid-size multimodal model that supports up to 1 million tokens',
