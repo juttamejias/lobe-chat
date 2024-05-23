@@ -4,7 +4,6 @@ const Ollama: ModelProviderCard = {
   chatModels: [
     {
       displayName: 'Llama3 8B',
-      enabled: true,
       id: 'llama3',
       tokens: 8000, // https://huggingface.co/blog/zh/llama3#llama-3-的新进展
     },
@@ -15,7 +14,6 @@ const Ollama: ModelProviderCard = {
     },
     {
       displayName: 'Command R 35B',
-      enabled: true,
       id: 'command-r',
       tokens: 131_072, // https://huggingface.co/CohereForAI/c4ai-command-r-v01/blob/main/config.json
     },
@@ -26,7 +24,6 @@ const Ollama: ModelProviderCard = {
     },
     {
       displayName: 'Gemma 7B',
-      enabled: true,
       id: 'gemma',
       tokens: 8192, // https://huggingface.co/google/gemma-7b-it/discussions/73#65e9678c0cda621164a95bad
     },
@@ -62,7 +59,6 @@ const Ollama: ModelProviderCard = {
     },
     {
       displayName: 'WizardLM 2 7B',
-      enabled: true,
       id: 'wizardlm2',
       tokens: 65_536,
     },
@@ -93,19 +89,16 @@ const Ollama: ModelProviderCard = {
     },
     {
       displayName: 'Phi3-Instruct 3.8B',
-      enabled: true,
       id: 'phi3:instruct',
       tokens: 131_072, // https://huggingface.co/microsoft/Phi-3-mini-128k-instruct/blob/main/config.json
     },
     {
       displayName: 'Mistral',
-      enabled: true,
       id: 'mistral',
       tokens: 32_768, // https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2/blob/main/config.json
     },
     {
       displayName: 'Mixtral 8x7B',
-      enabled: true,
       id: 'mixtral',
       tokens: 32_768,
     },
@@ -121,7 +114,6 @@ const Ollama: ModelProviderCard = {
     },
     {
       displayName: 'Qwen Chat 7B',
-      enabled: true,
       id: 'qwen:7b',
       tokens: 32_768,
     },
