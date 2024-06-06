@@ -362,8 +362,11 @@ const OpenAI: ModelProviderCard = {
       tokens: 8192,
     },
   ],
+  checkModel: 'gpt-3.5-turbo',
   enabled: true,
   id: 'openai',
+  modelList: { showModelFetcher: true },
+  name: 'OpenAI',
 };
 
 export default OpenAI;
