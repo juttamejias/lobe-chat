@@ -13,6 +13,36 @@ const Ollama: ModelProviderCard = {
       tokens: 8000,
     },
     {
+      displayName: 'Phi-3 3.8B',
+      id: 'phi3',
+      tokens: 128_000,
+    },
+    {
+      displayName: 'Phi-3 14B',
+      id: 'phi3:14b',
+      tokens: 128_000,
+    },
+    {
+      displayName: 'Aya 23 8B',
+      id: 'aya',
+      tokens: 8192, // https://cohere.com/research/papers/aya-command-23-8b-and-35b-technical-report-2024-05-23
+    },
+    {
+      displayName: 'Aya 23 35B',
+      id: 'aya:35b',
+      tokens: 8192,
+    },
+    {
+      displayName: 'Qwen2 7B',
+      id: 'qwen2',
+      tokens: 128_000,
+    },
+    {
+      displayName: 'Qwen2 72B',
+      id: 'qwen2:72b',
+      tokens: 128_000,
+    },
+    {
       displayName: 'Command R 35B',
       id: 'command-r',
       tokens: 131_072, // https://huggingface.co/CohereForAI/c4ai-command-r-v01/blob/main/config.json
@@ -146,11 +176,11 @@ const Ollama: ModelProviderCard = {
       vision: true,
     },
   ],
+  defaultShowBrowserRequest: true,
   id: 'ollama',
   modelList: { showModelFetcher: true },
   name: 'Ollama',
   showApiKey: false,
-  showBrowserRequest: true,
 };
 
 export default Ollama;
