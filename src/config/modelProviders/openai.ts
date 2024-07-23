@@ -399,6 +399,11 @@ const OpenAI: ModelProviderCard = {
       id: 'qwen-max',
       tokens: 8192,
     },
+    {
+      displayName: 'Command R',
+      id: 'command-r',
+      tokens: 131_072, // https://huggingface.co/CohereForAI/c4ai-command-r-v01/blob/main/config.json
+    },
   ],
   checkModel: 'gpt-4o-mini',
   enabled: true,
