@@ -1,5 +1,6 @@
 import { ModelProviderCard } from '@/types/llm';
 
+// ref https://ollama.com/library
 const Ollama: ModelProviderCard = {
   chatModels: [
     {
@@ -72,6 +73,28 @@ const Ollama: ModelProviderCard = {
       displayName: 'Gemma 2B',
       id: 'gemma:2b',
       tokens: 8192,
+    },
+    {
+      displayName: 'Deepseek V2 16B',
+      enabled: true,
+      id: 'deepseek-v2',
+      tokens: 32_000,
+    },
+    {
+      displayName: 'Deepseek V2 236B',
+      id: 'deepseek-v2:236b',
+      tokens: 128_000,
+    },
+    {
+      displayName: 'Deepseek Coder V2 16B', // https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct
+      enabled: true,
+      id: 'deepseek-coder-v2',
+      tokens: 128_000,
+    },
+    {
+      displayName: 'Deepseek Coder V2 236B', // https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct
+      id: 'deepseek-coder-v2:236b',
+      tokens: 128_000,
     },
     {
       displayName: 'Llama2 Chat 13B',
