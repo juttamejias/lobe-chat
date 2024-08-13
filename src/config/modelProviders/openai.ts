@@ -163,6 +163,15 @@ const OpenAI: ModelProviderCard = {
       vision: true,
     },
     {
+      description: 'Currently points to gpt-4o-2024-08-06',
+      displayName: 'GPT-4o 2024-08-06',
+      enabled: true,
+      functionCall: true,
+      id: 'gpt-4o-2024-08-06',
+      tokens: 128_000,
+      vision: true,
+    },
+    {
       description: '擅长通用对话任务',
       displayName: 'DeepSeek-V2',
       enabled: true,
