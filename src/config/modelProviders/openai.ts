@@ -418,10 +418,94 @@ const OpenAI: ModelProviderCard = {
       tokens: 8192,
     },
     {
-      displayName: 'Command R',
-      id: 'command-r',
-      tokens: 131_072, // https://huggingface.co/CohereForAI/c4ai-command-r-v01/blob/main/config.json
+      description:
+        'An instruction-following conversational model that performs language tasks at a higher quality, more reliably, and with a longer context than previous models. Best suited for complex RAG workflows and multi-step tool use.',
+      displayName: 'Command R+',
+      enabled: true,
+      functionCall: true,
+      id: 'command-r-plus',
+      maxOutput: 4096,
+      tokens: 128_000,
+      vision: false,
     },
+    {
+      description:
+        'An instruction-following conversational model that performs language tasks at a higher quality, more reliably, and with a longer context than previous models. It can be used for complex workflows like code generation, retrieval augmented generation (RAG), tool use, and agents.',
+      displayName: 'Command R',
+      enabled: true,
+      functionCall: true,
+      id: 'command-r',
+      maxOutput: 4096,
+      tokens: 128_000,
+      vision: false,
+    },
+    {
+      description:
+        'An instruction-following conversational model that performs language tasks at a higher quality, more reliably, and with a longer context than previous models. Best suited for complex RAG workflows and multi-step tool use.',
+      displayName: 'Command R+ 08-2024',
+      enabled: true,
+      functionCall: true,
+      id: 'command-r-plus-08-2024',
+      maxOutput: 4096,
+      tokens: 128_000,
+      vision: false,
+    },
+    {
+      description:
+        'An instruction-following conversational model that performs language tasks at a higher quality, more reliably, and with a longer context than previous models. It can be used for complex workflows like code generation, retrieval augmented generation (RAG), tool use, and agents.',
+      displayName: 'Command R 08-2024',
+      enabled: true,
+      functionCall: true,
+      id: 'command-r-08-2024',
+      maxOutput: 4096,
+      tokens: 128_000,
+      vision: false,
+    },
+    {
+      displayName: 'deepseek-coder-6.7b-instruct-awq',
+      enabled: true,
+      id: '@hf/thebloke/deepseek-coder-6.7b-instruct-awq',
+      tokens: 16_384,
+    },
+    {
+      displayName: 'deepseek-math-7b-instruct',
+      enabled: true,
+      id: '@hf/thebloke/deepseek-math-7b-instruct',
+      tokens: 4096,
+    },
+    {
+      displayName: 'gemma-7b-it',
+      enabled: true,
+      id: '@hf/google/gemma-7b-it',
+      tokens: 2048,
+    },
+    {
+      displayName: 'llama-3-8b-instruct-awq',
+      id: '@cf/meta/llama-3-8b-instruct-awq',
+      tokens: 8192,
+    },
+    {
+      displayName: 'llama-3.1-8b-instruct',
+      id: '@cf/meta/llama-3.1-8b-instruct',
+      tokens: 128_000,
+    },
+    {
+      displayName: 'mistral-7b-instruct-v0.2',
+      id: '@hf/mistral/mistral-7b-instruct-v0.2',
+      tokens: 4096,
+    },
+    {
+      displayName: 'qwen1.5-14b-chat-awq',
+      enabled: true,
+      id: '@cf/qwen/qwen1.5-14b-chat-awq',
+      tokens: 32_768,
+    },
+    {
+      displayName: 'qwen1.5-7b-chat-awq',
+      enabled: true,
+      id: '@cf/qwen/qwen1.5-7b-chat-awq',
+      tokens: 32_768,
+    }
   ],
   checkModel: 'gpt-4o-mini',
   enabled: true,
