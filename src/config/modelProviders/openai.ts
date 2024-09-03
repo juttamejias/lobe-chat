@@ -462,9 +462,9 @@ const OpenAI: ModelProviderCard = {
       vision: false,
     },
     {
-      displayName: 'deepseek-coder-6.7b-instruct-awq',
+      displayName: 'deepseek-coder-6.7b-base-awq',
       enabled: true,
-      id: '@hf/thebloke/deepseek-coder-6.7b-instruct-awq',
+      id: '@hf/thebloke/deepseek-coder-6.7b-base-awq',
       tokens: 16_384,
     },
     {
