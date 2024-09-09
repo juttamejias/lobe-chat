@@ -5,7 +5,6 @@ const Ollama: ModelProviderCard = {
   chatModels: [
     {
       displayName: 'Llama 3.1 8B',
-      enabled: true,
       id: 'llama3.1',
       tokens: 128_000,
     },
@@ -46,7 +45,6 @@ const Ollama: ModelProviderCard = {
     },
     {
       displayName: 'Gemma 2 9B',
-      enabled: true,
       id: 'gemma2',
       tokens: 8192,
     },
