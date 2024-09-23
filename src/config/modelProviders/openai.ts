@@ -664,6 +664,46 @@ const OpenAI: ModelProviderCard = {
       enabled: true,
       id: '@cf/qwen/qwen1.5-7b-chat-awq',
       tokens: 32_768,
+    },
+    {
+      displayName: 'bing-ai',
+      enabled: true,
+      id: 'bing-ai',
+      pricing: {
+        input: 5,
+        output: 15,
+      },
+      tokens: 128_000,
+    },
+    {
+      displayName: 'bing-balanced',
+      enabled: true,
+      id: 'bing-balanced',
+      pricing: {
+        input: 5,
+        output: 15,
+      },
+      tokens: 128_000,
+    },
+    {
+      displayName: 'bing-creative',
+      enabled: true,
+      id: 'bing-creative',
+      pricing: {
+        input: 5,
+        output: 15,
+      },
+      tokens: 128_000,
+    },
+    {
+      displayName: 'bing-precise',
+      enabled: true,
+      id: 'bing-precise',
+      pricing: {
+        input: 5,
+        output: 15,
+      },
+      tokens: 128_000,
     }
   ],
   checkModel: 'gpt-4o-mini',
