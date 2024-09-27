@@ -255,11 +255,12 @@ const Ollama: ModelProviderCard = {
       vision: true,
     },
     {
-      description: 'MiniCPM-V 是 OpenBMB 推出的新一代多模态大模型，具备卓越的 OCR 识别和多模态理解能力，支持广泛的应用场景。',
+      description:
+        'MiniCPM-V 是 OpenBMB 推出的新一代多模态大模型，具备卓越的 OCR 识别和多模态理解能力，支持广泛的应用场景。',
       displayName: 'MiniCPM-V 8B',
       id: 'minicpm-v',
       tokens: 128_000,
-      vision:true,
+      vision: true,
     },
   ],
   defaultShowBrowserRequest: true,
