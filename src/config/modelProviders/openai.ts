@@ -967,6 +967,14 @@ const OpenAI: ModelProviderCard = {
       tokens: 200_000,
       vision: true,
     },
+    {
+      description: 'Grok-Beta 马斯克的测试模型',
+      displayName: 'Grok-Beta',
+      enabled: true,
+      functionCall: true,
+      id: 'grok-beta',
+      tokens: 131_072,
+    },
   ],
   checkModel: 'gpt-4o-mini',
   description:
