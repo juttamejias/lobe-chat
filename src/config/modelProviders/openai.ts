@@ -272,6 +272,31 @@ const OpenAI: ModelProviderCard = {
     {
       description:
         'GPT 3.5 Turbo，适用于各种文本生成和理解任务，Currently points to gpt-3.5-turbo-0125',
+      displayName: 'GPT-3.5 Turbo 0301',
+      functionCall: true,
+      id: 'gpt-3.5-turbo-0301',
+      pricing: {
+        input: 0.5,
+        output: 1.5,
+      },
+      tokens: 16_385,
+    },
+    {
+      description:
+        'GPT-3.5 Turbo 是 OpenAI 的一款基础模型，结合了高效性和经济性，广泛用于文本生成、理解和分析，专为指导性提示进行调整，去除了与聊天相关的优化。',
+      displayName: 'GPT-3.5 Turbo 0613',
+      // Will be discontinued on September 13, 2024
+      id: 'gpt-3.5-turbo-0613',
+      legacy: true,
+      pricing: {
+        input: 1.5,
+        output: 2,
+      },
+      tokens: 4096,
+    },
+    {
+      description:
+        'GPT 3.5 Turbo，适用于各种文本生成和理解任务，Currently points to gpt-3.5-turbo-0125',
       displayName: 'GPT-3.5 Turbo Instruct',
       id: 'gpt-3.5-turbo-instruct',
       pricing: {
@@ -292,19 +317,6 @@ const OpenAI: ModelProviderCard = {
         output: 4,
       },
       tokens: 16_385,
-    },
-    {
-      description:
-        'GPT-3.5 Turbo 是 OpenAI 的一款基础模型，结合了高效性和经济性，广泛用于文本生成、理解和分析，专为指导性提示进行调整，去除了与聊天相关的优化。',
-      displayName: 'GPT-3.5 Turbo 0613',
-      // Will be discontinued on September 13, 2024
-      id: 'gpt-3.5-turbo-0613',
-      legacy: true,
-      pricing: {
-        input: 1.5,
-        output: 2,
-      },
-      tokens: 4096,
     },
     {
       description:
@@ -336,6 +348,7 @@ const OpenAI: ModelProviderCard = {
       tokens: 128_000,
       vision: true,
     },
+    // deepseek
     {
       description: '擅长通用对话任务',
       displayName: 'DeepSeek-V2',
@@ -352,6 +365,7 @@ const OpenAI: ModelProviderCard = {
       id: 'deepseek-coder',
       tokens: 128_000,
     },
+    // claude
     {
       description:
         'Claude 3.5 Sonnet raises the industry bar for intelligence, outperforming competitor models and Claude 3 Opus on a wide range of evaluations, with the speed and cost of our mid-tier model, Claude 3 Sonnet.',
@@ -462,6 +476,41 @@ const OpenAI: ModelProviderCard = {
       tokens: 100_000,
     },
     {
+      description:
+        'Claude 3.5 Haiku 是 Anthropic 最快的下一代模型。与 Claude 3 Haiku 相比，Claude 3.5 Haiku 在各项技能上都有所提升，并在许多智力基准测试中超越了上一代最大的模型 Claude 3 Opus。',
+      displayName: 'Claude 3.5 Haiku',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-5-haiku-20241022',
+      maxOutput: 8192,
+      pricing: {
+        cachedInput: 0.1,
+        input: 1,
+        output: 5,
+        writeCacheInput: 1.25,
+      },
+      releasedAt: '2024-11-05',
+      tokens: 200_000,
+    },
+    {
+      description:
+        'Claude 3.5 Sonnet 提供了超越 Opus 的能力和比 Sonnet 更快的速度，同时保持与 Sonnet 相同的价格。Sonnet 特别擅长编程、数据科学、视觉处理、代理任务。',
+      displayName: 'Claude 3.5 Sonnet',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-5-sonnet-20241022',
+      maxOutput: 8192,
+      pricing: {
+        cachedInput: 0.3,
+        input: 3,
+        output: 15,
+        writeCacheInput: 3.75,
+      },
+      releasedAt: '2024-10-22',
+      tokens: 200_000,
+      vision: true,
+    },
+    {
       description: 'A legacy text-only model optimized for chat conversations',
       displayName: 'PaLM 2 Chat (Legacy)',
       id: 'chat-bison-001',
@@ -499,6 +548,7 @@ const OpenAI: ModelProviderCard = {
       id: 'qwen-max',
       tokens: 8192,
     },
+    // command
     {
       description:
         'An instruction-following conversational model that performs language tasks at a higher quality, more reliably, and with a longer context than previous models. Best suited for complex RAG workflows and multi-step tool use.',
@@ -543,10 +593,23 @@ const OpenAI: ModelProviderCard = {
       tokens: 128_000,
       vision: false,
     },
+    // cloudflare
     {
       displayName: 'deepseek-coder-6.7b-instruct-awq',
       enabled: true,
       id: '@hf/thebloke/deepseek-coder-6.7b-instruct-awq',
+      tokens: 16_384,
+    },
+    {
+      displayName: 'deepseek-coder-6.7b-base-awq',
+      enabled: true,
+      id: '@hf/thebloke/deepseek-coder-6.7b-base-awq',
+      tokens: 16_384,
+    },
+    {
+      displayName: 'deepseek-math-7b-instruct',
+      enabled: true,
+      id: '@cf/deepseek-ai/deepseek-math-7b-instruct',
       tokens: 16_384,
     },
     {
@@ -615,6 +678,7 @@ const OpenAI: ModelProviderCard = {
       functionCall: false,
       id: '@hf/meta-llama/meta-llama-3-8b-instruct',
     },
+    //bing
     {
       displayName: 'bing-ai',
       enabled: true,
@@ -655,6 +719,7 @@ const OpenAI: ModelProviderCard = {
       },
       tokens: 128_000,
     },
+    //gemini
     {
       description:
         'Gemini 1.5 Flash 是Google最新的多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。',
@@ -883,6 +948,32 @@ const OpenAI: ModelProviderCard = {
       releasedAt: '2023-12-06',
       tokens: 30_720 + 2048,
     },
+    // 硅基流动
+    {
+      description: 'Hunyuan-Large 是业界最大的开源 Transformer 架构 MoE 模型，拥有 3890 亿总参数量和 520 亿激活参数量。',
+      displayName: 'Hunyuan Large',
+      enabled: true,
+      id: 'Tencent/Hunyuan-A52B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 21,
+        output: 21,
+      },
+      tokens: 32_768,
+    },
+    {
+      description: 'DeepSeek V2.5 集合了先前版本的优秀特征，增强了通用和编码能力。',
+      displayName: 'DeepSeek V2.5',
+      enabled: true,
+      functionCall: true,
+      id: 'deepseek-ai/DeepSeek-V2.5',
+      pricing: {
+        currency: 'CNY',
+        input: 1.33,
+        output: 1.33,
+      },
+      tokens: 32_768,
+    },
     {
       description: 'Qwen2.5 是全新的大型语言模型系列，旨在优化指令式任务的处理。',
       displayName: 'Qwen2.5 7B',
@@ -934,10 +1025,23 @@ const OpenAI: ModelProviderCard = {
       tokens: 131_072,
     },
     {
-      description: 'LLaMA 3.2 11B 提供多语言的高效对话支持。',
-      displayName: 'Llama 3.2 11B',
+      description: 'Qwen2-VL 是 Qwen-VL 模型的最新迭代版本，在视觉理解基准测试中达到了最先进的性能。',
+      displayName: 'Qwen2 VL 7B',
       enabled: true,
-      id: 'meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo',
+      id: 'Pro/Qwen/Qwen2-VL-7B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 0.35,
+        output: 0.35,
+      },
+      tokens: 32_768,
+      vision: true,
+    },
+    {
+      description: 'Qwen2-VL 是 Qwen-VL 模型的最新迭代版本，在视觉理解基准测试中达到了最先进的性能。',
+      displayName: 'Qwen2 VL 72B',
+      enabled: true,
+      id: 'Qwen/Qwen2-VL-72B-Instruct',
       pricing: {
         currency: 'CNY',
         input: 4.13,
@@ -947,53 +1051,443 @@ const OpenAI: ModelProviderCard = {
       vision: true,
     },
     {
-      description: 'LLaMA 3.2 90B 指令微调模型针对多语言对话场景进行了优化。',
-      displayName: 'Llama 3.2 90B',
+      description: 'Qwen2.5-Math 专注于数学领域的问题求解，为高难度题提供专业解答。',
+      displayName: 'Qwen2.5 Math 72B',
+      id: 'Qwen/Qwen2.5-Math-72B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 4.13,
+        output: 4.13,
+      },
+      tokens: 4096,
+    },
+    {
+      description: 'Qwen2.5-Coder 专注于代码编写。',
+      displayName: 'Qwen2.5 Coder 32B',
+      id: 'Qwen/Qwen2.5-Coder-32B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 1.26,
+        output: 1.26,
+      },
+      tokens: 32_768,
+    },
+    {
+      description: 'InternLM2.5 提供多场景下的智能对话解决方案。',
+      displayName: 'Internlm 2.5 7B',
+      functionCall: true,
+      id: 'internlm/internlm2_5-7b-chat',
+      pricing: {
+        currency: 'CNY',
+        input: 0,
+        output: 0,
+      },
+      tokens: 32_768,
+    },
+    {
+      description: '创新的开源模型InternLM2.5，通过大规模的参数提高了对话智能。',
+      displayName: 'Internlm 2.5 20B',
+      functionCall: true,
+      id: 'internlm/internlm2_5-20b-chat',
+      pricing: {
+        currency: 'CNY',
+        input: 1,
+        output: 1,
+      },
+      tokens: 32_768,
+    },
+    {
+      description: 'InternVL2在各种视觉语言任务上展现出了卓越的性能，包括文档和图表理解、场景文本理解、OCR、科学和数学问题解决等。',
+      displayName: 'InternVL2 8B',
+      id: 'Pro/OpenGVLab/InternVL2-8B',
+      pricing: {
+        currency: 'CNY',
+        input: 0.35,
+        output: 0.35,
+      },
+      tokens: 32_768,
+      vision: true,
+    },
+    {
+      description: 'InternVL2在各种视觉语言任务上展现出了卓越的性能，包括文档和图表理解、场景文本理解、OCR、科学和数学问题解决等。',
+      displayName: 'InternVL2 26B',
+      id: 'OpenGVLab/InternVL2-26B',
+      pricing: {
+        currency: 'CNY',
+        input: 1,
+        output: 1,
+      },
+      tokens: 32_768,
+      vision: true,
+    },
+    {
+      description: 'InternVL2在各种视觉语言任务上展现出了卓越的性能，包括文档和图表理解、场景文本理解、OCR、科学和数学问题解决等。',
+      displayName: 'InternVL2 Llama3 76B',
+      id: 'OpenGVLab/InternVL2-Llama3-76B',
+      pricing: {
+        currency: 'CNY',
+        input: 4.13,
+        output: 4.13,
+      },
+      tokens: 8192,
+      vision: true,
+    },
+    {
+      description: 'GLM-4 9B 开放源码版本，为会话应用提供优化后的对话体验。',
+      displayName: 'GLM-4 9B',
+      functionCall: true,
+      id: 'THUDM/glm-4-9b-chat',
+      pricing: {
+        currency: 'CNY',
+        input: 0,
+        output: 0,
+      },
+      tokens: 32_768,
+    },
+    {
+      description: 'Yi-1.5 9B 支持16K Tokens, 提供高效、流畅的语言生成能力。',
+      displayName: 'Yi-1.5 9B',
+      id: '01-ai/Yi-1.5-9B-Chat-16K',
+      pricing: {
+        currency: 'CNY',
+        input: 0,
+        output: 0,
+      },
+      tokens: 16_384,
+    },
+    {
+      description: 'Yi-1.5 34B, 以丰富的训练样本在行业应用中提供优越表现。',
+      displayName: 'Yi-1.5 34B',
+      id: '01-ai/Yi-1.5-34B-Chat-16K',
+      pricing: {
+        currency: 'CNY',
+        input: 1.26,
+        output: 1.26,
+      },
+      tokens: 16_384,
+    },
+    {
+      description: 'Gemma 2 是Google轻量化的开源文本模型系列。',
+      displayName: 'Gemma 2 9B',
       enabled: true,
-      id: 'meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo',
+      id: 'google/gemma-2-9b-it',
+      pricing: {
+        currency: 'CNY',
+        input: 0,
+        output: 0,
+      },
+      tokens: 8192,
+    },
+    {
+      description: 'Gemma 2 延续了轻量化与高效的设计理念。',
+      displayName: 'Gemma 2 27B',
+      enabled: true,
+      id: 'google/gemma-2-27b-it',
+      pricing: {
+        currency: 'CNY',
+        input: 1.26,
+        output: 1.26,
+      },
+      tokens: 8192,
+    },
+    {
+      description: 'LLaMA 3.1 提供多语言支持，是业界领先的生成模型之一。',
+      displayName: 'Llama 3.1 8B',
+      enabled: true,
+      id: 'meta-llama/Meta-Llama-3.1-8B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 0,
+        output: 0,
+      },
+      tokens: 32_768,
+    },
+    {
+      description: 'LLaMA 3.1 70B 提供多语言的高效对话支持。',
+      displayName: 'Llama 3.1 70B',
+      enabled: true,
+      id: 'meta-llama/Meta-Llama-3.1-70B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 4.13,
+        output: 4.13,
+      },
+      tokens: 32_768,
+    },
+    {
+      description: 'LLaMA 3.1 405B 指令微调模型针对多语言对话场景进行了优化。',
+      displayName: 'Llama 3.1 405B',
+      enabled: true,
+      id: 'meta-llama/Meta-Llama-3.1-405B-Instruct',
       pricing: {
         currency: 'CNY',
         input: 21,
         output: 21,
       },
       tokens: 32_768,
+    },
+    {
+      description: 'Llama 3.1 Nemotron 70B 是由 NVIDIA 定制的大型语言模型，旨在提高 LLM 生成的响应对用户查询的帮助程度。',
+      displayName: 'Llama 3.1 Nemotron 70B',
+      enabled: true,
+      id: 'nvidia/Llama-3.1-Nemotron-70B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 4.13,
+        output: 4.13,
+      },
+      tokens: 32_768,
+    },
+    // together ai
+    {
+      description: 'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
+      displayName: 'Llama 3.2 3B Instruct Turbo',
+      enabled: true,
+      id: 'meta-llama/Llama-3.2-3B-Instruct-Turbo',
+      tokens: 131_072,
+    },
+    {
+      description: 'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
+      displayName: 'Llama 3.2 11B Vision Instruct Turbo (Free)',
+      enabled: true,
+      id: 'meta-llama/Llama-Vision-Free',
+      tokens: 131_072,
+      vision: true,
+    },
+    {
+      description: 'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
+      displayName: 'Llama 3.2 11B Vision Instruct Turbo',
+      id: 'meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo',
+      tokens: 131_072,
+      vision: true,
+    },
+    {
+      description: 'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
+      displayName: 'Llama 3.2 90B Vision Instruct Turbo',
+      enabled: true,
+      id: 'meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo',
+      tokens: 131_072,
       vision: true,
     },
     {
       description:
-        'Claude 3.5 Haiku 是 Anthropic 最快的下一代模型。与 Claude 3 Haiku 相比，Claude 3.5 Haiku 在各项技能上都有所提升，并在许多智力基准测试中超越了上一代最大的模型 Claude 3 Opus。',
-      displayName: 'Claude 3.5 Haiku',
+        'Llama 3.1 8B 模型采用FP8量化，支持高达131,072个上下文标记，是开源模型中的佼佼者，适合复杂任务，表现优异于许多行业基准。',
+      displayName: 'Llama 3.1 8B Instruct Turbo',
       enabled: true,
       functionCall: true,
-      id: 'claude-3-5-haiku-20241022',
-      maxOutput: 8192,
-      pricing: {
-        cachedInput: 0.1,
-        input: 1,
-        output: 5,
-        writeCacheInput: 1.25,
-      },
-      releasedAt: '2024-11-05',
-      tokens: 200_000,
+      id: 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo',
+      tokens: 131_072,
     },
     {
       description:
-        'Claude 3.5 Sonnet 提供了超越 Opus 的能力和比 Sonnet 更快的速度，同时保持与 Sonnet 相同的价格。Sonnet 特别擅长编程、数据科学、视觉处理、代理任务。',
-      displayName: 'Claude 3.5 Sonnet',
+        'Llama 3.1 70B 模型经过精细调整，适用于高负载应用，量化至FP8提供更高效的计算能力和准确性，确保在复杂场景中的卓越表现。',
+      displayName: 'Llama 3.1 70B Instruct Turbo',
       enabled: true,
       functionCall: true,
-      id: 'claude-3-5-sonnet-20241022',
-      maxOutput: 8192,
-      pricing: {
-        cachedInput: 0.3,
-        input: 3,
-        output: 15,
-        writeCacheInput: 3.75,
-      },
-      releasedAt: '2024-10-22',
-      tokens: 200_000,
-      vision: true,
+      id: 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo',
+      tokens: 131_072,
     },
+    {
+      description:
+        '405B 的 Llama 3.1 Turbo 模型，为大数据处理提供超大容量的上下文支持，在超大规模的人工智能应用中表现突出。',
+      displayName: 'Llama 3.1 405B Instruct Turbo',
+      enabled: true,
+      functionCall: true,
+      id: 'meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo',
+      tokens: 130_815,
+    },
+    {
+      description: 'Llama 3 8B Instruct Turbo 是一款高效能的大语言模型，支持广泛的应用场景。',
+      displayName: 'Llama 3 8B Instruct Turbo',
+      id: 'meta-llama/Meta-Llama-3-8B-Instruct-Turbo',
+      tokens: 8192,
+    },
+    {
+      description:
+        'Llama 3 70B Instruct Turbo 提供卓越的语言理解和生成能力，适合最苛刻的计算任务。',
+      displayName: 'Llama 3 70B Instruct Turbo',
+      id: 'meta-llama/Meta-Llama-3-70B-Instruct-Turbo',
+      tokens: 8192,
+    },
+    {
+      description: 'Llama 3 8B Instruct Lite 适合资源受限的环境，提供出色的平衡性能。',
+      displayName: 'Llama 3 8B Instruct Lite',
+      id: 'meta-llama/Meta-Llama-3-8B-Instruct-Lite',
+      tokens: 8192,
+    },
+    {
+      description: 'Llama 3 70B Instruct Lite 适合需要高效能和低延迟的环境。',
+      displayName: 'Llama 3 70B Instruct Lite',
+      id: 'meta-llama/Meta-Llama-3-70B-Instruct-Lite',
+      tokens: 8192,
+    },
+    {
+      description: 'Llama 3 8B Instruct Reference 提供多语言支持，涵盖丰富的领域知识。',
+      displayName: 'Llama 3 8B Instruct Reference',
+      id: 'meta-llama/Llama-3-8b-chat-hf',
+      tokens: 8192,
+    },
+    {
+      description: 'Llama 3 70B Instruct Reference 是功能强大的聊天模型，支持复杂的对话需求。',
+      displayName: 'Llama 3 70B Instruct Reference',
+      id: 'meta-llama/Llama-3-70b-chat-hf',
+      tokens: 8192,
+    },
+    {
+      description: 'LLaMA-2 Chat (13B) 提供优秀的语言处理能力和出色的交互体验。',
+      displayName: 'LLaMA-2 Chat (13B)',
+      id: 'meta-llama/Llama-2-13b-chat-hf',
+      tokens: 4096,
+    },
+    {
+      description: 'LLaMA-2 提供优秀的语言处理能力和出色的交互体验。',
+      displayName: 'LLaMA-2 (70B)',
+      id: 'meta-llama/Llama-2-70b-hf',
+      tokens: 4096,
+    },
+    {
+      description: 'Gemma 2 9B 由Google开发，提供高效的指令响应和综合能力。',
+      displayName: 'Gemma 2 9B',
+      enabled: true,
+      id: 'google/gemma-2-9b-it',
+      tokens: 8192,
+    },
+    {
+      description: 'Gemma 2 27B 是一款通用大语言模型，具有优异的性能和广泛的应用场景。',
+      displayName: 'Gemma 2 27B',
+      enabled: true,
+      id: 'google/gemma-2-27b-it',
+      tokens: 8192,
+    },
+    {
+      description: 'Gemma Instruct (2B) 提供基本的指令处理能力，适合轻量级应用。',
+      displayName: 'Gemma Instruct (2B)',
+      id: 'google/gemma-2b-it',
+      tokens: 8192,
+    },
+    {
+      description: 'Mistral (7B) Instruct v0.3 提供高效的计算能力和自然语言理解，适合广泛的应用。',
+      displayName: 'Mistral (7B) Instruct v0.3',
+      enabled: true,
+      id: 'mistralai/Mistral-7B-Instruct-v0.3',
+      tokens: 32_768,
+    },
+    {
+      description: 'Mistral (7B) Instruct v0.2 提供改进的指令处理能力和更精确的结果。',
+      displayName: 'Mistral (7B) Instruct v0.2',
+      id: 'mistralai/Mistral-7B-Instruct-v0.2',
+      tokens: 32_768,
+    },
+    {
+      description: 'Mistral (7B) Instruct 以高性能著称，适用于多种语言任务。',
+      displayName: 'Mistral (7B) Instruct',
+      functionCall: true,
+      id: 'mistralai/Mistral-7B-Instruct-v0.1',
+      tokens: 8192,
+    },
+    {
+      description: 'Mistral 7B是一款紧凑但高性能的模型，擅长批量处理和简单任务，如分类和文本生成，具有良好的推理能力。',
+      displayName: 'Mistral (7B)',
+      id: 'mistralai/Mistral-7B-v0.1',
+      tokens: 8192,
+    },
+    {
+      description: 'Mixtral-8x7B Instruct (46.7B) 提供高容量的计算框架，适合大规模数据处理。',
+      displayName: 'Mixtral-8x7B Instruct (46.7B)',
+      enabled: true,
+      functionCall: true,
+      id: 'mistralai/Mixtral-8x7B-Instruct-v0.1',
+      tokens: 32_768,
+    },
+    {
+      description: 'Mixtral 8x7B是一个稀疏专家模型，利用多个参数提高推理速度，适合处理多语言和代码生成任务。',
+      displayName: 'Mixtral-8x7B (46.7B)',
+      id: 'mistralai/Mixtral-8x7B-v0.1',
+      tokens: 32_768,
+    },
+    {
+      description: 'Mixtral-8x22B Instruct (141B) 是一款超级大语言模型，支持极高的处理需求。',
+      displayName: 'Mixtral-8x22B Instruct (141B)',
+      enabled: true,
+      id: 'mistralai/Mixtral-8x22B-Instruct-v0.1',
+      tokens: 65_536,
+    },
+    {
+      description: 'DeepSeek LLM Chat (67B) 是创新的 AI 模型 提供深度语言理解和互动能力。',
+      displayName: 'DeepSeek LLM Chat (67B)',
+      enabled: true,
+      id: 'deepseek-ai/deepseek-llm-67b-chat',
+      tokens: 4096,
+    },
+    {
+      description: 'Qwen2.5 是全新的大型语言模型系列，旨在优化指令式任务的处理。',
+      displayName: 'Qwen 2.5 7B Instruct Turbo',
+      enabled: true,
+      id: 'Qwen/Qwen2.5-7B-Instruct-Turbo',
+      tokens: 32_768,
+    },
+    {
+      description: 'Qwen2.5 是全新的大型语言模型系列，旨在优化指令式任务的处理。',
+      displayName: 'Qwen 2.5 72B Instruct Turbo',
+      enabled: true,
+      id: 'Qwen/Qwen2.5-72B-Instruct-Turbo',
+      tokens: 32_768,
+    },
+    {
+      description: 'Qwen 2 Instruct (72B) 为企业级应用提供精准的指令理解和响应。',
+      displayName: 'Qwen 2 Instruct (72B)',
+      id: 'Qwen/Qwen2-72B-Instruct',
+      tokens: 32_768,
+    },
+    {
+      description: 'Qwen 1.5 Chat (72B) 提供快速响应和自然对话能力，适合多语言环境。',
+      displayName: 'Qwen 1.5 Chat (72B)',
+      id: 'Qwen/Qwen1.5-72B-Chat',
+      tokens: 32_768,
+    },
+    {
+      description: 'Qwen 1.5 Chat (110B) 是一款高效能的对话模型，支持复杂对话场景。',
+      displayName: 'Qwen 1.5 Chat (110B)',
+      id: 'Qwen/Qwen1.5-110B-Chat',
+      tokens: 32_768,
+    },
+    {
+      description: 'DBRX Instruct 提供高可靠性的指令处理能力，支持多行业应用。',
+      displayName: 'DBRX Instruct',
+      id: 'databricks/dbrx-instruct',
+      tokens: 32_768,
+    },
+    {
+      description: 'Upstage SOLAR Instruct v1 (11B) 适用于精细化指令任务，提供出色的语言处理能力。',
+      displayName: 'Upstage SOLAR Instruct v1 (11B)',
+      id: 'upstage/SOLAR-10.7B-Instruct-v1.0',
+      tokens: 4096,
+    },
+    {
+      description: 'Nous Hermes 2 - Mixtral 8x7B-DPO (46.7B) 是高精度的指令模型，适用于复杂计算。',
+      displayName: 'Nous Hermes 2 - Mixtral 8x7B-DPO (46.7B)',
+      id: 'NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO',
+      tokens: 32_768,
+    },
+    {
+      description: 'Nous Hermes-2 Yi (34B) 提供优化的语言输出和多样化的应用可能。',
+      displayName: 'Nous Hermes-2 Yi (34B)',
+      id: 'NousResearch/Nous-Hermes-2-Yi-34B',
+      tokens: 4096,
+    },
+    {
+      description: 'MythoMax-L2 (13B) 是一种创新模型，适合多领域应用和复杂任务。',
+      displayName: 'MythoMax-L2 (13B)',
+      id: 'Gryphe/MythoMax-L2-13b',
+      tokens: 4096,
+    },
+    {
+      description: 'StripedHyena Nous (7B) 通过高效的策略和模型架构，提供增强的计算能力。',
+      displayName: 'StripedHyena Nous (7B)',
+      id: 'togethercomputer/StripedHyena-Nous-7B',
+      tokens: 32_768,
+    },
+    // grok
     {
       description: '拥有与 Grok 2 相当的性能，但具有更高的效率、速度和功能。',
       displayName: 'Grok Beta',
