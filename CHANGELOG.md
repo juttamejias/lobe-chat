@@ -2,6 +2,298 @@
 
 # Changelog
 
+### [Version 1.31.10](https://github.com/lobehub/lobe-chat/compare/v1.31.9...v1.31.10)
+
+<sup>Released on **2024-11-16**</sup>
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.31.9](https://github.com/lobehub/lobe-chat/compare/v1.31.8...v1.31.9)
+
+<sup>Released on **2024-11-16**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add gemini-exp-1114 model.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add gemini-exp-1114 model, closes [#4702](https://github.com/lobehub/lobe-chat/issues/4702) ([b3306f2](https://github.com/lobehub/lobe-chat/commit/b3306f2))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.31.8](https://github.com/lobehub/lobe-chat/compare/v1.31.7...v1.31.8)
+
+<sup>Released on **2024-11-15**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Move ChatInput to features/ChatInput.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Move ChatInput to features/ChatInput, closes [#4699](https://github.com/lobehub/lobe-chat/issues/4699) ([5737d3f](https://github.com/lobehub/lobe-chat/commit/5737d3f))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.31.7](https://github.com/lobehub/lobe-chat/compare/v1.31.6...v1.31.7)
+
+<sup>Released on **2024-11-15**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: `genServerLLMConfig` function, get \*\_MODEL_LIST from env.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: `genServerLLMConfig` function, get \*\_MODEL_LIST from env, closes [#4694](https://github.com/lobehub/lobe-chat/issues/4694) ([d84f369](https://github.com/lobehub/lobe-chat/commit/d84f369))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.31.6](https://github.com/lobehub/lobe-chat/compare/v1.31.5...v1.31.6)
+
+<sup>Released on **2024-11-13**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor the chat conversation implement.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor the chat conversation implement, closes [#4689](https://github.com/lobehub/lobe-chat/issues/4689) ([85b1630](https://github.com/lobehub/lobe-chat/commit/85b1630))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.31.5](https://github.com/lobehub/lobe-chat/compare/v1.31.4...v1.31.5)
+
+<sup>Released on **2024-11-12**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update some provider modellist & fix ai360 baseurl.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update some provider modellist & fix ai360 baseurl, closes [#4679](https://github.com/lobehub/lobe-chat/issues/4679) ([1b19fae](https://github.com/lobehub/lobe-chat/commit/1b19fae))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.31.4](https://github.com/lobehub/lobe-chat/compare/v1.31.3...v1.31.4)
+
+<sup>Released on **2024-11-12**</sup>
+
+#### 💄 Styles
+
+- **misc**: Fix Cloudflare Workers AI Sort.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Fix Cloudflare Workers AI Sort, closes [#4672](https://github.com/lobehub/lobe-chat/issues/4672) ([353ba70](https://github.com/lobehub/lobe-chat/commit/353ba70))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.31.3](https://github.com/lobehub/lobe-chat/compare/v1.31.2...v1.31.3)
+
+<sup>Released on **2024-11-12**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor `languageModel` & `DEFAULT_LLM_CONFIG` generate.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor `languageModel` & `DEFAULT_LLM_CONFIG` generate, closes [#4649](https://github.com/lobehub/lobe-chat/issues/4649) ([2045131](https://github.com/lobehub/lobe-chat/commit/2045131))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.31.2](https://github.com/lobehub/lobe-chat/compare/v1.31.1...v1.31.2)
+
+<sup>Released on **2024-11-12**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update deepseek model.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update deepseek model, closes [#4674](https://github.com/lobehub/lobe-chat/issues/4674) ([5ab2986](https://github.com/lobehub/lobe-chat/commit/5ab2986))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.31.1](https://github.com/lobehub/lobe-chat/compare/v1.31.0...v1.31.1)
+
+<sup>Released on **2024-11-12**</sup>
+
+#### 💄 Styles
+
+- **misc**: Fix Windows always showing scrollbar.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Fix Windows always showing scrollbar, closes [#4502](https://github.com/lobehub/lobe-chat/issues/4502) ([780a2a9](https://github.com/lobehub/lobe-chat/commit/780a2a9))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version 1.31.0](https://github.com/lobehub/lobe-chat/compare/v1.30.0...v1.31.0)
+
+<sup>Released on **2024-11-11**</sup>
+
+#### ✨ Features
+
+- **misc**: Add support xAI provider.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add support xAI provider, closes [#4627](https://github.com/lobehub/lobe-chat/issues/4627) ([49e1e08](https://github.com/lobehub/lobe-chat/commit/49e1e08))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version 1.30.0](https://github.com/lobehub/lobe-chat/compare/v1.29.6...v1.30.0)
+
+<sup>Released on **2024-11-11**</sup>
+
+#### ✨ Features
+
+- **misc**: Support Cloudflare Workers AI.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support Cloudflare Workers AI, closes [#3402](https://github.com/lobehub/lobe-chat/issues/3402) [/github.com/vercel/next.js/issues/38736#issuecomment-1278917422](https://github.com//github.com/vercel/next.js/issues/38736/issues/issuecomment-1278917422) ([efb7adf](https://github.com/lobehub/lobe-chat/commit/efb7adf))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.29.6](https://github.com/lobehub/lobe-chat/compare/v1.29.5...v1.29.6)
 
 <sup>Released on **2024-11-10**</sup>
