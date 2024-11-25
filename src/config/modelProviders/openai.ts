@@ -1534,6 +1534,19 @@ const OpenAI: ModelProviderCard = {
       },
       tokens: 131_072,
     },
+    {
+      description: '最新的图像理解模型，可以处理各种各样的视觉信息，包括文档、图表、截图和照片等。',
+      displayName: 'Grok Vision Beta',
+      enabled: true,
+      functionCall: true,
+      id: 'grok-vision-beta',
+      pricing: {
+        input: 5,
+        output: 15,
+      },
+      tokens: 8192,
+      vision: true,
+    },
   ],
   checkModel: 'gpt-4o-mini',
   description:
