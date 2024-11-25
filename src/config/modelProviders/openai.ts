@@ -722,6 +722,23 @@ const OpenAI: ModelProviderCard = {
     //gemini
     {
       description:
+        'Gemini Exp 1121 是Google最新的实验性多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。',
+      displayName: 'Gemini Experimental 1121',
+      enabled: true,
+      functionCall: true,
+      id: 'gemini-exp-1121',
+      maxOutput: 8192,
+      pricing: {
+        cachedInput: 0,
+        input: 0,
+        output: 0,
+      },
+      releasedAt: '2024-11-21',
+      tokens: 32_767 + 8192,
+      vision: true,
+    },
+    {
+      description:
         'Gemini Exp 1114 是Google最新的实验性多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。',
       displayName: 'Gemini Experimental 1114',
       enabled: true,
@@ -1516,6 +1533,19 @@ const OpenAI: ModelProviderCard = {
         output: 15,
       },
       tokens: 131_072,
+    },
+    {
+      description: '最新的图像理解模型，可以处理各种各样的视觉信息，包括文档、图表、截图和照片等。',
+      displayName: 'Grok Vision Beta',
+      enabled: true,
+      functionCall: true,
+      id: 'grok-vision-beta',
+      pricing: {
+        input: 5,
+        output: 15,
+      },
+      tokens: 8192,
+      vision: true,
     },
   ],
   checkModel: 'gpt-4o-mini',
