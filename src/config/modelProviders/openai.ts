@@ -984,6 +984,19 @@ const OpenAI: ModelProviderCard = {
     },
     // 硅基流动
     {
+      description: 'QwQ-32B-Preview是Qwen 最新的实验性研究模型，专注于提升AI推理能力。',
+      displayName: 'QwQ 32B Preview',
+      enabled: true,
+      functionCall: true,
+      id: 'Qwen/QwQ-32B-Preview',
+      pricing: {
+        currency: 'CNY',
+        input: 0,
+        output: 0,
+      },
+      tokens: 32_768,
+    },
+    {
       description: 'Hunyuan-Large 是业界最大的开源 Transformer 架构 MoE 模型，拥有 3890 亿总参数量和 520 亿激活参数量。',
       displayName: 'Hunyuan Large',
       enabled: true,
