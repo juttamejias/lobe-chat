@@ -6,7 +6,6 @@ const Ollama: ModelProviderCard = {
       description:
         'Llama 3.1 是 Meta 推出的领先模型，支持高达 405B 参数，可应用于复杂对话、多语言翻译和数据分析领域。',
       displayName: 'Llama 3.1 8B',
-      enabled: true,
       functionCall: true,
       id: 'llama3.1',
       tokens: 128_000,
@@ -56,7 +55,6 @@ const Ollama: ModelProviderCard = {
     {
       description: 'QwQ 是一个实验研究模型，专注于提高 AI 推理能力。',
       displayName: 'QwQ 32B',
-      enabled: true,
       functionCall: true,
       id: 'qwq',
       releasedAt: '2024-11-28',
@@ -77,7 +75,6 @@ const Ollama: ModelProviderCard = {
     {
       description: 'Qwen2.5 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
       displayName: 'Qwen2.5 7B',
-      enabled: true,
       functionCall: true,
       id: 'qwen2.5',
       tokens: 128_000,
@@ -91,7 +88,6 @@ const Ollama: ModelProviderCard = {
     {
       description: 'Qwen2.5 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
       displayName: 'Qwen2.5 7B',
-      enabled: true,
       functionCall: true,
       id: 'qwen2.5',
       tokens: 128_000,
@@ -196,7 +192,6 @@ const Ollama: ModelProviderCard = {
     {
       description: 'Mistral 是 Mistral AI 发布的 7B 模型，适合多变的语言处理需求。',
       displayName: 'Mistral 7B',
-      enabled: true,
       functionCall: true,
       id: 'mistral',
       tokens: 32_768,
@@ -205,7 +200,6 @@ const Ollama: ModelProviderCard = {
       description:
         'Mixtral 是 Mistral AI 的专家模型，具有开源权重，并在代码生成和语言理解方面提供支持。',
       displayName: 'Mixtral 8x7B',
-      enabled: true,
       functionCall: true,
       id: 'mixtral',
       tokens: 32_768,
@@ -228,7 +222,6 @@ const Ollama: ModelProviderCard = {
     {
       description: 'Mistral Nemo 由 Mistral AI 和 NVIDIA 合作推出，是高效性能的 12B 模型。',
       displayName: 'Mixtral Nemo 12B',
-      enabled: true,
       functionCall: true,
       id: 'mistral-nemo',
       tokens: 128_000,
@@ -254,7 +247,6 @@ const Ollama: ModelProviderCard = {
     {
       description: 'Command R 是优化用于对话和长上下文任务的LLM，特别适合动态交互与知识管理。',
       displayName: 'Command R 35B',
-      enabled: true,
       functionCall: true,
       id: 'command-r',
       tokens: 131_072,
@@ -262,7 +254,6 @@ const Ollama: ModelProviderCard = {
     {
       description: 'Command R+ 是一款高性能的大型语言模型，专为真实企业场景和复杂应用而设计。',
       displayName: 'Command R+ 104B',
-      enabled: true,
       functionCall: true,
       id: 'command-r-plus',
       tokens: 131_072,
