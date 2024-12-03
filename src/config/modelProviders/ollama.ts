@@ -1,12 +1,13 @@
 import { ModelProviderCard } from '@/types/llm';
 
-// ref: https://ollama.com/library
 const Ollama: ModelProviderCard = {
   chatModels: [
     {
       description:
         'Llama 3.1 是 Meta 推出的领先模型，支持高达 405B 参数，可应用于复杂对话、多语言翻译和数据分析领域。',
       displayName: 'Llama 3.1 8B',
+      enabled: true,
+      functionCall: true,
       id: 'llama3.1',
       tokens: 128_000,
     },
@@ -51,6 +52,84 @@ const Ollama: ModelProviderCard = {
       displayName: 'Code Llama 70B',
       id: 'codellama:70b',
       tokens: 16_384,
+    },
+    {
+      description: 'QwQ 是一个实验研究模型，专注于提高 AI 推理能力。',
+      displayName: 'QwQ 32B',
+      enabled: true,
+      functionCall: true,
+      id: 'qwq',
+      releasedAt: '2024-11-28',
+      tokens: 128_000,
+    },
+    {
+      description: 'Qwen2.5 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
+      displayName: 'Qwen2.5 0.5B',
+      id: 'qwen2.5:0.5b',
+      tokens: 128_000,
+    },
+    {
+      description: 'Qwen2.5 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
+      displayName: 'Qwen2.5 1.5B',
+      id: 'qwen2.5:1.5b',
+      tokens: 128_000,
+    },
+    {
+      description: 'Qwen2.5 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
+      displayName: 'Qwen2.5 7B',
+      enabled: true,
+      functionCall: true,
+      id: 'qwen2.5',
+      tokens: 128_000,
+    },
+    {
+      description: 'Qwen2.5 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
+      displayName: 'Qwen2.5 72B',
+      id: 'qwen2.5:72b',
+      tokens: 128_000,
+    },
+    {
+      description: 'Qwen2.5 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
+      displayName: 'Qwen2.5 7B',
+      enabled: true,
+      functionCall: true,
+      id: 'qwen2.5',
+      tokens: 128_000,
+    },
+    {
+      description: 'CodeQwen1.5 是基于大量代码数据训练的大型语言模型，专为解决复杂编程任务。',
+      displayName: 'CodeQwen1.5 7B',
+      functionCall: true,
+      id: 'codeqwen',
+      tokens: 65_536,
+    },
+    {
+      description: 'Qwen2 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
+      displayName: 'Qwen2 0.5B',
+      functionCall: true,
+      id: 'qwen2:0.5b',
+      tokens: 128_000,
+    },
+    {
+      description: 'Qwen2 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
+      displayName: 'Qwen2 1.5B',
+      functionCall: true,
+      id: 'qwen2:1.5b',
+      tokens: 128_000,
+    },
+    {
+      description: 'Qwen2 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
+      displayName: 'Qwen2 7B',
+      functionCall: true,
+      id: 'qwen2',
+      tokens: 128_000,
+    },
+    {
+      description: 'Qwen2 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
+      displayName: 'Qwen2 72B',
+      functionCall: true,
+      id: 'qwen2:72b',
+      tokens: 128_000,
     },
     {
       description: 'Gemma 2 是 Google 推出的高效模型，涵盖从小型应用到复杂数据处理的多种应用场景。',
@@ -117,6 +196,8 @@ const Ollama: ModelProviderCard = {
     {
       description: 'Mistral 是 Mistral AI 发布的 7B 模型，适合多变的语言处理需求。',
       displayName: 'Mistral 7B',
+      enabled: true,
+      functionCall: true,
       id: 'mistral',
       tokens: 32_768,
     },
@@ -124,6 +205,8 @@ const Ollama: ModelProviderCard = {
       description:
         'Mixtral 是 Mistral AI 的专家模型，具有开源权重，并在代码生成和语言理解方面提供支持。',
       displayName: 'Mixtral 8x7B',
+      enabled: true,
+      functionCall: true,
       id: 'mixtral',
       tokens: 32_768,
     },
@@ -131,6 +214,7 @@ const Ollama: ModelProviderCard = {
       description:
         'Mixtral 是 Mistral AI 的专家模型，具有开源权重，并在代码生成和语言理解方面提供支持。',
       displayName: 'Mixtral 8x22B',
+      functionCall: true,
       id: 'mixtral:8x22b',
       tokens: 65_536,
     },
@@ -144,6 +228,8 @@ const Ollama: ModelProviderCard = {
     {
       description: 'Mistral Nemo 由 Mistral AI 和 NVIDIA 合作推出，是高效性能的 12B 模型。',
       displayName: 'Mixtral Nemo 12B',
+      enabled: true,
+      functionCall: true,
       id: 'mistral-nemo',
       tokens: 128_000,
     },
@@ -168,12 +254,16 @@ const Ollama: ModelProviderCard = {
     {
       description: 'Command R 是优化用于对话和长上下文任务的LLM，特别适合动态交互与知识管理。',
       displayName: 'Command R 35B',
+      enabled: true,
+      functionCall: true,
       id: 'command-r',
       tokens: 131_072,
     },
     {
       description: 'Command R+ 是一款高性能的大型语言模型，专为真实企业场景和复杂应用而设计。',
       displayName: 'Command R+ 104B',
+      enabled: true,
+      functionCall: true,
       id: 'command-r-plus',
       tokens: 131_072,
     },
@@ -202,36 +292,6 @@ const Ollama: ModelProviderCard = {
       displayName: 'DeepSeek Coder V2 236B',
       id: 'deepseek-coder-v2:236b',
       tokens: 128_000,
-    },
-    {
-      description: 'Qwen2 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
-      displayName: 'Qwen2 0.5B',
-      id: 'qwen2:0.5b',
-      tokens: 128_000,
-    },
-    {
-      description: 'Qwen2 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
-      displayName: 'Qwen2 1.5B',
-      id: 'qwen2:1.5b',
-      tokens: 128_000,
-    },
-    {
-      description: 'Qwen2 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
-      displayName: 'Qwen2 7B',
-      id: 'qwen2',
-      tokens: 128_000,
-    },
-    {
-      description: 'Qwen2 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
-      displayName: 'Qwen2 72B',
-      id: 'qwen2:72b',
-      tokens: 128_000,
-    },
-    {
-      description: 'CodeQwen1.5 是基于大量代码数据训练的大型语言模型，专为解决复杂编程任务。',
-      displayName: 'CodeQwen1.5 7B',
-      id: 'codeqwen',
-      tokens: 65_536,
     },
     {
       description: 'LLaVA 是结合视觉编码器和 Vicuna 的多模态模型，用于强大的视觉和语言理解。',
