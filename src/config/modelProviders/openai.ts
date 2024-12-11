@@ -168,29 +168,6 @@ const OpenAI: ModelProviderCard = {
     },
     {
       description:
-        '最新的 GPT-4 Turbo 模型具备视觉功能。现在，视觉请求可以使用 JSON 模式和函数调用。 GPT-4 Turbo 是一个增强版本，为多模态任务提供成本效益高的支持。它在准确性和效率之间找到平衡，适合需要进行实时交互的应用程序场景。', // Will be discontinued on December 6, 2024
-      displayName: 'GPT-4 Turbo Vision Preview',
-      id: 'gpt-4-vision-preview',
-      pricing: {
-        input: 10,
-        output: 30,
-      },
-      tokens: 128_000,
-      vision: true,
-    },
-    {
-      description:
-        '最新的 GPT-4 Turbo 模型具备视觉功能。现在，视觉请求可以使用 JSON 模式和函数调用。 GPT-4 Turbo 是一个增强版本，为多模态任务提供成本效益高的支持。它在准确性和效率之间找到平衡，适合需要进行实时交互的应用程序场景。', // Will be discontinued on December 6, 2024
-      id: 'gpt-4-1106-vision-preview',
-      pricing: {
-        input: 10,
-        output: 30,
-      },
-      tokens: 128_000,
-      vision: true,
-    },
-    {
-      description:
         '最新的 GPT-4 Turbo 模型具备视觉功能。现在，视觉请求可以使用 JSON 模式和函数调用。 GPT-4 Turbo 是一个增强版本，为多模态任务提供成本效益高的支持。它在准确性和效率之间找到平衡，适合需要进行实时交互的应用程序场景。',
       displayName: 'GPT-4 Turbo Preview 1106',
       functionCall: true,
@@ -737,6 +714,23 @@ const OpenAI: ModelProviderCard = {
       tokens: 128_000,
     },
     //gemini
+    {
+      description:
+        'Gemini Exp 1206 是 Google 最新的实验性多模态AI模型，与历史版本相比有一定的质量提升。',
+      displayName: 'Gemini Experimental 1206',
+      enabled: true,
+      functionCall: true,
+      id: 'gemini-exp-1206',
+      maxOutput: 8192,
+      pricing: {
+        cachedInput: 0,
+        input: 0,
+        output: 0,
+      },
+      releasedAt: '2024-12-06',
+      tokens: 2_097_152 + 8192,
+      vision: true,
+    },
     {
       description:
         'Gemini Exp 1121 是Google最新的实验性多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。',
