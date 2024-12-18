@@ -1587,6 +1587,33 @@ const OpenAI: ModelProviderCard = {
       tokens: 8192,
       vision: true,
     },
+    {
+      description: '该模型在准确性、指令遵循和多语言能力方面有所改进。',
+      displayName: 'Grok 2 1212',
+      enabled: true,
+      functionCall: true,
+      id: 'grok-2-1212',
+      pricing: {
+        input: 2,
+        output: 10,
+      },
+      releasedAt: '2024-12-12',
+      tokens: 131_072,
+    },
+    {
+      description: '该模型在准确性、指令遵循和多语言能力方面有所改进。',
+      displayName: 'Grok 2 Vision 1212',
+      enabled: true,
+      functionCall: true,
+      id: 'grok-2-vision-1212',
+      pricing: {
+        input: 2,
+        output: 10,
+      },
+      releasedAt: '2024-12-12',
+      tokens: 32_768,
+      vision: true,
+    },
   ],
   checkModel: 'gpt-4o-mini',
   description:
