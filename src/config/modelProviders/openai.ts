@@ -277,6 +277,7 @@ const OpenAI: ModelProviderCard = {
       },
     },
     {
+      contextWindowTokens: 4096,
       description:
         'GPT-3.5 Turbo 是 OpenAI 的一款基础模型，结合了高效性和经济性，广泛用于文本生成、理解和分析，专为指导性提示进行调整，去除了与聊天相关的优化。',
       displayName: 'GPT-3.5 Turbo 0613',
@@ -287,9 +288,9 @@ const OpenAI: ModelProviderCard = {
         input: 1.5,
         output: 2,
       },
-      contextWindowTokens: 4096,
     },
     {
+      contextWindowTokens: 4096,
       description:
         'GPT 3.5 Turbo，适用于各种文本生成和理解任务，Currently points to gpt-3.5-turbo-0125',
       displayName: 'GPT-3.5 Turbo Instruct',
@@ -300,6 +301,7 @@ const OpenAI: ModelProviderCard = {
       },
     },
     {
+      contextWindowTokens: 16_385,
       description:
         'GPT 3.5 Turbo，适用于各种文本生成和理解任务，Currently points to gpt-3.5-turbo-0125', // Will be discontinued on September 13, 2024
 
@@ -310,9 +312,9 @@ const OpenAI: ModelProviderCard = {
         input: 3,
         output: 4,
       },
-      contextWindowTokens: 16_385,
     },
     {
+      contextWindowTokens: 16_385,
       description:
         'GPT-3.5 Turbo 是 OpenAI 的一款基础模型，结合了高效性和经济性，广泛用于文本生成、理解和分析，专为指导性提示进行调整，去除了与聊天相关的优化。', // Will be discontinued on September 13, 2024
       id: 'gpt-3.5-turbo-16k-0613',
@@ -321,155 +323,46 @@ const OpenAI: ModelProviderCard = {
         input: 3,
         output: 4,
       },
-      contextWindowTokens: 16_385,
     },
     {
+      contextWindowTokens: 128_000,
       description: 'Currently points to gpt-4o-mini-2024-07-18',
       displayName: 'GPT-4o mini 2024-07-18',
       enabled: true,
       functionCall: true,
       id: 'gpt-4o-mini-2024-07-18',
       maxOutput: 16_385,
-      contextWindowTokens: 128_000,
       vision: true,
     },
     {
+      contextWindowTokens: 128_000,
       description: 'Currently points to gpt-4o-2024-05-13',
       displayName: 'GPT-4o 2024-05-13',
       enabled: true,
       functionCall: true,
       id: 'gpt-4o-2024-05-13',
-      contextWindowTokens: 128_000,
       vision: true,
     },
     // deepseek
     {
-      description: '擅长通用对话任务',
-      displayName: 'DeepSeek-V2',
+      contextWindowTokens: 65_536,
+      description:
+        '融合通用与代码能力的全新开源模型, 不仅保留了原有 Chat 模型的通用对话能力和 Coder 模型的强大代码处理能力，还更好地对齐了人类偏好。此外，DeepSeek-V3 在写作任务、指令跟随等多个方面也实现了大幅提升。',
+      displayName: 'DeepSeek V3',
       enabled: true,
       functionCall: true,
       id: 'deepseek-chat',
-      contextWindowTokens: 128_000,
-    },
-    {
-      description: '擅长处理编程和数学任务',
-      displayName: 'DeepSeek-Coder-V2',
-      enabled: true,
-      functionCall: true,
-      id: 'deepseek-coder',
-      contextWindowTokens: 128_000,
+      pricing: {
+        cachedInput: 0.1,
+        currency: 'CNY',
+        input: 2,
+        output: 8,
+      },
+      releasedAt: '2024-09-05',
     },
     // claude
     {
-      description:
-        'Claude 3.5 Sonnet raises the industry bar for intelligence, outperforming competitor models and Claude 3 Opus on a wide range of evaluations, with the speed and cost of our mid-tier model, Claude 3 Sonnet.',
-      displayName: 'Claude 3.5 Sonnet',
-      enabled: true,
-      functionCall: true,
-      id: 'claude-3-5-sonnet-20240620',
-      maxOutput: 4096,
       contextWindowTokens: 200_000,
-      vision: true,
-    },
-    {
-      description:
-        'Claude 3.5 Sonnet raises the industry bar for intelligence, outperforming competitor models and Claude 3 Opus on a wide range of evaluations, with the speed and cost of our mid-tier model, Claude 3 Sonnet.',
-      displayName: 'Claude 3.5 Sonnet',
-      enabled: true,
-      functionCall: true,
-      id: 'claude-3_5-sonnet',
-      maxOutput: 4096,
-      contextWindowTokens: 200_000,
-      vision: true,
-    },
-    {
-      description:
-        'Ideal balance of intelligence and speed for enterprise workloads. Maximum utility at a lower price, dependable, balanced for scaled deployments',
-      displayName: 'Claude 3 Sonnet 20240229',
-      enabled: true,
-      functionCall: true,
-      id: 'claude-3-sonnet-20240229',
-      maxOutput: 4096,
-      contextWindowTokens: 200_000,
-      vision: true,
-    },
-    {
-      description:
-        'Most powerful model for highly complex tasks. Top-level performance, intelligence, fluency, and understanding',
-      displayName: 'Claude 3 Opus 20240229',
-      enabled: true,
-      functionCall: true,
-      id: 'claude-3-opus-20240229',
-      maxOutput: 4096,
-      contextWindowTokens: 200_000,
-      vision: true,
-    },
-    {
-      description:
-        'Fastest and most compact model for near-instant responsiveness. Quick and accurate targeted performance',
-      displayName: 'Claude 3 Haiku 20240307',
-      enabled: true,
-      functionCall: true,
-      id: 'claude-3-haiku-20240307',
-      maxOutput: 4096,
-      contextWindowTokens: 200_000,
-      vision: true,
-    },
-    {
-      description:
-        'Ideal balance of intelligence and speed for enterprise workloads. Maximum utility at a lower price, dependable, balanced for scaled deployments',
-      displayName: 'Claude 3 Sonnet',
-      enabled: true,
-      functionCall: true,
-      id: 'claude-3-sonnet',
-      maxOutput: 4096,
-      contextWindowTokens: 200_000,
-      vision: true,
-    },
-    {
-      description:
-        'Most powerful model for highly complex tasks. Top-level performance, intelligence, fluency, and understanding',
-      displayName: 'Claude 3 Opus',
-      enabled: true,
-      functionCall: true,
-      id: 'claude-3-opus',
-      maxOutput: 4096,
-      contextWindowTokens: 200_000,
-      vision: true,
-    },
-    {
-      description:
-        'Fastest and most compact model for near-instant responsiveness. Quick and accurate targeted performance',
-      displayName: 'Claude 3 Haiku',
-      enabled: true,
-      functionCall: true,
-      id: 'claude-3-haiku',
-      maxOutput: 4096,
-      contextWindowTokens: 200_000,
-      vision: true,
-    },
-    {
-      displayName: 'Claude 2.1',
-      enabled: false,
-      id: 'claude-2.1',
-      maxOutput: 4096,
-      contextWindowTokens: 200_000,
-    },
-    {
-      displayName: 'Claude 2.0',
-      enabled: false,
-      id: 'claude-2.0',
-      maxOutput: 4096,
-      contextWindowTokens: 100_000,
-    },
-    {
-      displayName: 'Claude Instant 1.2',
-      enabled: false,
-      id: 'claude-instant-1.2',
-      maxOutput: 4096,
-      contextWindowTokens: 100_000,
-    },
-    {
       description:
         'Claude 3.5 Haiku 是 Anthropic 最快的下一代模型。与 Claude 3 Haiku 相比，Claude 3.5 Haiku 在各项技能上都有所提升，并在许多智力基准测试中超越了上一代最大的模型 Claude 3 Opus。',
       displayName: 'Claude 3.5 Haiku',
@@ -484,9 +377,9 @@ const OpenAI: ModelProviderCard = {
         writeCacheInput: 1.25,
       },
       releasedAt: '2024-11-05',
-      contextWindowTokens: 200_000,
     },
     {
+      contextWindowTokens: 200_000,
       description:
         'Claude 3.5 Sonnet 提供了超越 Opus 的能力和比 Sonnet 更快的速度，同时保持与 Sonnet 相同的价格。Sonnet 特别擅长编程、数据科学、视觉处理、代理任务。',
       displayName: 'Claude 3.5 Sonnet',
@@ -501,49 +394,148 @@ const OpenAI: ModelProviderCard = {
         writeCacheInput: 3.75,
       },
       releasedAt: '2024-10-22',
-      contextWindowTokens: 200_000,
       vision: true,
     },
     {
-      description: 'A legacy text-only model optimized for chat conversations',
-      displayName: 'PaLM 2 Chat (Legacy)',
-      id: 'chat-bison-001',
-      legacy: true,
-      maxOutput: 1024,
-      // contextWindowTokens: 4096 + 1024, // none tokens test
+      contextWindowTokens: 200_000,
+      description:
+        'Claude 3.5 Sonnet 提供了超越 Opus 的能力和比 Sonnet 更快的速度，同时保持与 Sonnet 相同的价格。Sonnet 特别擅长编程、数据科学、视觉处理、代理任务。',
+      displayName: 'Claude 3.5 Sonnet 0620',
+      functionCall: true,
+      id: 'claude-3-5-sonnet-20240620',
+      maxOutput: 8192,
+      pricing: {
+        cachedInput: 0.3,
+        input: 3,
+        output: 15,
+        writeCacheInput: 3.75,
+      },
+      releasedAt: '2024-06-20',
+      vision: true,
     },
     {
-      description: 'A legacy model that understands text and generates text as an output',
-      displayName: 'PaLM 2 (Legacy)',
-      id: 'text-bison-001',
-      legacy: true,
-      maxOutput: 1024,
-      contextWindowTokens: 8196 + 1024,
+      contextWindowTokens: 200_000,
+      description:
+        'Claude 3.5 Sonnet raises the industry bar for intelligence, outperforming competitor models and Claude 3 Opus on a wide range of evaluations, with the speed and cost of our mid-tier model, Claude 3 Sonnet.',
+      displayName: 'Claude 3.5 Sonnet',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3_5-sonnet',
+      maxOutput: 4096,
+      vision: true,
     },
     {
+      contextWindowTokens: 200_000,
+      description:
+        'Ideal balance of intelligence and speed for enterprise workloads. Maximum utility at a lower price, dependable, balanced for scaled deployments',
+      displayName: 'Claude 3 Sonnet 20240229',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-sonnet-20240229',
+      maxOutput: 4096,
+      vision: true,
+    },
+    {
+      contextWindowTokens: 200_000,
+      description:
+        'Most powerful model for highly complex tasks. Top-level performance, intelligence, fluency, and understanding',
+      displayName: 'Claude 3 Opus 20240229',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-opus-20240229',
+      maxOutput: 4096,
+      vision: true,
+    },
+    {
+      contextWindowTokens: 200_000,
+      description:
+        'Fastest and most compact model for near-instant responsiveness. Quick and accurate targeted performance',
+      displayName: 'Claude 3 Haiku 20240307',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-haiku-20240307',
+      maxOutput: 4096,
+      vision: true,
+    },
+    {
+      contextWindowTokens: 200_000,
+      description:
+        'Ideal balance of intelligence and speed for enterprise workloads. Maximum utility at a lower price, dependable, balanced for scaled deployments',
+      displayName: 'Claude 3 Sonnet',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-sonnet',
+      maxOutput: 4096,
+      vision: true,
+    },
+    {
+      contextWindowTokens: 200_000,
+      description:
+        'Most powerful model for highly complex tasks. Top-level performance, intelligence, fluency, and understanding',
+      displayName: 'Claude 3 Opus',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-opus',
+      maxOutput: 4096,
+      vision: true,
+    },
+    {
+      contextWindowTokens: 200_000,
+      description:
+        'Fastest and most compact model for near-instant responsiveness. Quick and accurate targeted performance',
+      displayName: 'Claude 3 Haiku',
+      enabled: true,
+      functionCall: true,
+      id: 'claude-3-haiku',
+      maxOutput: 4096,
+      vision: true,
+    },
+    {
+      contextWindowTokens: 200_000,
+      displayName: 'Claude 2.1',
+      enabled: false,
+      id: 'claude-2.1',
+      maxOutput: 4096,
+    },
+    {
+      contextWindowTokens: 100_000,
+      displayName: 'Claude 2.0',
+      enabled: false,
+      id: 'claude-2.0',
+      maxOutput: 4096,
+    },
+    {
+      contextWindowTokens: 100_000,
+      displayName: 'Claude Instant 1.2',
+      enabled: false,
+      id: 'claude-instant-1.2',
+      maxOutput: 4096,
+    },
+    {
+      contextWindowTokens: 8192,
       description: '通义千问超大规模语言模型，支持中文、英文等不同语言输入。',
       displayName: 'Qwen Turbo',
       enabled: true,
       id: 'qwen-turbo',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 30_720,
       description: '通义千问超大规模语言模型增强版，支持中文、英文等不同语言输入。',
       displayName: 'Qwen Plus',
       enabled: true,
       id: 'qwen-plus',
-      contextWindowTokens: 30_720,
     },
     {
+      contextWindowTokens: 8192,
       description:
         '通义千问千亿级别超大规模语言模型，支持中文、英文等不同语言输入，当前通义千问2.5产品版本背后的API模型。',
       displayName: 'Qwen Max',
       enabled: true,
       id: 'qwen-max',
-      contextWindowTokens: 8192,
     },
     // command
     {
+      contextWindowTokens: 128_000,
       description:
         'An instruction-following conversational model that performs language tasks at a higher quality, more reliably, and with a longer context than previous models. Best suited for complex RAG workflows and multi-step tool use.',
       displayName: 'Command R+',
@@ -551,10 +543,10 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'command-r-plus',
       maxOutput: 4096,
-      contextWindowTokens: 128_000,
       vision: false,
     },
     {
+      contextWindowTokens: 128_000,
       description:
         'An instruction-following conversational model that performs language tasks at a higher quality, more reliably, and with a longer context than previous models. It can be used for complex workflows like code generation, retrieval augmented generation (RAG), tool use, and agents.',
       displayName: 'Command R',
@@ -562,10 +554,10 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'command-r',
       maxOutput: 4096,
-      contextWindowTokens: 128_000,
       vision: false,
     },
     {
+      contextWindowTokens: 128_000,
       description:
         'An instruction-following conversational model that performs language tasks at a higher quality, more reliably, and with a longer context than previous models. Best suited for complex RAG workflows and multi-step tool use.',
       displayName: 'Command R+ 08-2024',
@@ -573,10 +565,10 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'command-r-plus-08-2024',
       maxOutput: 4096,
-      contextWindowTokens: 128_000,
       vision: false,
     },
     {
+      contextWindowTokens: 128_000,
       description:
         'An instruction-following conversational model that performs language tasks at a higher quality, more reliably, and with a longer context than previous models. It can be used for complex workflows like code generation, retrieval augmented generation (RAG), tool use, and agents.',
       displayName: 'Command R 08-2024',
@@ -584,89 +576,75 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'command-r-08-2024',
       maxOutput: 4096,
-      contextWindowTokens: 128_000,
       vision: false,
     },
     // cloudflare
     {
+      contextWindowTokens: 16_384,
       displayName: 'deepseek-coder-6.7b-instruct-awq',
       enabled: true,
       id: '@hf/thebloke/deepseek-coder-6.7b-instruct-awq',
-      contextWindowTokens: 16_384,
     },
     {
-      displayName: 'deepseek-coder-6.7b-base-awq',
-      enabled: true,
-      id: '@hf/thebloke/deepseek-coder-6.7b-base-awq',
-      contextWindowTokens: 16_384,
-    },
-    {
-      displayName: 'deepseek-math-7b-instruct',
-      enabled: true,
-      id: '@cf/deepseek-ai/deepseek-math-7b-instruct',
-      contextWindowTokens: 16_384,
-    },
-    {
+      contextWindowTokens: 2048,
       displayName: 'gemma-7b-it',
       enabled: true,
       id: '@hf/google/gemma-7b-it',
-      contextWindowTokens: 2048,
     },
     {
+      contextWindowTokens: 4096,
       displayName: 'hermes-2-pro-mistral-7b',
+
       enabled: true,
       // functionCall: true,
       id: '@hf/nousresearch/hermes-2-pro-mistral-7b',
-      contextWindowTokens: 4096,
     },
     {
+      contextWindowTokens: 8192,
       displayName: 'llama-3-8b-instruct-awq',
       id: '@cf/meta/llama-3-8b-instruct-awq',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 4096,
       displayName: 'mistral-7b-instruct-v0.2',
       id: '@hf/mistral/mistral-7b-instruct-v0.2',
-      contextWindowTokens: 4096,
     },
     {
+      contextWindowTokens: 32_768,
       displayName: 'neural-chat-7b-v3-1-awq',
       enabled: true,
       id: '@hf/thebloke/neural-chat-7b-v3-1-awq',
-      contextWindowTokens: 32_768,
     },
     {
+      contextWindowTokens: 8192,
       displayName: 'openchat-3.5-0106',
       id: '@cf/openchat/openchat-3.5-0106',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 32_768,
       displayName: 'openhermes-2.5-mistral-7b-awq',
       enabled: true,
       id: '@hf/thebloke/openhermes-2.5-mistral-7b-awq',
-      contextWindowTokens: 32_768,
     },
     {
+      contextWindowTokens: 32_768,
       displayName: 'qwen1.5-14b-chat-awq',
       enabled: true,
       id: '@cf/qwen/qwen1.5-14b-chat-awq',
-      contextWindowTokens: 32_768,
     },
     {
+      contextWindowTokens: 4096,
       displayName: 'starling-lm-7b-beta',
       enabled: true,
       id: '@hf/nexusflow/starling-lm-7b-beta',
-      contextWindowTokens: 4096,
     },
     {
+      contextWindowTokens: 32_768,
       displayName: 'zephyr-7b-beta-awq',
       enabled: true,
       id: '@hf/thebloke/zephyr-7b-beta-awq',
-      contextWindowTokens: 32_768,
     },
     {
-      description:
-        'Generation over generation, Meta Llama 3 demonstrates state-of-the-art performance on a wide range of industry benchmarks and offers new capabilities, including improved reasoning.\t',
       displayName: 'meta-llama-3-8b-instruct',
       enabled: true,
       functionCall: false,
@@ -674,6 +652,7 @@ const OpenAI: ModelProviderCard = {
     },
     //bing
     {
+      contextWindowTokens: 128_000,
       displayName: 'bing-ai',
       enabled: true,
       id: 'bing-ai',
@@ -681,9 +660,9 @@ const OpenAI: ModelProviderCard = {
         input: 5,
         output: 15,
       },
-      contextWindowTokens: 128_000,
     },
     {
+      contextWindowTokens: 128_000,
       displayName: 'bing-balanced',
       enabled: true,
       id: 'bing-balanced',
@@ -691,9 +670,9 @@ const OpenAI: ModelProviderCard = {
         input: 5,
         output: 15,
       },
-      contextWindowTokens: 128_000,
     },
     {
+      contextWindowTokens: 128_000,
       displayName: 'bing-creative',
       enabled: true,
       id: 'bing-creative',
@@ -701,9 +680,9 @@ const OpenAI: ModelProviderCard = {
         input: 5,
         output: 15,
       },
-      contextWindowTokens: 128_000,
     },
     {
+      contextWindowTokens: 128_000,
       displayName: 'bing-precise',
       enabled: true,
       id: 'bing-precise',
@@ -711,10 +690,10 @@ const OpenAI: ModelProviderCard = {
         input: 5,
         output: 15,
       },
-      contextWindowTokens: 128_000,
     },
     //gemini
     {
+      contextWindowTokens: 32_767 + 8192,
       description:
         'Gemini 2.0 Flash Exp 是 Google 最新的实验性多模态AI模型，拥有下一代特性，卓越的速度，原生工具调用以及多模态生成。',
       displayName: 'Gemini 2.0 Flash Thinking Experimental 1219',
@@ -728,10 +707,10 @@ const OpenAI: ModelProviderCard = {
         output: 0,
       },
       releasedAt: '2024-12-19',
-      contextWindowTokens: 32_767 + 8192,
       vision: true,
     },
     {
+      contextWindowTokens: 1_048_576 + 8192,
       description:
         'Gemini 2.0 Flash Exp 是 Google 最新的实验性多模态AI模型，拥有下一代特性，卓越的速度，原生工具调用以及多模态生成。',
       displayName: 'Gemini 2.0 Flash Experimental',
@@ -745,10 +724,10 @@ const OpenAI: ModelProviderCard = {
         output: 0,
       },
       releasedAt: '2024-12-11',
-      contextWindowTokens: 1_048_576 + 8192,
       vision: true,
     },
     {
+      contextWindowTokens: 2_097_152 + 8192,
       description:
         'Gemini Exp 1206 是 Google 最新的实验性多模态AI模型，与历史版本相比有一定的质量提升。',
       displayName: 'Gemini Experimental 1206',
@@ -762,14 +741,13 @@ const OpenAI: ModelProviderCard = {
         output: 0,
       },
       releasedAt: '2024-12-06',
-      contextWindowTokens: 2_097_152 + 8192,
       vision: true,
     },
     {
+      contextWindowTokens: 32_767 + 8192,
       description:
-        'Gemini Exp 1121 是Google最新的实验性多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。',
+        'Gemini Exp 1121 是 Google 的实验性多模态AI模型，拥有改进的编码、推理和视觉能力。',
       displayName: 'Gemini Experimental 1121',
-      enabled: true,
       functionCall: true,
       id: 'gemini-exp-1121',
       maxOutput: 8192,
@@ -779,14 +757,12 @@ const OpenAI: ModelProviderCard = {
         output: 0,
       },
       releasedAt: '2024-11-21',
-      contextWindowTokens: 32_767 + 8192,
       vision: true,
     },
     {
-      description:
-        'Gemini Exp 1114 是Google最新的实验性多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。',
+      contextWindowTokens: 32_767 + 8192,
+      description: 'Gemini Exp 1114 是 Google 的实验性多模态AI模型，对输出质量有一定改进。',
       displayName: 'Gemini Experimental 1114',
-      enabled: true,
       functionCall: true,
       id: 'gemini-exp-1114',
       maxOutput: 8192,
@@ -796,13 +772,29 @@ const OpenAI: ModelProviderCard = {
         output: 0,
       },
       releasedAt: '2024-11-14',
-      contextWindowTokens: 32_767 + 8192,
       vision: true,
     },
     {
+      contextWindowTokens: 32_767 + 8192,
       description:
-        'Gemini 1.5 Flash 是Google最新的多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。',
-      displayName: 'Gemini 1.5 Flash Latest',
+        'LearnLM 是一个实验性的、特定于任务的语言模型，经过训练以符合学习科学原则，可在教学和学习场景中遵循系统指令，充当专家导师等。',
+      displayName: 'LearnLM 1.5 Pro Experimental',
+      functionCall: true,
+      id: 'learnlm-1.5-pro-experimental',
+      maxOutput: 8192,
+      pricing: {
+        cachedInput: 0,
+        input: 0,
+        output: 0,
+      },
+      releasedAt: '2024-11-19',
+      vision: true,
+    },
+    {
+      contextWindowTokens: 1_000_000 + 8192,
+      description:
+        'Gemini 1.5 Flash 是 Google 最新的多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。',
+      displayName: 'Gemini 1.5 Flash',
       enabled: true,
       functionCall: true,
       id: 'gemini-1.5-flash-latest',
@@ -812,26 +804,10 @@ const OpenAI: ModelProviderCard = {
         input: 0.075,
         output: 0.3,
       },
-      contextWindowTokens: 1_000_000 + 8192,
       vision: true,
     },
     {
-      description:
-        'Gemini 1.5 Flash 是Google最新的多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。',
-      displayName: 'Gemini 1.5 Flash',
-      enabled: true,
-      functionCall: true,
-      id: 'gemini-1.5-flash',
-      maxOutput: 8192,
-      pricing: {
-        cachedInput: 0.018_75,
-        input: 0.075,
-        output: 0.3,
-      },
       contextWindowTokens: 1_000_000 + 8192,
-      vision: true,
-    },
-    {
       description: 'Gemini 1.5 Flash 002 是一款高效的多模态模型，支持广泛应用的扩展。',
       displayName: 'Gemini 1.5 Flash 002',
       enabled: true,
@@ -844,10 +820,10 @@ const OpenAI: ModelProviderCard = {
         output: 0.3,
       },
       releasedAt: '2024-09-25',
-      contextWindowTokens: 1_000_000 + 8192,
       vision: true,
     },
     {
+      contextWindowTokens: 1_000_000 + 8192,
       description: 'Gemini 1.5 Flash 001 是一款高效的多模态模型，支持广泛应用的扩展。',
       displayName: 'Gemini 1.5 Flash 001',
       functionCall: true,
@@ -858,45 +834,13 @@ const OpenAI: ModelProviderCard = {
         input: 0.075,
         output: 0.3,
       },
-      contextWindowTokens: 1_000_000 + 8192,
       vision: true,
     },
     {
-      description: 'Gemini 1.5 Flash 0827 提供了优化后的多模态处理能力，适用多种复杂任务场景。',
-      displayName: 'Gemini 1.5 Flash 0827',
-      functionCall: true,
-      id: 'gemini-1.5-flash-exp-0827',
-      maxOutput: 8192,
-      pricing: {
-        cachedInput: 0.018_75,
-        input: 0.075,
-        output: 0.3,
-      },
-      releasedAt: '2024-08-27',
-      contextWindowTokens: 1_000_000 + 8192,
-      vision: true,
-    },
-
-    {
-      description:
-        'Gemini 1.5 Flash 8B 0924 是最新的实验性模型，在文本和多模态用例中都有显著的性能提升。',
-      displayName: 'Gemini 1.5 Flash 8B 0924',
-      functionCall: true,
-      id: 'gemini-1.5-flash-8b-exp-0924',
-      maxOutput: 8192,
-      pricing: {
-        cachedInput: 0.018_75,
-        input: 0.075,
-        output: 0.3,
-      },
-      releasedAt: '2024-09-24',
-      contextWindowTokens: 1_000_000 + 8192,
-      vision: true,
-    },
-    {
+      contextWindowTokens: 2_000_000 + 8192,
       description:
         'Gemini 1.5 Pro 支持高达200万个tokens，是中型多模态模型的理想选择，适用于复杂任务的多方面支持。',
-      displayName: 'Gemini 1.5 Pro Latest',
+      displayName: 'Gemini 1.5 Pro',
       enabled: true,
       functionCall: true,
       id: 'gemini-1.5-pro-latest',
@@ -907,27 +851,10 @@ const OpenAI: ModelProviderCard = {
         output: 10.5,
       },
       releasedAt: '2024-02-15',
-      contextWindowTokens: 2_000_000 + 8192,
       vision: true,
     },
     {
-      description:
-        'Gemini 1.5 Pro 支持高达200万个tokens，是中型多模态模型的理想选择，适用于复杂任务的多方面支持。',
-      displayName: 'Gemini 1.5 Pro',
-      enabled: true,
-      functionCall: true,
-      id: 'gemini-1.5-pro',
-      maxOutput: 8192,
-      pricing: {
-        cachedInput: 0.875,
-        input: 3.5,
-        output: 10.5,
-      },
-      releasedAt: '2024-02-15',
       contextWindowTokens: 2_000_000 + 8192,
-      vision: true,
-    },
-    {
       description:
         'Gemini 1.5 Pro 002 是最新的生产就绪模型，提供更高质量的输出，特别在数学、长上下文和视觉任务方面有显著提升。',
       displayName: 'Gemini 1.5 Pro 002',
@@ -941,10 +868,10 @@ const OpenAI: ModelProviderCard = {
         output: 2.5,
       },
       releasedAt: '2024-09-24',
-      contextWindowTokens: 2_000_000 + 8192,
       vision: true,
     },
     {
+      contextWindowTokens: 2_000_000 + 8192,
       description: 'Gemini 1.5 Pro 001 是可扩展的多模态AI解决方案，支持广泛的复杂任务。',
       displayName: 'Gemini 1.5 Pro 001',
       functionCall: true,
@@ -956,40 +883,43 @@ const OpenAI: ModelProviderCard = {
         output: 10.5,
       },
       releasedAt: '2024-02-15',
-      contextWindowTokens: 2_000_000 + 8192,
       vision: true,
     },
     {
-      description: 'Gemini 1.5 Pro 0827 结合最新优化技术，带来更高效的多模态数据处理能力。',
-      displayName: 'Gemini 1.5 Pro 0827',
+      contextWindowTokens: 1_000_000 + 8192,
+      description: 'Gemini 1.5 Flash 8B 是一款高效的多模态模型，支持广泛应用的扩展。',
+      displayName: 'Gemini 1.5 Flash 8B',
+      enabled: true,
       functionCall: true,
-      id: 'gemini-1.5-pro-exp-0827',
+      id: 'gemini-1.5-flash-8b',
       maxOutput: 8192,
       pricing: {
-        cachedInput: 0.875,
-        input: 3.5,
-        output: 10.5,
+        cachedInput: 0.02,
+        input: 0.075,
+        output: 0.3,
       },
-      releasedAt: '2024-08-27',
-      contextWindowTokens: 2_000_000 + 8192,
+      releasedAt: '2024-10-03',
       vision: true,
     },
     {
-      description: 'Gemini 1.5 Pro 0801 提供出色的多模态处理能力，为应用开发带来更大灵活性。',
-      displayName: 'Gemini 1.5 Pro 0801',
+      contextWindowTokens: 1_000_000 + 8192,
+      description:
+        'Gemini 1.5 Flash 8B 0924 是最新的实验性模型，在文本和多模态用例中都有显著的性能提升。',
+      displayName: 'Gemini 1.5 Flash 8B 0924',
       functionCall: true,
-      id: 'gemini-1.5-pro-exp-0801',
+      id: 'gemini-1.5-flash-8b-exp-0924',
       maxOutput: 8192,
       pricing: {
-        cachedInput: 0.875,
-        input: 3.5,
-        output: 10.5,
+        cachedInput: 0.018_75,
+        input: 0.075,
+        output: 0.3,
       },
-      releasedAt: '2024-08-01',
-      contextWindowTokens: 2_000_000 + 8192,
+      releasedAt: '2024-09-24',
       vision: true,
     },
+    // Gemini 1.0 Pro will be removed on 2025.02.15
     {
+      contextWindowTokens: 30_720 + 2048,
       description: 'Gemini 1.0 Pro 是Google的高性能AI模型，专为广泛任务扩展而设计。',
       displayName: 'Gemini 1.0 Pro',
       id: 'gemini-1.0-pro-latest',
@@ -999,9 +929,9 @@ const OpenAI: ModelProviderCard = {
         output: 1.5,
       },
       releasedAt: '2023-12-06',
-      contextWindowTokens: 30_720 + 2048,
     },
     {
+      contextWindowTokens: 30_720 + 2048,
       description:
         'Gemini 1.0 Pro 001 (Tuning) 提供稳定并可调优的性能，是复杂任务解决方案的理想选择。',
       displayName: 'Gemini 1.0 Pro 001 (Tuning)',
@@ -1013,9 +943,9 @@ const OpenAI: ModelProviderCard = {
         output: 1.5,
       },
       releasedAt: '2023-12-06',
-      contextWindowTokens: 30_720 + 2048,
     },
     {
+      contextWindowTokens: 30_720 + 2048,
       description: 'Gemini 1.0 Pro 002 (Tuning) 提供出色的多模态支持，专注于复杂任务的有效解决。',
       displayName: 'Gemini 1.0 Pro 002 (Tuning)',
       id: 'gemini-1.0-pro-002',
@@ -1025,24 +955,13 @@ const OpenAI: ModelProviderCard = {
         output: 1.5,
       },
       releasedAt: '2023-12-06',
-      contextWindowTokens: 30_720 + 2048,
     },
     // 硅基流动
     {
-      description: 'QwQ-32B-Preview是Qwen 最新的实验性研究模型，专注于提升AI推理能力。',
-      displayName: 'QwQ 32B Preview',
-      enabled: true,
-      id: 'Qwen/QwQ-32B-Preview',
-      pricing: {
-        currency: 'CNY',
-        input: 0,
-        output: 0,
-      },
       contextWindowTokens: 32_768,
-    },
-    {
-      description: 'Hunyuan-Large 是业界最大的开源 Transformer 架构 MoE 模型，拥有 3890 亿总参数量和 520 亿激活参数量。',
-      displayName: 'Hunyuan Large',
+      description:
+        'Hunyuan-Large 是业界最大的开源 Transformer 架构 MoE 模型，拥有 3890 亿总参数量和 520 亿激活参数量。',
+      displayName: 'Hunyuan A52B Instruct',
       enabled: true,
       id: 'Tencent/Hunyuan-A52B-Instruct',
       pricing: {
@@ -1050,10 +969,11 @@ const OpenAI: ModelProviderCard = {
         input: 21,
         output: 21,
       },
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'DeepSeek V2.5 集合了先前版本的优秀特征，增强了通用和编码能力。',
+      contextWindowTokens: 32_768,
+      description:
+        'DeepSeek-V2.5 是 DeepSeek-V2-Chat 和 DeepSeek-Coder-V2-Instruct 的升级版本，集成了两个先前版本的通用和编码能力。该模型在多个方面进行了优化，包括写作和指令跟随能力，更好地与人类偏好保持一致。DeepSeek-V2.5 在各种评估基准上都取得了显著的提升，如 AlpacaEval 2.0、ArenaHard、AlignBench 和 MT-Bench 等',
       displayName: 'DeepSeek V2.5',
       enabled: true,
       functionCall: true,
@@ -1063,11 +983,37 @@ const OpenAI: ModelProviderCard = {
         input: 1.33,
         output: 1.33,
       },
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'Qwen2.5 是全新的大型语言模型系列，旨在优化指令式任务的处理。',
-      displayName: 'Qwen2.5 7B',
+      contextWindowTokens: 32_768,
+      description:
+        'DeepSeek-V2 是一个强大、经济高效的混合专家（MoE）语言模型。它在 8.1 万亿个 token 的高质量语料库上进行了预训练，并通过监督微调（SFT）和强化学习（RL）进一步提升了模型能力。与 DeepSeek 67B 相比， DeepSeek-V2 在性能更强的同时，节省了 42.5% 的训练成本，减少了 93.3% 的 KV 缓存，并将最大生成吞吐量提高到了 5.76 倍。该模型支持 128k 的上下文长度，在标准基准测试和开放式生成评估中都表现出色',
+      displayName: 'DeepSeek V2 Chat',
+      id: 'deepseek-ai/DeepSeek-V2-Chat',
+      pricing: {
+        currency: 'CNY',
+        input: 1.33,
+        output: 1.33,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'QwQ-32B-Preview是Qwen 最新的实验性研究模型，专注于提升AI推理能力。通过探索语言混合、递归推理等复杂机制，主要优势包括强大的推理分析能力、数学和编程能力。与此同时，也存在语言切换问题、推理循环、安全性考虑、其他能力方面的差异。',
+      displayName: 'QwQ 32B Preview',
+      enabled: true,
+      id: 'Qwen/QwQ-32B-Preview',
+      pricing: {
+        currency: 'CNY',
+        input: 1.26,
+        output: 1.26,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5-7B-Instruct 是阿里云发布的最新大语言模型系列之一。该 7B 模型在编码和数学等领域具有显著改进的能力。该模型还提供了多语言支持，覆盖超过 29 种语言，包括中文、英文等。模型在指令跟随、理解结构化数据以及生成结构化输出（尤其是 JSON）方面都有显著提升',
+      displayName: 'Qwen2.5 7B Instruct (Free)',
       enabled: true,
       functionCall: true,
       id: 'Qwen/Qwen2.5-7B-Instruct',
@@ -1076,11 +1022,37 @@ const OpenAI: ModelProviderCard = {
         input: 0,
         output: 0,
       },
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'Qwen2.5 是全新的大型语言模型系列，旨在优化指令式任务的处理。',
-      displayName: 'Qwen2.5 14B',
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5-7B-Instruct 是阿里云发布的最新大语言模型系列之一。该 7B 模型在编码和数学等领域具有显著改进的能力。该模型还提供了多语言支持，覆盖超过 29 种语言，包括中文、英文等。模型在指令跟随、理解结构化数据以及生成结构化输出（尤其是 JSON）方面都有显著提升',
+      displayName: 'Qwen2.5 7B Instruct (LoRA)',
+      id: 'LoRA/Qwen/Qwen2.5-7B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 0.53,
+        output: 0.53,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5-7B-Instruct 是阿里云发布的最新大语言模型系列之一。该 7B 模型在编码和数学等领域具有显著改进的能力。该模型还提供了多语言支持，覆盖超过 29 种语言，包括中文、英文等。模型在指令跟随、理解结构化数据以及生成结构化输出（尤其是 JSON）方面都有显著提升',
+      displayName: 'Qwen2.5 7B Instruct (Pro)',
+      functionCall: true,
+      id: 'Pro/Qwen/Qwen2.5-7B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 0.35,
+        output: 0.35,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5-14B-Instruct 是阿里云发布的最新大语言模型系列之一。该 14B 模型在编码和数学等领域具有显著改进的能力。该模型还提供了多语言支持，覆盖超过 29 种语言，包括中文、英文等。模型在指令跟随、理解结构化数据以及生成结构化输出（尤其是 JSON）方面都有显著提升',
+      displayName: 'Qwen2.5 14B Instruct',
       functionCall: true,
       id: 'Qwen/Qwen2.5-14B-Instruct',
       pricing: {
@@ -1088,11 +1060,12 @@ const OpenAI: ModelProviderCard = {
         input: 0.7,
         output: 0.7,
       },
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'Qwen2.5 是全新的大型语言模型系列，旨在优化指令式任务的处理。',
-      displayName: 'Qwen2.5 32B',
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5-32B-Instruct 是阿里云发布的最新大语言模型系列之一。该 32B 模型在编码和数学等领域具有显著改进的能力。该模型还提供了多语言支持，覆盖超过 29 种语言，包括中文、英文等。模型在指令跟随、理解结构化数据以及生成结构化输出（尤其是 JSON）方面都有显著提升',
+      displayName: 'Qwen2.5 32B Instruct',
       functionCall: true,
       id: 'Qwen/Qwen2.5-32B-Instruct',
       pricing: {
@@ -1100,11 +1073,50 @@ const OpenAI: ModelProviderCard = {
         input: 1.26,
         output: 1.26,
       },
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'Qwen2.5 是全新的大型语言模型系列，具有更强的理解和生成能力。',
-      displayName: 'Qwen2.5 72B',
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5-72B-Instruct 是阿里云发布的最新大语言模型系列之一。该 72B 模型在编码和数学等领域具有显著改进的能力。该模型还提供了多语言支持，覆盖超过 29 种语言，包括中文、英文等。模型在指令跟随、理解结构化数据以及生成结构化输出（尤其是 JSON）方面都有显著提升',
+      displayName: 'Qwen2.5 72B Instruct',
+      functionCall: true,
+      id: 'Qwen/Qwen2.5-72B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 4.13,
+        output: 4.13,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5-72B-Instruct 是阿里云发布的最新大语言模型系列之一。该 72B 模型在编码和数学等领域具有显著改进的能力。该模型还提供了多语言支持，覆盖超过 29 种语言，包括中文、英文等。模型在指令跟随、理解结构化数据以及生成结构化输出（尤其是 JSON）方面都有显著提升',
+      displayName: 'Qwen2.5 72B Instruct (LoRA)',
+      id: 'LoRA/Qwen/Qwen2.5-72B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 6.2,
+        output: 6.2,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5-72B-Instruct 是阿里云发布的最新大语言模型系列之一。该 72B 模型在编码和数学等领域具有显著改进的能力。该模型还提供了多语言支持，覆盖超过 29 种语言，包括中文、英文等。模型在指令跟随、理解结构化数据以及生成结构化输出（尤其是 JSON）方面都有显著提升',
+      displayName: 'Qwen2.5 72B Instruct (Vendor-A)',
+      functionCall: true,
+      id: 'Vendor-A/Qwen/Qwen2.5-72B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 1,
+        output: 1,
+      },
+    },
+    {
+      contextWindowTokens: 131_072,
+      description:
+        'Qwen2.5-72B-Instruct 是阿里云发布的最新大语言模型系列之一。该 72B 模型在编码和数学等领域具有显著改进的能力。它支持长达 128K tokens 的输入，可以生成超过 8K tokens 的长文本。该模型还提供了多语言支持，覆盖超过 29 种语言，包括中文、英文等。模型在指令跟随、理解结构化数据以及生成结构化输出（尤其是 JSON）方面都有显著提升',
+      displayName: 'Qwen2.5 72B Instruct 128K',
       enabled: true,
       functionCall: true,
       id: 'Qwen/Qwen2.5-72B-Instruct-128K',
@@ -1113,11 +1125,132 @@ const OpenAI: ModelProviderCard = {
         input: 4.13,
         output: 4.13,
       },
-      contextWindowTokens: 131_072,
     },
     {
-      description: 'Qwen2-VL 是 Qwen-VL 模型的最新迭代版本，在视觉理解基准测试中达到了最先进的性能。',
-      displayName: 'Qwen2 VL 7B',
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5-Coder-7B-Instruct 是阿里云发布的代码特定大语言模型系列的最新版本。该模型在 Qwen2.5 的基础上，通过 5.5 万亿个 tokens 的训练，显著提升了代码生成、推理和修复能力。它不仅增强了编码能力，还保持了数学和通用能力的优势。模型为代码智能体等实际应用提供了更全面的基础',
+      displayName: 'Qwen2.5 Coder 7B Instruct (Free)',
+      id: 'Qwen/Qwen2.5-Coder-7B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 0,
+        output: 0,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5-Coder-7B-Instruct 是阿里云发布的代码特定大语言模型系列的最新版本。该模型在 Qwen2.5 的基础上，通过 5.5 万亿个 tokens 的训练，显著提升了代码生成、推理和修复能力。它不仅增强了编码能力，还保持了数学和通用能力的优势。模型为代码智能体等实际应用提供了更全面的基础',
+      displayName: 'Qwen2.5 Coder 7B Instruct (Pro)',
+      id: 'Pro/Qwen/Qwen2.5-Coder-7B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 0.35,
+        output: 0.35,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5-Coder-32B-Instruct 是基于 Qwen2.5 开发的代码特定大语言模型。该模型通过 5.5 万亿 tokens 的训练，在代码生成、代码推理和代码修复方面都取得了显著提升。它是当前最先进的开源代码语言模型，编码能力可与 GPT-4 相媲美。模型不仅增强了编码能力，还保持了在数学和通用能力方面的优势，并支持长文本处理',
+      displayName: 'Qwen2.5 Coder 32B Instruct',
+      id: 'Qwen/Qwen2.5-Coder-32B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 1.26,
+        output: 1.26,
+      },
+    },
+    {
+      contextWindowTokens: 4096,
+      description:
+        'Qwen2.5-Math-72B 是阿里云发布的 Qwen2.5-Math 系列数学大语言模型之一。该模型支持使用思维链（CoT）和工具集成推理（TIR）方法解决中文和英文数学问题。相比前代 Qwen2-Math 系列，Qwen2.5-Math 系列在中英文数学基准测试中取得了显著的性能提升。该模型在处理精确计算、符号操作和算法操作方面表现出色，尤其适合解决复杂的数学和算法推理任务',
+      displayName: 'Qwen2.5 Math 72B Instruct',
+      id: 'Qwen/Qwen2.5-Math-72B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 4.13,
+        output: 4.13,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2-1.5B-Instruct 是 Qwen2 系列中的指令微调大语言模型，参数规模为 1.5B。该模型基于 Transformer 架构，采用了 SwiGLU 激活函数、注意力 QKV 偏置和组查询注意力等技术。它在语言理解、生成、多语言能力、编码、数学和推理等多个基准测试中表现出色，超越了大多数开源模型。与 Qwen1.5-1.8B-Chat 相比，Qwen2-1.5B-Instruct 在 MMLU、HumanEval、GSM8K、C-Eval 和 IFEval 等测试中均显示出显著的性能提升，尽管参数量略少',
+      displayName: 'Qwen2 1.5B Instruct (Free)',
+      id: 'Qwen/Qwen2-1.5B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 0,
+        output: 0,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2-1.5B-Instruct 是 Qwen2 系列中的指令微调大语言模型，参数规模为 1.5B。该模型基于 Transformer 架构，采用了 SwiGLU 激活函数、注意力 QKV 偏置和组查询注意力等技术。它在语言理解、生成、多语言能力、编码、数学和推理等多个基准测试中表现出色，超越了大多数开源模型。与 Qwen1.5-1.8B-Chat 相比，Qwen2-1.5B-Instruct 在 MMLU、HumanEval、GSM8K、C-Eval 和 IFEval 等测试中均显示出显著的性能提升，尽管参数量略少',
+      displayName: 'Qwen2 1.5B Instruct (Pro)',
+      id: 'Pro/Qwen/Qwen2-1.5B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 0.14,
+        output: 0.14,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2-7B-Instruct 是 Qwen2 系列中的指令微调大语言模型，参数规模为 7B。该模型基于 Transformer 架构，采用了 SwiGLU 激活函数、注意力 QKV 偏置和组查询注意力等技术。它能够处理大规模输入。该模型在语言理解、生成、多语言能力、编码、数学和推理等多个基准测试中表现出色，超越了大多数开源模型，并在某些任务上展现出与专有模型相当的竞争力。Qwen2-7B-Instruct 在多项评测中均优于 Qwen1.5-7B-Chat，显示出显著的性能提升',
+      displayName: 'Qwen2 7B Instruct (Free)',
+      id: 'Qwen/Qwen2-7B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 0,
+        output: 0,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2-7B-Instruct 是 Qwen2 系列中的指令微调大语言模型，参数规模为 7B。该模型基于 Transformer 架构，采用了 SwiGLU 激活函数、注意力 QKV 偏置和组查询注意力等技术。它能够处理大规模输入。该模型在语言理解、生成、多语言能力、编码、数学和推理等多个基准测试中表现出色，超越了大多数开源模型，并在某些任务上展现出与专有模型相当的竞争力。Qwen2-7B-Instruct 在多项评测中均优于 Qwen1.5-7B-Chat，显示出显著的性能提升',
+      displayName: 'Qwen2 7B Instruct (Pro)',
+      id: 'Pro/Qwen/Qwen2-7B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 0.35,
+        output: 0.35,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2-72B-Instruct 是 Qwen2 系列中的指令微调大语言模型，参数规模为 72B。该模型基于 Transformer 架构，采用了 SwiGLU 激活函数、注意力 QKV 偏置和组查询注意力等技术。它能够处理大规模输入。该模型在语言理解、生成、多语言能力、编码、数学和推理等多个基准测试中表现出色，超越了大多数开源模型，并在某些任务上展现出与专有模型相当的竞争力',
+      displayName: 'Qwen2 72B Instruct',
+      id: 'Qwen/Qwen2-7B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 4.13,
+        output: 4.13,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2-72B-Instruct 是 Qwen2 系列中的指令微调大语言模型，参数规模为 72B。该模型基于 Transformer 架构，采用了 SwiGLU 激活函数、注意力 QKV 偏置和组查询注意力等技术。它能够处理大规模输入。该模型在语言理解、生成、多语言能力、编码、数学和推理等多个基准测试中表现出色，超越了大多数开源模型，并在某些任务上展现出与专有模型相当的竞争力',
+      displayName: 'Qwen2 72B Instruct (Vendor-A)',
+      id: 'Vendor-A/Qwen/Qwen2-7B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 1,
+        output: 1,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2-VL-7B-Instruct 是 Qwen-VL 模型的最新迭代版本，在视觉理解基准测试中达到了最先进的性能，包括 MathVista、DocVQA、RealWorldQA 和 MTVQA 等。Qwen2-VL 能够用于高质量的基于视频的问答、对话和内容创作，还具备复杂推理和决策能力，可以与移动设备、机器人等集成，基于视觉环境和文本指令进行自动操作。除了英语和中文，Qwen2-VL 现在还支持理解图像中不同语言的文本，包括大多数欧洲语言、日语、韩语、阿拉伯语和越南语等',
+      displayName: 'Qwen2 VL 7B Instruct (Pro)',
       enabled: true,
       id: 'Pro/Qwen/Qwen2-VL-7B-Instruct',
       pricing: {
@@ -1125,12 +1258,13 @@ const OpenAI: ModelProviderCard = {
         input: 0.35,
         output: 0.35,
       },
-      contextWindowTokens: 32_768,
       vision: true,
     },
     {
-      description: 'Qwen2-VL 是 Qwen-VL 模型的最新迭代版本，在视觉理解基准测试中达到了最先进的性能。',
-      displayName: 'Qwen2 VL 72B',
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2-VL 是 Qwen-VL 模型的最新迭代版本，在视觉理解基准测试中达到了最先进的性能，包括 MathVista、DocVQA、RealWorldQA 和 MTVQA 等。Qwen2-VL 能够理解超过 20 分钟的视频，用于高质量的基于视频的问答、对话和内容创作。它还具备复杂推理和决策能力，可以与移动设备、机器人等集成，基于视觉环境和文本指令进行自动操作。除了英语和中文，Qwen2-VL 现在还支持理解图像中不同语言的文本，包括大多数欧洲语言、日语、韩语、阿拉伯语和越南语等',
+      displayName: 'Qwen2 VL 72B Instruct',
       enabled: true,
       id: 'Qwen/Qwen2-VL-72B-Instruct',
       pricing: {
@@ -1138,34 +1272,13 @@ const OpenAI: ModelProviderCard = {
         input: 4.13,
         output: 4.13,
       },
-      contextWindowTokens: 32_768,
       vision: true,
     },
     {
-      description: 'Qwen2.5-Math 专注于数学领域的问题求解，为高难度题提供专业解答。',
-      displayName: 'Qwen2.5 Math 72B',
-      id: 'Qwen/Qwen2.5-Math-72B-Instruct',
-      pricing: {
-        currency: 'CNY',
-        input: 4.13,
-        output: 4.13,
-      },
-      contextWindowTokens: 4096,
-    },
-    {
-      description: 'Qwen2.5-Coder 专注于代码编写。',
-      displayName: 'Qwen2.5 Coder 32B',
-      id: 'Qwen/Qwen2.5-Coder-32B-Instruct',
-      pricing: {
-        currency: 'CNY',
-        input: 1.26,
-        output: 1.26,
-      },
       contextWindowTokens: 32_768,
-    },
-    {
-      description: 'InternLM2.5 提供多场景下的智能对话解决方案。',
-      displayName: 'Internlm 2.5 7B',
+      description:
+        'InternLM2.5-7B-Chat 是一个开源的对话模型，基于 InternLM2 架构开发。该 7B 参数规模的模型专注于对话生成任务，支持中英双语交互。模型采用了最新的训练技术，旨在提供流畅、智能的对话体验。InternLM2.5-7B-Chat 适用于各种对话应用场景，包括但不限于智能客服、个人助手等领域',
+      displayName: 'InternLM2.5 7B Chat (Free)',
       functionCall: true,
       id: 'internlm/internlm2_5-7b-chat',
       pricing: {
@@ -1173,11 +1286,12 @@ const OpenAI: ModelProviderCard = {
         input: 0,
         output: 0,
       },
-      contextWindowTokens: 32_768,
     },
     {
-      description: '创新的开源模型InternLM2.5，通过大规模的参数提高了对话智能。',
-      displayName: 'Internlm 2.5 20B',
+      contextWindowTokens: 32_768,
+      description:
+        'InternLM2.5-20B-Chat 是一个开源的大规模对话模型，基于 InternLM2 架构开发。该模型拥有 200 亿参数，在数学推理方面表现出色，超越了同量级的 Llama3 和 Gemma2-27B 模型。InternLM2.5-20B-Chat 在工具调用能力方面有显著提升，支持从上百个网页收集信息进行分析推理，并具备更强的指令理解、工具选择和结果反思能力。它适用于构建复杂智能体，可进行多轮工具调用以完成复杂任务',
+      displayName: 'InternLM2.5 20B Chat',
       functionCall: true,
       id: 'internlm/internlm2_5-20b-chat',
       pricing: {
@@ -1185,22 +1299,24 @@ const OpenAI: ModelProviderCard = {
         input: 1,
         output: 1,
       },
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'InternVL2在各种视觉语言任务上展现出了卓越的性能，包括文档和图表理解、场景文本理解、OCR、科学和数学问题解决等。',
-      displayName: 'InternVL2 8B',
+      contextWindowTokens: 32_768,
+      description:
+        'InternVL2-8B 是 InternVL 2.0 系列多模态大语言模型中的一员。该模型由 InternViT-300M-448px 视觉模型、MLP 投影层和 internlm2_5-7b-chat 语言模型组成。它在各种视觉语言任务上展现出了卓越的性能，包括文档和图表理解、场景文本理解、OCR、科学和数学问题解决等。InternVL2-8B 使用 8K 上下文窗口训练，能够处理长文本、多图像和视频输入，显著提升了模型在这些任务上的处理能力',
+      displayName: 'InternVL2 8B (Pro)',
       id: 'Pro/OpenGVLab/InternVL2-8B',
       pricing: {
         currency: 'CNY',
         input: 0.35,
         output: 0.35,
       },
-      contextWindowTokens: 32_768,
       vision: true,
     },
     {
-      description: 'InternVL2在各种视觉语言任务上展现出了卓越的性能，包括文档和图表理解、场景文本理解、OCR、科学和数学问题解决等。',
+      contextWindowTokens: 32_768,
+      description:
+        'InternVL2-26B 是 InternVL 2.0 系列多模态大语言模型中的一员。该模型由 InternViT-6B-448px-V1-5 视觉模型、MLP 投影层和 internlm2-chat-20b 语言模型组成。它在各种视觉语言任务上展现出了卓越的性能，包括文档和图表理解、场景文本理解、OCR、科学和数学问题解决等。InternVL2-26B 使用 8K 上下文窗口训练，能够处理长文本、多图像和视频输入，显著提升了模型在这些任务上的处理能力',
       displayName: 'InternVL2 26B',
       id: 'OpenGVLab/InternVL2-26B',
       pricing: {
@@ -1208,11 +1324,12 @@ const OpenAI: ModelProviderCard = {
         input: 1,
         output: 1,
       },
-      contextWindowTokens: 32_768,
       vision: true,
     },
     {
-      description: 'InternVL2在各种视觉语言任务上展现出了卓越的性能，包括文档和图表理解、场景文本理解、OCR、科学和数学问题解决等。',
+      contextWindowTokens: 8192,
+      description:
+        'InternVL2-Llama3-76B 是 InternVL 2.0 系列中的大规模多模态模型。它由 InternViT-6B-448px-V1-5 视觉模型、MLP 投影层和 Hermes-2-Theta-Llama-3-70B 语言模型组成。该模型在各种视觉语言任务上表现出色，包括文档和图表理解、信息图表问答、场景文本理解和 OCR 任务等。InternVL2-Llama3-76B 使用 8K 上下文窗口训练，能够处理长文本、多图像和视频输入，显著提升了模型在这些任务上的处理能力，在多项基准测试中达到或接近最先进的商业模型水平',
       displayName: 'InternVL2 Llama3 76B',
       id: 'OpenGVLab/InternVL2-Llama3-76B',
       pricing: {
@@ -1220,12 +1337,13 @@ const OpenAI: ModelProviderCard = {
         input: 4.13,
         output: 4.13,
       },
-      contextWindowTokens: 8192,
       vision: true,
     },
     {
-      description: 'GLM-4 9B 开放源码版本，为会话应用提供优化后的对话体验。',
-      displayName: 'GLM-4 9B',
+      contextWindowTokens: 131_072,
+      description:
+        'GLM-4-9B-Chat 是智谱 AI 推出的 GLM-4 系列预训练模型中的开源版本。该模型在语义、数学、推理、代码和知识等多个方面表现出色。除了支持多轮对话外，GLM-4-9B-Chat 还具备网页浏览、代码执行、自定义工具调用（Function Call）和长文本推理等高级功能。模型支持 26 种语言，包括中文、英文、日语、韩语和德语等。在多项基准测试中，GLM-4-9B-Chat 展现了优秀的性能，如 AlignBench-v2、MT-Bench、MMLU 和 C-Eval 等。该模型支持最大 128K 的上下文长度，适用于学术研究和商业应用',
+      displayName: 'GLM-4 9B Chat (Free)',
       functionCall: true,
       id: 'THUDM/glm-4-9b-chat',
       pricing: {
@@ -1233,33 +1351,73 @@ const OpenAI: ModelProviderCard = {
         input: 0,
         output: 0,
       },
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'Yi-1.5 9B 支持16K Tokens, 提供高效、流畅的语言生成能力。',
-      displayName: 'Yi-1.5 9B',
+      contextWindowTokens: 131_072,
+      description:
+        'GLM-4-9B-Chat 是智谱 AI 推出的 GLM-4 系列预训练模型中的开源版本。该模型在语义、数学、推理、代码和知识等多个方面表现出色。除了支持多轮对话外，GLM-4-9B-Chat 还具备网页浏览、代码执行、自定义工具调用（Function Call）和长文本推理等高级功能。模型支持 26 种语言，包括中文、英文、日语、韩语和德语等。在多项基准测试中，GLM-4-9B-Chat 展现了优秀的性能，如 AlignBench-v2、MT-Bench、MMLU 和 C-Eval 等。该模型支持最大 128K 的上下文长度，适用于学术研究和商业应用',
+      displayName: 'GLM-4 9B Chat (Pro)',
+      functionCall: true,
+      id: 'Pro/THUDM/glm-4-9b-chat',
+      pricing: {
+        currency: 'CNY',
+        input: 0.6,
+        output: 0.6,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'ChatGLM3-6B 是 ChatGLM 系列的开源模型，由智谱 AI 开发。该模型保留了前代模型的优秀特性，如对话流畅和部署门槛低，同时引入了新的特性。它采用了更多样的训练数据、更充分的训练步数和更合理的训练策略，在 10B 以下的预训练模型中表现出色。ChatGLM3-6B 支持多轮对话、工具调用、代码执行和 Agent 任务等复杂场景。除对话模型外，还开源了基础模型 ChatGLM-6B-Base 和长文本对话模型 ChatGLM3-6B-32K。该模型对学术研究完全开放，在登记后也允许免费商业使用',
+      displayName: 'ChatGLM3 6B (Free)',
+      id: 'THUDM/chatglm3-6b',
+      pricing: {
+        currency: 'CNY',
+        input: 0,
+        output: 0,
+      },
+    },
+    {
+      contextWindowTokens: 4096,
+      description:
+        'Yi-1.5-6B-Chat 是 Yi-1.5 系列的一个变体，属于开源聊天模型。Yi-1.5 是 Yi 的升级版本，在 500B 个高质量语料上进行了持续预训练，并在 3M 多样化的微调样本上进行了微调。相比于 Yi，Yi-1.5 在编码、数学、推理和指令遵循能力方面表现更强，同时保持了出色的语言理解、常识推理和阅读理解能力。该模型具有 4K、16K 和 32K 的上下文长度版本，预训练总量达到 3.6T 个 token',
+      displayName: 'Yi-1.5 6B Chat (Free)',
+      id: '01-ai/Yi-1.5-6B-Chat',
+      pricing: {
+        currency: 'CNY',
+        input: 0,
+        output: 0,
+      },
+    },
+    {
+      contextWindowTokens: 16_384,
+      description:
+        'Yi-1.5-9B-Chat-16K 是 Yi-1.5 系列的一个变体，属于开源聊天模型。Yi-1.5 是 Yi 的升级版本，在 500B 个高质量语料上进行了持续预训练，并在 3M 多样化的微调样本上进行了微调。相比于 Yi，Yi-1.5 在编码、数学、推理和指令遵循能力方面表现更强，同时保持了出色的语言理解、常识推理和阅读理解能力。该模型在同等规模的开源模型中表现最佳',
+      displayName: 'Yi-1.5 9B Chat 16K (Free)',
       id: '01-ai/Yi-1.5-9B-Chat-16K',
       pricing: {
         currency: 'CNY',
         input: 0,
         output: 0,
       },
-      contextWindowTokens: 16_384,
     },
     {
-      description: 'Yi-1.5 34B, 以丰富的训练样本在行业应用中提供优越表现。',
-      displayName: 'Yi-1.5 34B',
+      contextWindowTokens: 16_384,
+      description:
+        'Yi-1.5-34B-Chat-16K 是 Yi-1.5 系列的一个变体，属于开源聊天模型。Yi-1.5 是 Yi 的升级版本，在 500B 个高质量语料上进行了持续预训练，并在 3M 多样化的微调样本上进行了微调。相比于 Yi，Yi-1.5 在编码、数学、推理和指令遵循能力方面表现更强，同时保持了出色的语言理解、常识推理和阅读理解能力。该模型在大多数基准测试中与更大的模型相当或表现更佳，具有 16K 的上下文长度',
+      displayName: 'Yi-1.5 34B Chat 16K',
       id: '01-ai/Yi-1.5-34B-Chat-16K',
       pricing: {
         currency: 'CNY',
         input: 1.26,
         output: 1.26,
       },
-      contextWindowTokens: 16_384,
     },
     {
-      description: 'Gemma 2 是Google轻量化的开源文本模型系列。',
-      displayName: 'Gemma 2 9B',
+      contextWindowTokens: 8192,
+      description:
+        'Gemma 是 Google 开发的轻量级、最先进的开放模型系列之一。它是一个仅解码器的大型语言模型，支持英语，提供开放权重、预训练变体和指令微调变体。Gemma 模型适用于各种文本生成任务，包括问答、摘要和推理。该 9B 模型是通过 8 万亿个 tokens 训练而成。其相对较小的规模使其可以在资源有限的环境中部署，如笔记本电脑、台式机或您自己的云基础设施，从而使更多人能够访问最先进的 AI 模型并促进创新',
+      displayName: 'Gemma 2 9B (Free)',
       enabled: true,
       id: 'google/gemma-2-9b-it',
       pricing: {
@@ -1267,10 +1425,23 @@ const OpenAI: ModelProviderCard = {
         input: 0,
         output: 0,
       },
-      contextWindowTokens: 8192,
     },
     {
-      description: 'Gemma 2 延续了轻量化与高效的设计理念。',
+      contextWindowTokens: 8192,
+      description:
+        'Gemma 是 Google 开发的轻量级、最先进的开放模型系列之一。它是一个仅解码器的大型语言模型，支持英语，提供开放权重、预训练变体和指令微调变体。Gemma 模型适用于各种文本生成任务，包括问答、摘要和推理。该 9B 模型是通过 8 万亿个 tokens 训练而成。其相对较小的规模使其可以在资源有限的环境中部署，如笔记本电脑、台式机或您自己的云基础设施，从而使更多人能够访问最先进的 AI 模型并促进创新',
+      displayName: 'Gemma 2 9B (Pro)',
+      id: 'Pro/google/gemma-2-9b-it',
+      pricing: {
+        currency: 'CNY',
+        input: 0.6,
+        output: 0.6,
+      },
+    },
+    {
+      contextWindowTokens: 8192,
+      description:
+        'Gemma 是由 Google 开发的轻量级、最先进的开放模型系列，采用与 Gemini 模型相同的研究和技术构建。这些模型是仅解码器的大型语言模型，支持英语，提供预训练和指令微调两种变体的开放权重。Gemma 模型适用于各种文本生成任务，包括问答、摘要和推理。其相对较小的规模使其能够部署在资源有限的环境中，如笔记本电脑、台式机或个人云基础设施，从而让所有人都能获得最先进的 AI 模型，促进创新',
       displayName: 'Gemma 2 27B',
       enabled: true,
       id: 'google/gemma-2-27b-it',
@@ -1279,35 +1450,52 @@ const OpenAI: ModelProviderCard = {
         input: 1.26,
         output: 1.26,
       },
-      contextWindowTokens: 8192,
     },
     {
-      description: 'LLaMA 3.1 提供多语言支持，是业界领先的生成模型之一。',
-      displayName: 'Llama 3.1 8B',
+      contextWindowTokens: 32_768,
+      description:
+        'Meta Llama 3.1 是由 Meta 开发的多语言大型语言模型家族，包括 8B、70B 和 405B 三种参数规模的预训练和指令微调变体。该 8B 指令微调模型针对多语言对话场景进行了优化，在多项行业基准测试中表现优异。模型训练使用了超过 15 万亿个 tokens 的公开数据，并采用了监督微调和人类反馈强化学习等技术来提升模型的有用性和安全性。Llama 3.1 支持文本生成和代码生成，知识截止日期为 2023 年 12 月',
+      displayName: 'Llama 3.1 8B Instruct (Free)',
       enabled: true,
+      functionCall: true,
       id: 'meta-llama/Meta-Llama-3.1-8B-Instruct',
       pricing: {
         currency: 'CNY',
         input: 0,
         output: 0,
       },
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'LLaMA 3.1 70B 提供多语言的高效对话支持。',
-      displayName: 'Llama 3.1 70B',
+      contextWindowTokens: 32_768,
+      description:
+        'Meta Llama 3.1 是由 Meta 开发的多语言大型语言模型家族，包括 8B、70B 和 405B 三种参数规模的预训练和指令微调变体。该 8B 指令微调模型针对多语言对话场景进行了优化，在多项行业基准测试中表现优异。模型训练使用了超过 15 万亿个 tokens 的公开数据，并采用了监督微调和人类反馈强化学习等技术来提升模型的有用性和安全性。Llama 3.1 支持文本生成和代码生成，知识截止日期为 2023 年 12 月',
+      displayName: 'Llama 3.1 8B Instruct (Pro)',
+      id: 'Pro/meta-llama/Meta-Llama-3.1-8B-Instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 0.42,
+        output: 0.42,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
+        'Meta Llama 3.1 是由 Meta 开发的多语言大型语言模型家族，包括 8B、70B 和 405B 三种参数规模的预训练和指令微调变体。该 70B 指令微调模型针对多语言对话场景进行了优化，在多项行业基准测试中表现优异。模型训练使用了超过 15 万亿个 tokens 的公开数据，并采用了监督微调和人类反馈强化学习等技术来提升模型的有用性和安全性。Llama 3.1 支持文本生成和代码生成，知识截止日期为 2023 年 12 月',
+      displayName: 'Llama 3.1 70B Instruct',
       enabled: true,
+      functionCall: true,
       id: 'meta-llama/Meta-Llama-3.1-70B-Instruct',
       pricing: {
         currency: 'CNY',
         input: 4.13,
         output: 4.13,
       },
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'LLaMA 3.1 405B 指令微调模型针对多语言对话场景进行了优化。',
-      displayName: 'Llama 3.1 405B',
+      contextWindowTokens: 32_768,
+      description:
+        'Meta Llama 3.1 是由 Meta 开发的多语言大型语言模型家族，包括 8B、70B 和 405B 三种参数规模的预训练和指令微调变体。该 405B 指令微调模型针对多语言对话场景进行了优化，在多项行业基准测试中表现优异。模型训练使用了超过 15 万亿个 tokens 的公开数据，并采用了监督微调和人类反馈强化学习等技术来提升模型的有用性和安全性。Llama 3.1 支持文本生成和代码生成，知识截止日期为 2023 年 12 月',
+      displayName: 'Llama 3.1 405B Instruct',
       enabled: true,
       id: 'meta-llama/Meta-Llama-3.1-405B-Instruct',
       pricing: {
@@ -1315,11 +1503,12 @@ const OpenAI: ModelProviderCard = {
         input: 21,
         output: 21,
       },
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'Llama 3.1 Nemotron 70B 是由 NVIDIA 定制的大型语言模型，旨在提高 LLM 生成的响应对用户查询的帮助程度。',
-      displayName: 'Llama 3.1 Nemotron 70B',
+      contextWindowTokens: 32_768,
+      description:
+        'Llama-3.1-Nemotron-70B-Instruct 是由 NVIDIA 定制的大型语言模型，旨在提高 LLM 生成的响应对用户查询的帮助程度。该模型在 Arena Hard、AlpacaEval 2 LC 和 GPT-4-Turbo MT-Bench 等基准测试中表现出色，截至 2024 年 10 月 1 日，在所有三个自动对齐基准测试中排名第一。该模型使用 RLHF（特别是 REINFORCE）、Llama-3.1-Nemotron-70B-Reward 和 HelpSteer2-Preference 提示在 Llama-3.1-70B-Instruct 模型基础上进行训练',
+      displayName: 'Llama 3.1 Nemotron 70B Instruct',
       enabled: true,
       id: 'nvidia/Llama-3.1-Nemotron-70B-Instruct',
       pricing: {
@@ -1327,259 +1516,308 @@ const OpenAI: ModelProviderCard = {
         input: 4.13,
         output: 4.13,
       },
+    },
+    {
+      contextWindowTokens: 8192,
+      description:
+        'TeleChat2大模型是由中国电信从0到1自主研发的生成式语义大模型，支持百科问答、代码生成、长文生成等功能，为用户提供对话咨询服务，能够与用户进行对话互动，回答问题，协助创作，高效便捷地帮助用户获取信息、知识和灵感。模型在幻觉问题、长文生成、逻辑理解等方面均有较出色表现。',
+      displayName: 'TeleChat2',
+      id: 'TeleAI/TeleChat2',
+      pricing: {
+        currency: 'CNY',
+        input: 1.33,
+        output: 1.33,
+      },
+    },
+    {
       contextWindowTokens: 32_768,
+      description:
+        'TeleMM多模态大模型是由中国电信自主研发的多模态理解大模型，能够处理文本、图像等多种模态输入，支持图像理解、图表分析等功能，为用户提供跨模态的理解服务。模型能够与用户进行多模态交互，准确理解输入内容，回答问题、协助创作，并高效提供多模态信息和灵感支持。在细粒度感知，逻辑推理等多模态任务上有出色表现',
+      displayName: 'TeleMM',
+      id: 'TeleAI/TeleMM',
+      pricing: {
+        currency: 'CNY',
+        input: 1.33,
+        output: 1.33,
+      },
+      vision: true,
     },
     // together ai
     {
-      description: 'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
+      contextWindowTokens: 131_072,
+      description:
+        'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
       displayName: 'Llama 3.2 3B Instruct Turbo',
       enabled: true,
       id: 'meta-llama/Llama-3.2-3B-Instruct-Turbo',
-      contextWindowTokens: 131_072,
     },
     {
-      description: 'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
+      contextWindowTokens: 131_072,
+      description:
+        'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
       displayName: 'Llama 3.2 11B Vision Instruct Turbo (Free)',
       enabled: true,
       id: 'meta-llama/Llama-Vision-Free',
-      contextWindowTokens: 131_072,
       vision: true,
     },
     {
-      description: 'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
+      contextWindowTokens: 131_072,
+      description:
+        'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
       displayName: 'Llama 3.2 11B Vision Instruct Turbo',
       id: 'meta-llama/Llama-3.2-11B-Vision-Instruct-Turbo',
-      contextWindowTokens: 131_072,
       vision: true,
     },
     {
-      description: 'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
+      contextWindowTokens: 131_072,
+      description:
+        'LLaMA 3.2 旨在处理结合视觉和文本数据的任务。它在图像描述和视觉问答等任务中表现出色，跨越了语言生成和视觉推理之间的鸿沟。',
       displayName: 'Llama 3.2 90B Vision Instruct Turbo',
       enabled: true,
       id: 'meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo',
-      contextWindowTokens: 131_072,
       vision: true,
     },
     {
+      contextWindowTokens: 131_072,
       description:
         'Llama 3.1 8B 模型采用FP8量化，支持高达131,072个上下文标记，是开源模型中的佼佼者，适合复杂任务，表现优异于许多行业基准。',
       displayName: 'Llama 3.1 8B Instruct Turbo',
       enabled: true,
       functionCall: true,
       id: 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo',
-      contextWindowTokens: 131_072,
     },
     {
+      contextWindowTokens: 131_072,
       description:
         'Llama 3.1 70B 模型经过精细调整，适用于高负载应用，量化至FP8提供更高效的计算能力和准确性，确保在复杂场景中的卓越表现。',
       displayName: 'Llama 3.1 70B Instruct Turbo',
       enabled: true,
       functionCall: true,
       id: 'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo',
-      contextWindowTokens: 131_072,
     },
     {
+      contextWindowTokens: 130_815,
       description:
         '405B 的 Llama 3.1 Turbo 模型，为大数据处理提供超大容量的上下文支持，在超大规模的人工智能应用中表现突出。',
       displayName: 'Llama 3.1 405B Instruct Turbo',
       enabled: true,
       functionCall: true,
       id: 'meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo',
-      contextWindowTokens: 130_815,
     },
     {
+      contextWindowTokens: 32_768,
+      description:
+        'Llama 3.1 Nemotron 70B 是由 NVIDIA 定制的大型语言模型，旨在提高 LLM 生成的响应对用户查询的帮助程度。该模型在 Arena Hard、AlpacaEval 2 LC 和 GPT-4-Turbo MT-Bench 等基准测试中表现出色，截至 2024 年 10 月 1 日，在所有三个自动对齐基准测试中排名第一。该模型使用 RLHF（特别是 REINFORCE）、Llama-3.1-Nemotron-70B-Reward 和 HelpSteer2-Preference 提示在 Llama-3.1-70B-Instruct 模型基础上进行训练',
+      displayName: 'Llama 3.1 Nemotron 70B',
+      enabled: true,
+      id: 'nvidia/Llama-3.1-Nemotron-70B-Instruct-HF',
+    },
+    {
+      contextWindowTokens: 8192,
       description: 'Llama 3 8B Instruct Turbo 是一款高效能的大语言模型，支持广泛的应用场景。',
       displayName: 'Llama 3 8B Instruct Turbo',
       id: 'meta-llama/Meta-Llama-3-8B-Instruct-Turbo',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 8192,
       description:
         'Llama 3 70B Instruct Turbo 提供卓越的语言理解和生成能力，适合最苛刻的计算任务。',
       displayName: 'Llama 3 70B Instruct Turbo',
       id: 'meta-llama/Meta-Llama-3-70B-Instruct-Turbo',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 8192,
       description: 'Llama 3 8B Instruct Lite 适合资源受限的环境，提供出色的平衡性能。',
       displayName: 'Llama 3 8B Instruct Lite',
       id: 'meta-llama/Meta-Llama-3-8B-Instruct-Lite',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 8192,
       description: 'Llama 3 70B Instruct Lite 适合需要高效能和低延迟的环境。',
       displayName: 'Llama 3 70B Instruct Lite',
       id: 'meta-llama/Meta-Llama-3-70B-Instruct-Lite',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 8192,
       description: 'Llama 3 8B Instruct Reference 提供多语言支持，涵盖丰富的领域知识。',
       displayName: 'Llama 3 8B Instruct Reference',
       id: 'meta-llama/Llama-3-8b-chat-hf',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 8192,
       description: 'Llama 3 70B Instruct Reference 是功能强大的聊天模型，支持复杂的对话需求。',
       displayName: 'Llama 3 70B Instruct Reference',
       id: 'meta-llama/Llama-3-70b-chat-hf',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 4096,
       description: 'LLaMA-2 Chat (13B) 提供优秀的语言处理能力和出色的交互体验。',
       displayName: 'LLaMA-2 Chat (13B)',
       id: 'meta-llama/Llama-2-13b-chat-hf',
-      contextWindowTokens: 4096,
     },
     {
+      contextWindowTokens: 4096,
       description: 'LLaMA-2 提供优秀的语言处理能力和出色的交互体验。',
       displayName: 'LLaMA-2 (70B)',
       id: 'meta-llama/Llama-2-70b-hf',
-      contextWindowTokens: 4096,
     },
     {
+      contextWindowTokens: 16_384,
+      description:
+        'Code Llama 是一款专注于代码生成和讨论的 LLM，结合广泛的编程语言支持，适用于开发者环境。',
+      displayName: 'CodeLlama 34B Instruct',
+      id: 'codellama/CodeLlama-34b-Instruct-hf',
+    },
+    {
+      contextWindowTokens: 8192,
       description: 'Gemma 2 9B 由Google开发，提供高效的指令响应和综合能力。',
       displayName: 'Gemma 2 9B',
       enabled: true,
       id: 'google/gemma-2-9b-it',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 8192,
       description: 'Gemma 2 27B 是一款通用大语言模型，具有优异的性能和广泛的应用场景。',
       displayName: 'Gemma 2 27B',
       enabled: true,
       id: 'google/gemma-2-27b-it',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 8192,
       description: 'Gemma Instruct (2B) 提供基本的指令处理能力，适合轻量级应用。',
       displayName: 'Gemma Instruct (2B)',
       id: 'google/gemma-2b-it',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 32_768,
       description: 'Mistral (7B) Instruct v0.3 提供高效的计算能力和自然语言理解，适合广泛的应用。',
       displayName: 'Mistral (7B) Instruct v0.3',
       enabled: true,
       id: 'mistralai/Mistral-7B-Instruct-v0.3',
-      contextWindowTokens: 32_768,
     },
     {
+      contextWindowTokens: 32_768,
       description: 'Mistral (7B) Instruct v0.2 提供改进的指令处理能力和更精确的结果。',
       displayName: 'Mistral (7B) Instruct v0.2',
       id: 'mistralai/Mistral-7B-Instruct-v0.2',
-      contextWindowTokens: 32_768,
     },
     {
+      contextWindowTokens: 8192,
       description: 'Mistral (7B) Instruct 以高性能著称，适用于多种语言任务。',
       displayName: 'Mistral (7B) Instruct',
       functionCall: true,
       id: 'mistralai/Mistral-7B-Instruct-v0.1',
-      contextWindowTokens: 8192,
     },
     {
-      description: 'Mistral 7B是一款紧凑但高性能的模型，擅长批量处理和简单任务，如分类和文本生成，具有良好的推理能力。',
+      contextWindowTokens: 8192,
+      description:
+        'Mistral 7B是一款紧凑但高性能的模型，擅长批量处理和简单任务，如分类和文本生成，具有良好的推理能力。',
       displayName: 'Mistral (7B)',
       id: 'mistralai/Mistral-7B-v0.1',
-      contextWindowTokens: 8192,
     },
     {
+      contextWindowTokens: 32_768,
       description: 'Mixtral-8x7B Instruct (46.7B) 提供高容量的计算框架，适合大规模数据处理。',
       displayName: 'Mixtral-8x7B Instruct (46.7B)',
       enabled: true,
       functionCall: true,
       id: 'mistralai/Mixtral-8x7B-Instruct-v0.1',
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'Mixtral 8x7B是一个稀疏专家模型，利用多个参数提高推理速度，适合处理多语言和代码生成任务。',
+      contextWindowTokens: 32_768,
+      description:
+        'Mixtral 8x7B是一个稀疏专家模型，利用多个参数提高推理速度，适合处理多语言和代码生成任务。',
       displayName: 'Mixtral-8x7B (46.7B)',
       id: 'mistralai/Mixtral-8x7B-v0.1',
-      contextWindowTokens: 32_768,
     },
     {
+      contextWindowTokens: 65_536,
       description: 'Mixtral-8x22B Instruct (141B) 是一款超级大语言模型，支持极高的处理需求。',
       displayName: 'Mixtral-8x22B Instruct (141B)',
       enabled: true,
       id: 'mistralai/Mixtral-8x22B-Instruct-v0.1',
-      contextWindowTokens: 65_536,
     },
     {
+      contextWindowTokens: 65_536,
+      description:
+        'WizardLM 2 是微软AI提供的语言模型，在复杂对话、多语言、推理和智能助手领域表现尤为出色。',
+      displayName: 'WizardLM-2 8x22B',
+      id: 'microsoft/WizardLM-2-8x22B',
+    },
+    {
+      contextWindowTokens: 4096,
       description: 'DeepSeek LLM Chat (67B) 是创新的 AI 模型 提供深度语言理解和互动能力。',
       displayName: 'DeepSeek LLM Chat (67B)',
       enabled: true,
       id: 'deepseek-ai/deepseek-llm-67b-chat',
-      contextWindowTokens: 4096,
     },
     {
+      contextWindowTokens: 32_768,
+      description: 'QwQ模型是由 Qwen 团队开发的实验性研究模型，专注于增强 AI 推理能力。',
+      displayName: 'QwQ 32B Preview',
+      enabled: true,
+      id: 'Qwen/QwQ-32B-Preview',
+    },
+    {
+      contextWindowTokens: 32_768,
       description: 'Qwen2.5 是全新的大型语言模型系列，旨在优化指令式任务的处理。',
       displayName: 'Qwen 2.5 7B Instruct Turbo',
       enabled: true,
       id: 'Qwen/Qwen2.5-7B-Instruct-Turbo',
-      contextWindowTokens: 32_768,
     },
     {
+      contextWindowTokens: 32_768,
       description: 'Qwen2.5 是全新的大型语言模型系列，旨在优化指令式任务的处理。',
       displayName: 'Qwen 2.5 72B Instruct Turbo',
       enabled: true,
       id: 'Qwen/Qwen2.5-72B-Instruct-Turbo',
-      contextWindowTokens: 32_768,
     },
     {
+      contextWindowTokens: 32_768,
+      description:
+        'Qwen2.5 Coder 32B Instruct 是阿里云发布的代码特定大语言模型系列的最新版本。该模型在 Qwen2.5 的基础上，通过 5.5 万亿个 tokens 的训练，显著提升了代码生成、推理和修复能力。它不仅增强了编码能力，还保持了数学和通用能力的优势。模型为代码智能体等实际应用提供了更全面的基础',
+      displayName: 'Qwen 2.5 Coder 32B Instruct',
+      id: 'Qwen/Qwen2.5-Coder-32B-Instruct',
+    },
+    {
+      contextWindowTokens: 32_768,
       description: 'Qwen 2 Instruct (72B) 为企业级应用提供精准的指令理解和响应。',
       displayName: 'Qwen 2 Instruct (72B)',
       id: 'Qwen/Qwen2-72B-Instruct',
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'Qwen 1.5 Chat (72B) 提供快速响应和自然对话能力，适合多语言环境。',
-      displayName: 'Qwen 1.5 Chat (72B)',
-      id: 'Qwen/Qwen1.5-72B-Chat',
       contextWindowTokens: 32_768,
-    },
-    {
-      description: 'Qwen 1.5 Chat (110B) 是一款高效能的对话模型，支持复杂对话场景。',
-      displayName: 'Qwen 1.5 Chat (110B)',
-      id: 'Qwen/Qwen1.5-110B-Chat',
-      contextWindowTokens: 32_768,
-    },
-    {
       description: 'DBRX Instruct 提供高可靠性的指令处理能力，支持多行业应用。',
       displayName: 'DBRX Instruct',
       id: 'databricks/dbrx-instruct',
-      contextWindowTokens: 32_768,
     },
     {
+      contextWindowTokens: 4096,
       description: 'Upstage SOLAR Instruct v1 (11B) 适用于精细化指令任务，提供出色的语言处理能力。',
       displayName: 'Upstage SOLAR Instruct v1 (11B)',
       id: 'upstage/SOLAR-10.7B-Instruct-v1.0',
-      contextWindowTokens: 4096,
     },
     {
+      contextWindowTokens: 32_768,
       description: 'Nous Hermes 2 - Mixtral 8x7B-DPO (46.7B) 是高精度的指令模型，适用于复杂计算。',
       displayName: 'Nous Hermes 2 - Mixtral 8x7B-DPO (46.7B)',
       id: 'NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO',
-      contextWindowTokens: 32_768,
     },
     {
-      description: 'Nous Hermes-2 Yi (34B) 提供优化的语言输出和多样化的应用可能。',
-      displayName: 'Nous Hermes-2 Yi (34B)',
-      id: 'NousResearch/Nous-Hermes-2-Yi-34B',
       contextWindowTokens: 4096,
-    },
-    {
       description: 'MythoMax-L2 (13B) 是一种创新模型，适合多领域应用和复杂任务。',
       displayName: 'MythoMax-L2 (13B)',
       id: 'Gryphe/MythoMax-L2-13b',
-      contextWindowTokens: 4096,
     },
     {
+      contextWindowTokens: 32_768,
       description: 'StripedHyena Nous (7B) 通过高效的策略和模型架构，提供增强的计算能力。',
       displayName: 'StripedHyena Nous (7B)',
       id: 'togethercomputer/StripedHyena-Nous-7B',
-      contextWindowTokens: 32_768,
     },
     // grok
     {
+      contextWindowTokens: 131_072,
       description: '拥有与 Grok 2 相当的性能，但具有更高的效率、速度和功能。',
       displayName: 'Grok Beta',
       enabled: true,
@@ -1589,9 +1827,9 @@ const OpenAI: ModelProviderCard = {
         input: 5,
         output: 15,
       },
-      contextWindowTokens: 131_072,
     },
     {
+      contextWindowTokens: 8192,
       description: '最新的图像理解模型，可以处理各种各样的视觉信息，包括文档、图表、截图和照片等。',
       displayName: 'Grok Vision Beta',
       enabled: true,
@@ -1601,10 +1839,10 @@ const OpenAI: ModelProviderCard = {
         input: 5,
         output: 15,
       },
-      contextWindowTokens: 8192,
       vision: true,
     },
     {
+      contextWindowTokens: 131_072,
       description: '该模型在准确性、指令遵循和多语言能力方面有所改进。',
       displayName: 'Grok 2 1212',
       enabled: true,
@@ -1615,9 +1853,9 @@ const OpenAI: ModelProviderCard = {
         output: 10,
       },
       releasedAt: '2024-12-12',
-      contextWindowTokens: 131_072,
     },
     {
+      contextWindowTokens: 32_768,
       description: '该模型在准确性、指令遵循和多语言能力方面有所改进。',
       displayName: 'Grok 2 Vision 1212',
       enabled: true,
@@ -1628,7 +1866,6 @@ const OpenAI: ModelProviderCard = {
         output: 10,
       },
       releasedAt: '2024-12-12',
-      contextWindowTokens: 32_768,
       vision: true,
     },
   ],
