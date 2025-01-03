@@ -1905,6 +1905,9 @@ const OpenAI: ModelProviderCard = {
   modelList: { showModelFetcher: true },
   modelsUrl: 'https://platform.openai.com/docs/models',
   name: 'OpenAI',
+  settings: {
+    showModelFetcher: true,
+  },
   url: 'https://openai.com',
 };
 
