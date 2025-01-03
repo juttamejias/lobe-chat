@@ -1027,6 +1027,19 @@ const OpenAI: ModelProviderCard = {
     {
       contextWindowTokens: 32_768,
       description:
+        'Marco-o1 是一个开放推理模型，由阿里巴巴国际数字商务 MarcoPolo 团队开发。',
+      displayName: 'Marco-o1',
+      enabled: true,
+      id: 'AIDC-AI/Marco-o1',
+      pricing: {
+        currency: 'CNY',
+        input: 0.26,
+        output: 0.26,
+      },
+    },
+    {
+      contextWindowTokens: 32_768,
+      description:
         'Qwen2.5-7B-Instruct 是阿里云发布的最新大语言模型系列之一。该 7B 模型在编码和数学等领域具有显著改进的能力。该模型还提供了多语言支持，覆盖超过 29 种语言，包括中文、英文等。模型在指令跟随、理解结构化数据以及生成结构化输出（尤其是 JSON）方面都有显著提升',
       displayName: 'Qwen2.5 7B Instruct (Free)',
       enabled: true,
