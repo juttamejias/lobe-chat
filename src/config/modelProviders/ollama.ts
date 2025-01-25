@@ -315,7 +315,7 @@ const Ollama: ModelProviderCard = {
   modelsUrl: 'https://ollama.com/library',
   name: 'Ollama',
   settings: {
-    disableBrowserRequest: true,
+    defaultShowBrowserRequest: true,
     sdkType: 'ollama',
     showApiKey: false,
     showModelFetcher: true,
