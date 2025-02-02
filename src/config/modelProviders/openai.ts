@@ -1004,16 +1004,30 @@ const OpenAI: ModelProviderCard = {
     },
     // 硅基流动
     {
-      contextWindowTokens: 32_768,
+      contextWindowTokens: 65_536,
       description:
-        'Hunyuan-Large 是业界最大的开源 Transformer 架构 MoE 模型，拥有 3890 亿总参数量和 520 亿激活参数量。',
-      displayName: 'Hunyuan A52B Instruct',
+        'DeepSeek-R1 是一款强化学习（RL）驱动的推理模型，解决了模型中的重复性和可读性问题。在 RL 之前，DeepSeek-R1 引入了冷启动数据，进一步优化了推理性能。它在数学、代码和推理任务中与 OpenAI-o1 表现相当，并且通过精心设计的训练方法，提升了整体效果。',
+      displayName: 'DeepSeek R1-SL',
       enabled: true,
-      id: 'Tencent/Hunyuan-A52B-Instruct',
+      id: 'deepseek-ai/DeepSeek-R1',
       pricing: {
         currency: 'CNY',
-        input: 21,
-        output: 21,
+        input: 4,
+        output: 16,
+      },
+    },
+    {
+      contextWindowTokens: 65_536,
+      description:
+        'DeepSeek-V3 是一款拥有 6710 亿参数的混合专家（MoE）语言模型，采用多头潜在注意力（MLA）和 DeepSeekMoE 架构，结合无辅助损失的负载平衡策略，优化推理和训练效率。通过在 14.8 万亿高质量tokens上预训练，并进行监督微调和强化学习，DeepSeek-V3 在性能上超越其他开源模型，接近领先闭源模型。',
+      displayName: 'DeepSeek V3',
+      enabled: true,
+      functionCall: true,
+      id: 'deepseek-ai/DeepSeek-V3',
+      pricing: { // 2.9 涨价
+        currency: 'CNY',
+        input: 1,
+        output: 2,
       },
     },
     {
@@ -1026,21 +1040,36 @@ const OpenAI: ModelProviderCard = {
       id: 'deepseek-ai/DeepSeek-V2.5',
       pricing: {
         currency: 'CNY',
-        input: 1.33,
-        output: 1.33,
+        input: 5,
+        output: 5,
       },
+    },
+    {
+      contextWindowTokens: 4096,
+      description:
+        'DeepSeek-VL2 是一个基于 DeepSeekMoE-27B 开发的混合专家（MoE）视觉语言模型，采用稀疏激活的 MoE 架构，在仅激活 4.5B 参数的情况下实现了卓越性能。该模型在视觉问答、光学字符识别、文档/表格/图表理解和视觉定位等多个任务中表现优异。',
+      displayName: 'DeepSeek VL2',
+      id: 'deepseek-ai/deepseek-vl2',
+      pricing: {
+        currency: 'CNY',
+        input: 0.99,
+        output: 0.99,
+      },
+      vision: true,
     },
     {
       contextWindowTokens: 32_768,
       description:
-        'DeepSeek-V2 是一个强大、经济高效的混合专家（MoE）语言模型。它在 8.1 万亿个 token 的高质量语料库上进行了预训练，并通过监督微调（SFT）和强化学习（RL）进一步提升了模型能力。与 DeepSeek 67B 相比， DeepSeek-V2 在性能更强的同时，节省了 42.5% 的训练成本，减少了 93.3% 的 KV 缓存，并将最大生成吞吐量提高到了 5.76 倍。该模型支持 128k 的上下文长度，在标准基准测试和开放式生成评估中都表现出色',
-      displayName: 'DeepSeek V2 Chat',
-      id: 'deepseek-ai/DeepSeek-V2-Chat',
+        'QVQ-72B-Preview 是由 Qwen 团队开发的专注于视觉推理能力的研究型模型，其在复杂场景理解和解决视觉相关的数学问题方面具有独特优势。',
+      displayName: 'QVQ 72B Preview',
+      enabled: true,
+      id: 'Qwen/QVQ-72B-Preview',
       pricing: {
         currency: 'CNY',
-        input: 1.33,
-        output: 1.33,
+        input: 9.9,
+        output: 9.9,
       },
+      vision: true,
     },
     {
       contextWindowTokens: 32_768,
@@ -1053,19 +1082,6 @@ const OpenAI: ModelProviderCard = {
         currency: 'CNY',
         input: 1.26,
         output: 1.26,
-      },
-    },
-    {
-      contextWindowTokens: 32_768,
-      description:
-        'Marco-o1 是一个开放推理模型，由阿里巴巴国际数字商务 MarcoPolo 团队开发。',
-      displayName: 'Marco-o1',
-      enabled: true,
-      id: 'AIDC-AI/Marco-o1',
-      pricing: {
-        currency: 'CNY',
-        input: 0.26,
-        output: 0.26,
       },
     },
     {
@@ -1222,18 +1238,6 @@ const OpenAI: ModelProviderCard = {
       },
     },
     {
-      contextWindowTokens: 4096,
-      description:
-        'Qwen2.5-Math-72B 是阿里云发布的 Qwen2.5-Math 系列数学大语言模型之一。该模型支持使用思维链（CoT）和工具集成推理（TIR）方法解决中文和英文数学问题。相比前代 Qwen2-Math 系列，Qwen2.5-Math 系列在中英文数学基准测试中取得了显著的性能提升。该模型在处理精确计算、符号操作和算法操作方面表现出色，尤其适合解决复杂的数学和算法推理任务',
-      displayName: 'Qwen2.5 Math 72B Instruct',
-      id: 'Qwen/Qwen2.5-Math-72B-Instruct',
-      pricing: {
-        currency: 'CNY',
-        input: 4.13,
-        output: 4.13,
-      },
-    },
-    {
       contextWindowTokens: 32_768,
       description:
         'Qwen2-1.5B-Instruct 是 Qwen2 系列中的指令微调大语言模型，参数规模为 1.5B。该模型基于 Transformer 架构，采用了 SwiGLU 激活函数、注意力 QKV 偏置和组查询注意力等技术。它在语言理解、生成、多语言能力、编码、数学和推理等多个基准测试中表现出色，超越了大多数开源模型。与 Qwen1.5-1.8B-Chat 相比，Qwen2-1.5B-Instruct 在 MMLU、HumanEval、GSM8K、C-Eval 和 IFEval 等测试中均显示出显著的性能提升，尽管参数量略少',
@@ -1291,18 +1295,6 @@ const OpenAI: ModelProviderCard = {
         currency: 'CNY',
         input: 4.13,
         output: 4.13,
-      },
-    },
-    {
-      contextWindowTokens: 32_768,
-      description:
-        'Qwen2-72B-Instruct 是 Qwen2 系列中的指令微调大语言模型，参数规模为 72B。该模型基于 Transformer 架构，采用了 SwiGLU 激活函数、注意力 QKV 偏置和组查询注意力等技术。它能够处理大规模输入。该模型在语言理解、生成、多语言能力、编码、数学和推理等多个基准测试中表现出色，超越了大多数开源模型，并在某些任务上展现出与专有模型相当的竞争力',
-      displayName: 'Qwen2 72B Instruct (Vendor-A)',
-      id: 'Vendor-A/Qwen/Qwen2-7B-Instruct',
-      pricing: {
-        currency: 'CNY',
-        input: 1,
-        output: 1,
       },
     },
     {
@@ -1382,19 +1374,6 @@ const OpenAI: ModelProviderCard = {
         currency: 'CNY',
         input: 1,
         output: 1,
-      },
-      vision: true,
-    },
-    {
-      contextWindowTokens: 8192,
-      description:
-        'InternVL2-Llama3-76B 是 InternVL 2.0 系列中的大规模多模态模型。它由 InternViT-6B-448px-V1-5 视觉模型、MLP 投影层和 Hermes-2-Theta-Llama-3-70B 语言模型组成。该模型在各种视觉语言任务上表现出色，包括文档和图表理解、信息图表问答、场景文本理解和 OCR 任务等。InternVL2-Llama3-76B 使用 8K 上下文窗口训练，能够处理长文本、多图像和视频输入，显著提升了模型在这些任务上的处理能力，在多项基准测试中达到或接近最先进的商业模型水平',
-      displayName: 'InternVL2 Llama3 76B',
-      id: 'OpenGVLab/InternVL2-Llama3-76B',
-      pricing: {
-        currency: 'CNY',
-        input: 4.13,
-        output: 4.13,
       },
       vision: true,
     },
@@ -1566,10 +1545,11 @@ const OpenAI: ModelProviderCard = {
     {
       contextWindowTokens: 32_768,
       description:
-        'Llama-3.1-Nemotron-70B-Instruct 是由 NVIDIA 定制的大型语言模型，旨在提高 LLM 生成的响应对用户查询的帮助程度。该模型在 Arena Hard、AlpacaEval 2 LC 和 GPT-4-Turbo MT-Bench 等基准测试中表现出色，截至 2024 年 10 月 1 日，在所有三个自动对齐基准测试中排名第一。该模型使用 RLHF（特别是 REINFORCE）、Llama-3.1-Nemotron-70B-Reward 和 HelpSteer2-Preference 提示在 Llama-3.1-70B-Instruct 模型基础上进行训练',
-      displayName: 'Llama 3.1 Nemotron 70B Instruct',
+        'Llama 3.3 是 Llama 系列最先进的多语言开源大型语言模型，以极低成本体验媲美 405B 模型的性能。基于 Transformer 结构，并通过监督微调（SFT）和人类反馈强化学习（RLHF）提升有用性和安全性。其指令调优版本专为多语言对话优化，在多项行业基准上表现优于众多开源和封闭聊天模型。知识截止日期为 2023 年 12 月',
+      displayName: 'Llama 3.3 70B Instruct',
       enabled: true,
-      id: 'nvidia/Llama-3.1-Nemotron-70B-Instruct',
+      functionCall: true,
+      id: 'meta-llama/Llama-3.3-70B-Instruct',
       pricing: {
         currency: 'CNY',
         input: 4.13,
@@ -1926,6 +1906,20 @@ const OpenAI: ModelProviderCard = {
       },
       releasedAt: '2024-12-12',
       vision: true,
+    },
+    // nvidia
+    {
+      contextWindowTokens: 65_536,
+      description:
+        'DeepSeek-R1 是一款强化学习（RL）驱动的推理模型，解决了模型中的重复性和可读性问题。在 RL 之前，DeepSeek-R1 引入了冷启动数据，进一步优化了推理性能。它在数学、代码和推理任务中与 OpenAI-o1 表现相当，并且通过精心设计的训练方法，提升了整体效果。',
+      displayName: 'DeepSeek R1-NV',
+      enabled: true,
+      id: 'deepseek-ai/deepseek-r1',
+      pricing: {
+        currency: 'CNY',
+        input: 4,
+        output: 16,
+      },
     },
   ],
   checkModel: 'gpt-4o-mini',
