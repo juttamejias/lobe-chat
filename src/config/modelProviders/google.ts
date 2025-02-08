@@ -42,9 +42,9 @@ const Google: ModelProviderCard = {
       description:
         'Gemini 2.0 Flash 提供下一代功能和改进，包括卓越的速度、原生工具使用、多模态生成和1M令牌上下文窗口。',
       displayName: 'Gemini 2.0 Flash 001',
-      id: 'gemini-2.0-flash-001',
       enabled: true,
       functionCall: true,
+      id: 'gemini-2.0-flash-001',
       maxOutput: 8192,
       pricing: {
         cachedInput: 0.025,
@@ -92,6 +92,7 @@ const Google: ModelProviderCard = {
       description:
         'Gemini 2.0 Flash Exp 是 Google 最新的实验性多模态AI模型，拥有下一代特性，卓越的速度，原生工具调用以及多模态生成。',
       displayName: 'Gemini 2.0 Flash Thinking Experimental 1219',
+      enabled: true,
       functionCall: true,
       id: 'gemini-2.0-flash-thinking-exp-1219',
       maxOutput: 8192,
