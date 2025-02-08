@@ -758,6 +758,73 @@ const OpenAI: ModelProviderCard = {
     },
     //gemini
     {
+      contextWindowTokens: 2_097_152 + 8192,
+      description:
+        'Gemini 2.0 Pro Experimental 是 Google 最新的实验性多模态AI模型，与历史版本相比有一定的质量提升，特别是对于世界知识、代码和长上下文。',
+      displayName: 'Gemini 2.0 Pro Experimental 02-05',
+      enabled: true,
+      functionCall: true,
+      id: 'gemini-2.0-pro-exp-02-05',
+      maxOutput: 8192,
+      pricing: {
+        cachedInput: 0,
+        input: 0,
+        output: 0,
+      },
+      releasedAt: '2025-02-05',
+      vision: true,
+    },
+    {
+      contextWindowTokens: 1_048_576 + 8192,
+      description:
+        'Gemini 2.0 Flash 提供下一代功能和改进，包括卓越的速度、原生工具使用、多模态生成和1M令牌上下文窗口。',
+      displayName: 'Gemini 2.0 Flash',
+      enabled: true,
+      functionCall: true,
+      id: 'gemini-2.0-flash',
+      maxOutput: 8192,
+      pricing: {
+        cachedInput: 0.025,
+        input: 0.1,
+        output: 0.4,
+      },
+      releasedAt: '2025-02-05',
+      vision: true,
+    },
+    {
+      contextWindowTokens: 1_048_576 + 8192,
+      description:
+        'Gemini 2.0 Flash 提供下一代功能和改进，包括卓越的速度、原生工具使用、多模态生成和1M令牌上下文窗口。',
+      displayName: 'Gemini 2.0 Flash 001',
+      id: 'gemini-2.0-flash-001',
+      enabled: true,
+      functionCall: true,
+      maxOutput: 8192,
+      pricing: {
+        cachedInput: 0.025,
+        input: 0.1,
+        output: 0.4,
+      },
+      releasedAt: '2025-02-05',
+      vision: true,
+    },
+    {
+      contextWindowTokens: 1_048_576 + 8192,
+      description:
+        '一个 Gemini 2.0 Flash 模型，针对成本效益和低延迟等目标进行了优化。',
+      displayName: 'Gemini 2.0 Flash-Lite Preview 02-05',
+      enabled: true,
+      id: 'gemini-2.0-flash-lite-preview-02-05',
+      maxOutput: 8192,
+      pricing: {
+        cachedInput: 0.018_75,
+        input: 0.075,
+        output: 0.3,
+      },
+      releasedAt: '2025-02-05',
+      vision: true,
+    },
+    {
       contextWindowTokens: 1_048_576 + 65_536,
       description:
         'Gemini 2.0 Flash Exp 是 Google 最新的实验性多模态AI模型，拥有下一代特性，卓越的速度，原生工具调用以及多模态生成。',
