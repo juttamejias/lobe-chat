@@ -63,7 +63,7 @@ jobs:
             # PR 构建使用特殊的 tag
             type=raw,value=${{ env.PR_TAG_PREFIX }}${{ steps.pr_meta.outputs.pr_tag }},enable=${{ github.event_name == 'pull_request' }}
             # release 构建使用版本号
-            type=semver,pattern={{version}},enable=${{ github.event_name != 'pull_request' }}
+            type=raw,pattern={{version}},enable=${{ github.event_name != 'pull_request' }}
             type=raw,value=latest,enable=${{ github.event_name != 'pull_request' }}
 
       - name: Docker login
@@ -141,7 +141,7 @@ jobs:
           images: ${{ env.REGISTRY_IMAGE }}
           tags: |
             type=raw,value=${{ env.PR_TAG_PREFIX }}${{ steps.pr_meta.outputs.pr_tag }},enable=${{ github.event_name == 'pull_request' }}
-            type=semver,pattern={{version}},enable=${{ github.event_name != 'pull_request' }}
+            type=raw,pattern={{version}},enable=${{ github.event_name != 'pull_request' }}
             type=raw,value=latest,enable=${{ github.event_name != 'pull_request' }}
 
       - name: Docker login
