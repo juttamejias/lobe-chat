@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 
 import { AssistantStore } from './index';
 
-const baseURL = 'https://registry.npmmirror.com/@lobehub/agents-index/v1/files/public';
+const baseURL = 'https://mirrors.cloud.tencent.com/npm/@lobehub/agents-index/v1/files/public';
 describe('AssistantStore', () => {
   it('should return the default index URL when no language is provided', () => {
     const agentMarket = new AssistantStore();
@@ -14,14 +14,14 @@ describe('AssistantStore', () => {
   it('should return the index URL for a not supported language', () => {
     const agentMarket = new AssistantStore();
     const url = agentMarket['getAgentIndexUrl']('xxx' as any);
-    expect(url).toBe('https://registry.npmmirror.com/@lobehub/agents-index/v1/files/public');
+    expect(url).toBe('https://mirrors.cloud.tencent.com/npm/@lobehub/agents-index/v1/files/public');
   });
 
   it('should return the zh-CN URL for zh locale', () => {
     const agentMarket = new AssistantStore();
     const url = agentMarket['getAgentIndexUrl']('zh' as any);
     expect(url).toBe(
-      'https://registry.npmmirror.com/@lobehub/agents-index/v1/files/public/index.zh-CN.json',
+      'https://mirrors.cloud.tencent.com/npm/@lobehub/agents-index/v1/files/public/index.zh-CN.json',
     );
   });
 
@@ -29,7 +29,7 @@ describe('AssistantStore', () => {
     const agentMarket = new AssistantStore();
     const url = agentMarket['getAgentIndexUrl']('en' as any);
     expect(url).toBe(
-      'https://registry.npmmirror.com/@lobehub/agents-index/v1/files/public/index.en-US.json',
+      'https://mirrors.cloud.tencent.com/npm/@lobehub/agents-index/v1/files/public/index.en-US.json',
     );
   });
 
