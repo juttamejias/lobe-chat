@@ -25,7 +25,7 @@ describe('getServerConfig', () => {
     it('should return default URLs when no environment variables are set', () => {
       const config = getAppConfig();
       expect(config.AGENTS_INDEX_URL).toBe(
-        'https://mirrors.cloud.tencent.com/npm/@lobehub/agents-index/v1/files/public',
+        'https://registry.npmmirror.com/@lobehub/agents-index/v1/files/public',
       );
       expect(config.PLUGINS_INDEX_URL).toBe('https://chat-plugins.lobehub.com');
     });
@@ -44,7 +44,7 @@ describe('getServerConfig', () => {
 
       const config = getAppConfig();
       expect(config.AGENTS_INDEX_URL).toBe(
-        'https://mirrors.cloud.tencent.com/npm/@lobehub/agents-index/v1/files/public',
+        'https://registry.npmmirror.com/@lobehub/agents-index/v1/files/public',
       );
       expect(config.PLUGINS_INDEX_URL).toBe('https://chat-plugins.lobehub.com');
     });

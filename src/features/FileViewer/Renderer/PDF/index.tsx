@@ -14,7 +14,7 @@ import { useStyles } from './style';
 import useResizeObserver from './useResizeObserver';
 
 // 如果海外的地址： https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs
-pdfjs.GlobalWorkerOptions.workerSrc = `https://mirrors.cloud.tencent.com/npm/pdfjs-dist/${pdfjs.version}/files/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://registry.npmmirror.com/pdfjs-dist/${pdfjs.version}/files/build/pdf.worker.min.mjs`;
 
 const options = {
   cMapUrl: '/cmaps/',
