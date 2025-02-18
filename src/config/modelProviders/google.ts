@@ -99,7 +99,7 @@ const Google: ModelProviderCard = {
       pricing: {
         cachedInput: 0.025,
         input: 0.1,
-        output: 0.4
+        output: 0.4,
       },
       releasedAt: '2025-02-05',
       vision: true
@@ -114,7 +114,7 @@ const Google: ModelProviderCard = {
       pricing: {
         cachedInput: 0.025,
         input: 0.1,
-        output: 0.4
+        output: 0.4,
       },
       releasedAt: '2025-02-05',
       vision: true
@@ -128,7 +128,7 @@ const Google: ModelProviderCard = {
       pricing: {
         cachedInput: 0.018_75,
         input: 0.075,
-        output: 0.3
+        output: 0.3,
       },
       releasedAt: '2025-02-05',
       vision: true
@@ -158,7 +158,7 @@ const Google: ModelProviderCard = {
       pricing: {
         cachedInput: 0,
         input: 0,
-        output: 0
+        output: 0,
       },
       releasedAt: '2025-01-21',
       vision: true
@@ -187,7 +187,7 @@ const Google: ModelProviderCard = {
       pricing: {
         cachedInput: 0,
         input: 0,
-        output: 0
+        output: 0,
       },
       releasedAt: '2024-12-11',
       vision: true
@@ -217,7 +217,7 @@ const Google: ModelProviderCard = {
       pricing: {
         cachedInput: 0.018_75,
         input: 0.075,
-        output: 0.3
+        output: 0.3,
       },
       releasedAt: '2024-09-25',
       vision: true
@@ -232,9 +232,9 @@ const Google: ModelProviderCard = {
       pricing: {
         cachedInput: 0.018_75,
         input: 0.075,
-        output: 0.3
+        output: 0.3,
       },
-      vision: true
+      vision: true,
     },
     {
       contextWindowTokens: 2_008_192,
@@ -246,7 +246,7 @@ const Google: ModelProviderCard = {
       pricing: {
         cachedInput: 0.315,
         input: 1.25,
-        output: 2.5
+        output: 2.5,
       },
       releasedAt: '2024-09-24',
       vision: true
@@ -261,7 +261,7 @@ const Google: ModelProviderCard = {
       pricing: {
         cachedInput: 0.875,
         input: 3.5,
-        output: 10.5
+        output: 10.5,
       },
       releasedAt: '2024-02-15',
       vision: true
@@ -276,7 +276,7 @@ const Google: ModelProviderCard = {
       pricing: {
         cachedInput: 0.02,
         input: 0.075,
-        output: 0.3
+        output: 0.3,
       },
       releasedAt: '2024-10-03',
       vision: true
@@ -323,7 +323,7 @@ const Google: ModelProviderCard = {
       releasedAt: '2023-12-06'
     }
   ],
-  checkModel: 'gemini-1.5-flash-latest',
+  checkModel: 'gemini-2.0-flash',
   description:
     'Google 的 Gemini 系列是其最先进、通用的 AI模型，由 Google DeepMind 打造，专为多模态设计，支持文本、代码、图像、音频和视频的无缝理解与处理。适用于从数据中心到移动设备的多种环境，极大提升了AI模型的效率与应用广泛性。',
   enabled: true,
