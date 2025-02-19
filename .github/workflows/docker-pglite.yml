@@ -1,18 +1,17 @@
 name: Publish Docker Pglite Image
 
 on:
-  workflow_dispatch:
-  release:
-    types: [published]
-  pull_request:
-    types: [synchronize, labeled, unlabeled]
+  push:
+    tags:
+      - x*
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
 
 env:
-  REGISTRY_IMAGE: lobehub/lobe-chat-pglite
+  REGISTRY_IMAGE: ghcr.io/blee0036/lobe-custom-pglite
+  REGISTRY: ghcr.io
   PR_TAG_PREFIX: pr-
 
 jobs:
@@ -64,14 +63,15 @@ jobs:
             # PR 构建使用特殊的 tag
             type=raw,value=${{ env.PR_TAG_PREFIX }}${{ steps.pr_meta.outputs.pr_tag }},enable=${{ github.event_name == 'pull_request' }}
             # release 构建使用版本号
-            type=semver,pattern={{version}},enable=${{ github.event_name != 'pull_request' }}
+            type=ref,event=tag,enable=${{ github.event_name != 'pull_request' }}
             type=raw,value=latest,enable=${{ github.event_name != 'pull_request' }}
 
       - name: Docker login
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_REGISTRY_USER }}
-          password: ${{ secrets.DOCKER_REGISTRY_PASSWORD }}
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get commit SHA
         if: github.ref == 'refs/heads/main'
@@ -141,14 +141,15 @@ jobs:
           images: ${{ env.REGISTRY_IMAGE }}
           tags: |
             type=raw,value=${{ env.PR_TAG_PREFIX }}${{ steps.pr_meta.outputs.pr_tag }},enable=${{ github.event_name == 'pull_request' }}
-            type=semver,pattern={{version}},enable=${{ github.event_name != 'pull_request' }}
+            type=ref,event=tag,enable=${{ github.event_name != 'pull_request' }}
             type=raw,value=latest,enable=${{ github.event_name != 'pull_request' }}
 
       - name: Docker login
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_REGISTRY_USER }}
-          password: ${{ secrets.DOCKER_REGISTRY_PASSWORD }}
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create manifest list and push
         working-directory: /tmp/digests
