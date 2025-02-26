@@ -21,5 +21,5 @@ jobs:
           HD_OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
           HD_ACCESS_CODE: ""
           HD_OPENAI_PROXY_URL: "https://m3.ckit.gold/v1"
-          HD_OPENAI_MODEL_LIST: "-all,gpt-4o-mini,gpt-3.5-turbo,gpt-4o,claude-3-5-haiku,claude-3-5-sonnet,deepseek-chat,deepseek-reasoner,gemini-1.5-flash,gemini-1.5-pro-latest,gemini-2.0-flash-exp,o1-mini,o1-preview,o3-mini"
+          HD_OPENAI_MODEL_LIST: "-all,gpt-4o-mini,gpt-3.5-turbo,gpt-4o,claude-3-5-sonnet-20240620,deepseek-r1,gemini-2.0-flash-exp,o3-mini,o1-mini"
           
