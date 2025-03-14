@@ -21,6 +21,7 @@ export const openaiChatModels: AIChatModelCard[] = [
     id: 'o3-mini',
     maxOutput: 100_000,
     pricing: {
+      cachedInput: 0.55,
       input: 1.1,
       output: 4.4,
     },
@@ -39,6 +40,7 @@ export const openaiChatModels: AIChatModelCard[] = [
     id: 'o1-mini',
     maxOutput: 65_536,
     pricing: {
+      cachedInput: 0.55,
       input: 1.1,
       output: 4.4,
     },
@@ -58,6 +60,7 @@ export const openaiChatModels: AIChatModelCard[] = [
     id: 'o1',
     maxOutput: 100_000,
     pricing: {
+      cachedInput: 7.5,
       input: 15,
       output: 60,
     },
@@ -89,12 +92,33 @@ export const openaiChatModels: AIChatModelCard[] = [
     },
     contextWindowTokens: 128_000,
     description:
+      'GPT-4.5 的研究预览版，它是我们迄今为止最大、最强大的 GPT 模型。它拥有广泛的世界知识，并能更好地理解用户意图，使其在创造性任务和自主规划方面表现出色。GPT-4.5 可接受文本和图像输入，并生成文本输出（包括结构化输出）。支持关键的开发者功能，如函数调用、批量 API 和流式输出。在需要创造性、开放式思考和对话的任务（如写作、学习或探索新想法）中，GPT-4.5 表现尤为出色。知识截止日期为 2023 年 10 月。',
+    displayName: 'GPT-4.5 Preview',
+    enabled: true,
+    id: 'gpt-4.5-preview',
+    maxOutput: 16_384,
+    pricing: {
+      cachedInput: 37.5,
+      input: 75,
+      output: 150,
+    },
+    releasedAt: '2025-02-27',
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      vision: true,
+    },
+    contextWindowTokens: 128_000,
+    description:
       'GPT-4o mini是OpenAI在GPT-4 Omni之后推出的最新模型，支持图文输入并输出文本。作为他们最先进的小型模型，它比其他近期的前沿模型便宜很多，并且比GPT-3.5 Turbo便宜超过60%。它保持了最先进的智能，同时具有显著的性价比。GPT-4o mini在MMLU测试中获得了 82% 的得分，目前在聊天偏好上排名高于 GPT-4。',
     displayName: 'GPT-4o mini',
     enabled: true,
     id: 'gpt-4o-mini',
-    maxOutput: 16_385,
+    maxOutput: 16_384,
     pricing: {
+      cachedInput: 0.075,
       input: 0.15,
       output: 0.6,
     },
@@ -110,7 +134,6 @@ export const openaiChatModels: AIChatModelCard[] = [
     description:
       'ChatGPT-4o 是一款动态模型，实时更新以保持当前最新版本。它结合了强大的语言理解与生成能力，适合于大规模应用场景，包括客户服务、教育和技术支持。',
     displayName: 'GPT-4o 1120',
-    enabled: true,
     id: 'gpt-4o-2024-11-20',
     pricing: {
       input: 2.5,
@@ -131,6 +154,7 @@ export const openaiChatModels: AIChatModelCard[] = [
     enabled: true,
     id: 'gpt-4o',
     pricing: {
+      cachedInput: 1.25,
       input: 2.5,
       output: 10,
     },
@@ -350,7 +374,7 @@ export const openaiChatModels: AIChatModelCard[] = [
     abilities: {
       functionCall: true,
     },
-    contextWindowTokens: 16_385,
+    contextWindowTokens: 16_384,
     description:
       'GPT 3.5 Turbo，适用于各种文本生成和理解任务，Currently points to gpt-3.5-turbo-0125',
     displayName: 'GPT-3.5 Turbo',
@@ -365,7 +389,7 @@ export const openaiChatModels: AIChatModelCard[] = [
     abilities: {
       functionCall: true,
     },
-    contextWindowTokens: 16_385,
+    contextWindowTokens: 16_384,
     description:
       'GPT 3.5 Turbo，适用于各种文本生成和理解任务，Currently points to gpt-3.5-turbo-0125',
     displayName: 'GPT-3.5 Turbo 0125',
@@ -381,7 +405,7 @@ export const openaiChatModels: AIChatModelCard[] = [
     abilities: {
       functionCall: true,
     },
-    contextWindowTokens: 16_385,
+    contextWindowTokens: 16_384,
     description:
       'GPT 3.5 Turbo，适用于各种文本生成和理解任务，Currently points to gpt-3.5-turbo-0125',
     displayName: 'GPT-3.5 Turbo 1106',
@@ -403,6 +427,209 @@ export const openaiChatModels: AIChatModelCard[] = [
       input: 1.5,
       output: 2,
     },
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      vision: true,
+    },
+    contextWindowTokens: 200_000,
+    description:
+      'Claude 3.7 Sonnet 是 Anthropic 迄今为止最智能的模型，也是市场上首个混合推理模型。Claude 3.7 Sonnet 可以产生近乎即时的响应或延长的逐步思考，用户可以清晰地看到这些过程。Sonnet 特别擅长编程、数据科学、视觉处理、代理任务。',
+    displayName: 'Claude 3.7 Sonnet 0219',
+    enabled: true,
+    id: 'claude-3-7-sonnet-20250219',
+    maxOutput: 8192,
+    pricing: {
+      cachedInput: 0.3,
+      input: 3,
+      output: 15,
+      writeCacheInput: 3.75,
+    },
+    releasedAt: '2025-02-24',
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      reasoning: true,
+      vision: true,
+    },
+    contextWindowTokens: 200_000,
+    description:
+      'Claude 3.7 Sonnet 是 Anthropic 迄今为止最智能的模型，也是市场上首个混合推理模型。Claude 3.7 Sonnet 可以产生近乎即时的响应或延长的逐步思考，用户可以清晰地看到这些过程。Sonnet 特别擅长编程、数据科学、视觉处理、代理任务。',
+    displayName: 'Claude 3.7 Sonnet Extended thinking',
+    enabled: true,
+    id: 'claude-3-7-sonnet-20250219-thinking',
+    maxOutput: 8192,
+    pricing: {
+      cachedInput: 0.3,
+      input: 3,
+      output: 15,
+      writeCacheInput: 3.75,
+    },
+    releasedAt: '2025-02-24',
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      vision: true,
+    },
+    contextWindowTokens: 200_000,
+    description:
+      'Claude 3.7 Sonnet 是 Anthropic 迄今为止最智能的模型，也是市场上首个混合推理模型。Claude 3.7 Sonnet 可以产生近乎即时的响应或延长的逐步思考，用户可以清晰地看到这些过程。Sonnet 特别擅长编程、数据科学、视觉处理、代理任务。',
+    displayName: '官Claude 3.7 Sonnet 0219',
+    enabled: true,
+    id: 'claude-3-7-sonnet-guan-20250219',
+    maxOutput: 8192,
+    pricing: {
+      cachedInput: 0.3,
+      input: 3,
+      output: 15,
+      writeCacheInput: 3.75,
+    },
+    releasedAt: '2025-02-24',
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      reasoning: true,
+      vision: true,
+    },
+    contextWindowTokens: 200_000,
+    description:
+      'Claude 3.7 Sonnet 是 Anthropic 迄今为止最智能的模型，也是市场上首个混合推理模型。Claude 3.7 Sonnet 可以产生近乎即时的响应或延长的逐步思考，用户可以清晰地看到这些过程。Sonnet 特别擅长编程、数据科学、视觉处理、代理任务。',
+    displayName: '官Claude 3.7 Sonnet Extended thinking',
+    enabled: true,
+    id: 'claude-3-7-sonnet-guan-20250219-thinking',
+    maxOutput: 8192,
+    pricing: {
+      cachedInput: 0.3,
+      input: 3,
+      output: 15,
+      writeCacheInput: 3.75,
+    },
+    releasedAt: '2025-02-24',
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      vision: true,
+    },
+    contextWindowTokens: 200_000,
+    description:
+      'Claude 3.5 Haiku 是 Anthropic 最快的下一代模型。与 Claude 3 Haiku 相比，Claude 3.5 Haiku 在各项技能上都有所提升，并在许多智力基准测试中超越了上一代最大的模型 Claude 3 Opus。',
+    displayName: '官Claude 3.5 Haiku',
+    enabled: true,
+    id: 'claude-3-5-haiku-guan-20241022',
+    maxOutput: 8192,
+    pricing: {
+      cachedInput: 0.1,
+      input: 1,
+      output: 5,
+      writeCacheInput: 1.25,
+    },
+    releasedAt: '2024-11-05',
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      vision: true,
+    },
+    contextWindowTokens: 200_000,
+    description:
+      'Claude 3.5 Sonnet 提供了超越 Opus 的能力和比 Sonnet 更快的速度，同时保持与 Sonnet 相同的价格。Sonnet 特别擅长编程、数据科学、视觉处理、代理任务。',
+    displayName: '官Claude 3.5 Sonnet',
+    enabled: true,
+    id: 'claude-3-5-sonnet-guan-20241022',
+    maxOutput: 8192,
+    pricing: {
+      cachedInput: 0.3,
+      input: 3,
+      output: 15,
+      writeCacheInput: 3.75,
+    },
+    releasedAt: '2024-10-22',
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      vision: true,
+    },
+    contextWindowTokens: 200_000,
+    description:
+      'Claude 3.5 Sonnet 提供了超越 Opus 的能力和比 Sonnet 更快的速度，同时保持与 Sonnet 相同的价格。Sonnet 特别擅长编程、数据科学、视觉处理、代理任务。',
+    displayName: '官Claude 3.5 Sonnet 0620',
+    id: 'claude-3-5-sonnet-guan-20240620',
+    maxOutput: 8192,
+    pricing: {
+      cachedInput: 0.3,
+      input: 3,
+      output: 15,
+      writeCacheInput: 3.75,
+    },
+    releasedAt: '2024-06-20',
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      vision: true,
+    },
+    contextWindowTokens: 200_000,
+    description:
+      'Claude 3 Haiku 是 Anthropic 的最快且最紧凑的模型，旨在实现近乎即时的响应。它具有快速且准确的定向性能。',
+    displayName: '官Claude 3 Haiku',
+    id: 'claude-3-haiku-guan-20240307',
+    maxOutput: 4096,
+    pricing: {
+      input: 0.25,
+      output: 1.25,
+    },
+    releasedAt: '2024-03-07',
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      vision: true,
+    },
+    contextWindowTokens: 200_000,
+    description:
+      'Claude 3 Sonnet 在智能和速度方面为企业工作负载提供了理想的平衡。它以更低的价格提供最大效用，可靠且适合大规模部署。',
+    displayName: '官Claude 3 Sonnet',
+    id: 'claude-3-sonnet-guan-20240229',
+    maxOutput: 4096,
+    pricing: {
+      input: 3,
+      output: 15,
+    },
+    releasedAt: '2024-02-29',
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      vision: true,
+    },
+    contextWindowTokens: 200_000,
+    description:
+      'Claude 3 Opus 是 Anthropic 用于处理高度复杂任务的最强大模型。它在性能、智能、流畅性和理解力方面表现卓越。',
+    displayName: '官Claude 3 Opus',
+    enabled: true,
+    id: 'claude-3-opus-guan-20240229',
+    maxOutput: 4096,
+    pricing: {
+      input: 15,
+      output: 75,
+    },
+    releasedAt: '2024-02-29',
     type: 'chat',
   },
   {
