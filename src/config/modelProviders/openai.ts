@@ -832,6 +832,23 @@ const OpenAI: ModelProviderCard = {
     },
     //gemini
     {
+      contextWindowTokens: 1_048_567 + 65_536,
+      description:
+        'Gemini 2.5 Pro Experimental 是 Google 最先进的思维模型，能够对代码、数学和STEM领域的复杂问题进行推理，还能利用长上下文来分析大型数据集、代码库和文档。',
+      displayName: 'Gemini 2.5 Pro Experimental 03-25',
+      enabled: true,
+      functionCall: true,
+      id: 'gemini-2.5-pro-exp-03-25',
+      maxOutput: 65_536,
+      pricing: {
+        cachedInput: 0,
+        input: 0,
+        output: 0,
+      },
+      releasedAt: '2025-03-25',
+      vision: true,
+    },
+    {
       contextWindowTokens: 2_097_152 + 8192,
       description:
         'Gemini 2.0 Pro Experimental 是 Google 最新的实验性多模态AI模型，与历史版本相比有一定的质量提升，特别是对于世界知识、代码和长上下文。',
