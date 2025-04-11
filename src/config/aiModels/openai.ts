@@ -131,6 +131,25 @@ export const openaiChatModels: AIChatModelCard[] = [
       vision: true,
     },
     contextWindowTokens: 128_000,
+    description: 'Currently points to gpt-4o-mini-2024-07-18',
+    displayName: 'GPT-4o mini 2024-07-18',
+    enabled: true,
+    id: 'gpt-4o-mini-2024-07-18',
+    maxOutput: 16_384,
+    pricing: {
+      cachedInput: 0.075,
+      input: 0.15,
+      output: 0.6,
+    },
+    releasedAt: '2024-07-18',
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      vision: true,
+    },
+    contextWindowTokens: 128_000,
     description:
       'ChatGPT-4o 是一款动态模型，实时更新以保持当前最新版本。它结合了强大的语言理解与生成能力，适合于大规模应用场景，包括客户服务、教育和技术支持。',
     displayName: 'GPT-4o 1120',
