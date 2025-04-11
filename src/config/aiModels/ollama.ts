@@ -9,7 +9,6 @@ const ollamaChatModels: AIChatModelCard[] = [
     description:
       'DeepSeek-R1 是一款强化学习（RL）驱动的推理模型，解决了模型中的重复性和可读性问题。在 RL 之前，DeepSeek-R1 引入了冷启动数据，进一步优化了推理性能。它在数学、代码和推理任务中与 OpenAI-o1 表现相当，并且通过精心设计的训练方法，提升了整体效果。',
     displayName: 'DeepSeek R1',
-    enabled: true,
     id: 'deepseek-r1',
     type: 'chat',
   },
@@ -89,7 +88,6 @@ const ollamaChatModels: AIChatModelCard[] = [
     description:
       'QwQ 是 Qwen 系列的推理模型。与传统的指令调优模型相比，QwQ 具备思考和推理的能力，能够在下游任务中，尤其是困难问题上，显著提升性能。QwQ-32B 是中型推理模型，能够在与最先进的推理模型（如 DeepSeek-R1、o1-mini）竞争时取得可观的表现。',
     displayName: 'QwQ 32B',
-    enabled: true,
     id: 'qwq',
     releasedAt: '2024-11-28',
     type: 'chat',
@@ -115,7 +113,6 @@ const ollamaChatModels: AIChatModelCard[] = [
     contextWindowTokens: 128_000,
     description: 'Qwen2.5 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
     displayName: 'Qwen2.5 7B',
-    enabled: true,
     id: 'qwen2.5',
     type: 'chat',
   },
