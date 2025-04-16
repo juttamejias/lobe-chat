@@ -6,6 +6,23 @@ const OpenAI: ModelProviderCard = {
     {
       contextWindowTokens: 1_047_576,
       description:
+        'GPT-4.1 是我们用于复杂任务的旗舰模型。它非常适合跨领域解决问题。',
+      displayName: 'GPT-4.1',
+      enabled: true,
+      functionCall: true,
+      id: 'gpt-4.1',
+      maxOutput: 32_768,
+      pricing: {
+        cachedInput: 0.5,
+        input: 2,
+        output: 8,
+      },
+      releasedAt: '2025-04-14',
+      vision: true
+    },
+    {
+      contextWindowTokens: 1_047_576,
+      description:
         'GPT-4.1 mini 提供了智能、速度和成本之间的平衡，使其成为许多用例中有吸引力的模型。',
       displayName: 'GPT-4.1 mini',
       enabled: true,
@@ -18,7 +35,40 @@ const OpenAI: ModelProviderCard = {
         output: 1.6,
       },
       releasedAt: '2025-04-14',
-      vision: true,
+      vision: true
+    },
+    {
+      contextWindowTokens: 1_047_576,
+      description:
+        'GPT-4.1 mini 提供了智能、速度和成本之间的平衡，使其成为许多用例中有吸引力的模型。',
+      displayName: 'GPT-4.1 nano',
+      enabled: true,
+      functionCall: true,
+      id: 'gpt-4.1-nano',
+      maxOutput: 32_768,
+      pricing: {
+        cachedInput: 0.025,
+        input: 0.1,
+        output: 0.4,
+      },
+      releasedAt: '2025-04-14',
+      vision: true
+    },
+    {
+      contextWindowTokens: 200_000,
+      description:
+        'o3-mini 是我们最新的小型推理模型，在与 o1-mini 相同的成本和延迟目标下提供高智能。',
+      displayName: 'OpenAI o3-mini',
+      enabled: true,
+      functionCall: true,
+      id: 'o3-mini',
+      maxOutput: 100_000,
+      pricing: {
+        cachedInput: 0.55,
+        input: 1.1,
+        output: 4.4,
+      },
+      releasedAt: '2025-01-31',
     },
     {
       contextWindowTokens: 128_000,
@@ -29,10 +79,27 @@ const OpenAI: ModelProviderCard = {
       id: 'o1-mini',
       maxOutput: 65_536,
       pricing: {
-        input: 3,
-        output: 12,
+        cachedInput: 0.55,
+        input: 1.1,
+        output: 4.4,
       },
       releasedAt: '2024-09-12',
+    },
+    {
+      contextWindowTokens: 200_000,
+      description:
+        'o1是OpenAI新的推理模型，支持图文输入并输出文本，适用于需要广泛通用知识的复杂任务。该模型具有200K上下文和2023年10月的知识截止日期。',
+      displayName: 'OpenAI o1',
+      enabled: true,
+      id: 'o1',
+      maxOutput: 100_000,
+      pricing: {
+        cachedInput: 7.5,
+        input: 15,
+        output: 60,
+      },
+      releasedAt: '2024-12-17',
+      vision: true,
     },
     {
       contextWindowTokens: 200_000,
@@ -62,6 +129,23 @@ const OpenAI: ModelProviderCard = {
         output: 60,
       },
       releasedAt: '2024-09-12',
+    },
+    {
+      contextWindowTokens: 128_000,
+      description:
+        'GPT-4.5 的研究预览版，它是我们迄今为止最大、最强大的 GPT 模型。它拥有广泛的世界知识，并能更好地理解用户意图，使其在创造性任务和自主规划方面表现出色。GPT-4.5 可接受文本和图像输入，并生成文本输出（包括结构化输出）。支持关键的开发者功能，如函数调用、批量 API 和流式输出。在需要创造性、开放式思考和对话的任务（如写作、学习或探索新想法）中，GPT-4.5 表现尤为出色。知识截止日期为 2023 年 10 月。',
+      displayName: 'GPT-4.5 Preview',
+      enabled: true,
+      functionCall: true,
+      id: 'gpt-4.5-preview', // deprecated on 2025-07-14
+      maxOutput: 16_384,
+      pricing: {
+        cachedInput: 37.5,
+        input: 75,
+        output: 150,
+      },
+      releasedAt: '2025-02-27',
+      vision: true,
     },
     {
       contextWindowTokens: 128_000,
