@@ -120,20 +120,6 @@ const Google: ModelProviderCard = {
       vision: true
     },
     {
-      contextWindowTokens: 1_048_576 + 8192,
-      description: '一个 Gemini 2.0 Flash 模型，针对成本效益和低延迟等目标进行了优化。',
-      displayName: 'Gemini 2.0 Flash-Lite Preview 02-05',
-      id: 'gemini-2.0-flash-lite-preview-02-05',
-      maxOutput: 8192,
-      pricing: {
-        cachedInput: 0.018_75,
-        input: 0.075,
-        output: 0.3,
-      },
-      releasedAt: '2025-02-05',
-      vision: true
-    },
-    {
       contextWindowTokens: 2_097_152 + 8192,
       description: 'Gemini Exp 1206 是 Google 的实验性多模态AI模型，与历史版本相比有一定的质量提升。',
       displayName: 'Gemini Experimental 1206',
