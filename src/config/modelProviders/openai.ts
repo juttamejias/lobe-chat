@@ -1278,9 +1278,9 @@ const OpenAI: ModelProviderCard = {
       description:
         'GLM-Z1-Rumination-32B-0414 是一个具有沉思能力的深度推理模型（与 OpenAI 的 Deep Research 对标）。与典型的深度思考模型不同，沉思模型采用更长时间的深度思考来解决更开放和复杂的问题。',
       displayName: 'GLM-Z1-Rumination 32B 0414',
-      id: 'THUDM/GLM-Z1-Rumination-32B-0414',
       enabled: true,
       functionCall: true,
+      id: 'THUDM/GLM-Z1-Rumination-32B-0414',
       pricing: {
         currency: 'CNY',
         input: 1,
