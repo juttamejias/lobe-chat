@@ -1423,7 +1423,21 @@ const OpenAI: ModelProviderCard = {
       releasedAt: '2024-12-12',
       vision: true,
     },
-    // nvidia
+    // 其他
+    {
+      contextWindowTokens: 131_072,
+      description:
+        'Qwen3是一款能力大幅提升的新一代通义千问大模型，在推理、通用、Agent和多语言等多个核心能力上均达到业界领先水平，并支持思考模式切换。',
+      displayName: 'Qwen3 235B A22B FP8',
+      enabled: true,
+      id: 'Qwen3-235B-A22B-FP8',
+      pricing: {
+        currency: 'CNY',
+        input: 1.25,
+        output: 5,
+      },
+      releasedAt: '2025-04-28',
+    },
     {
       contextWindowTokens: 65_536,
       description:
