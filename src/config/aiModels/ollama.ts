@@ -93,6 +93,18 @@ const ollamaChatModels: AIChatModelCard[] = [
     type: 'chat',
   },
   {
+    abilities: {
+      functionCall: true,
+    },
+    contextWindowTokens: 65_536,
+    description: 'Qwen3 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
+    displayName: 'Qwen3 7B',
+    enabled: true,
+    id: 'qwen3',
+    type: 'chat',
+  },
+
+  {
     contextWindowTokens: 128_000,
     description: 'Qwen2.5 是阿里巴巴的新一代大规模语言模型，以优异的性能支持多元化的应用需求。',
     displayName: 'Qwen2.5 0.5B',
