@@ -903,9 +903,9 @@ const OpenAI: ModelProviderCard = {
       description:
         'Gemini 2.5 Pro Preview 是 Google 最先进的思维模型，能够对代码、数学和STEM领域的复杂问题进行推理，以及使用长上下文分析大型数据集、代码库和文档。',
       displayName: 'Gemini 2.5 Pro Preview 05-06 (Paid)',
-      id: 'gemini-2.5-pro-preview-05-06',
       enabled: true,
       functionCall: true,
+      id: 'gemini-2.5-pro-preview-05-06',
       maxOutput: 65_536,
       pricing: {
         input: 1.25, // prompts <= 200k tokens
