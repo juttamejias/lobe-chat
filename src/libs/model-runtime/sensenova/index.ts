@@ -52,6 +52,7 @@ export const LobeSenseNovaAI = LobeOpenAICompatibleFactory({
     client.baseURL = 'https://api.sensenova.cn/v1/llm';
 
     const modelsPage = (await client.models.list()) as any;
+
     const modelList: SenseNovaModelCard[] = modelsPage.data;
 
     return modelList
