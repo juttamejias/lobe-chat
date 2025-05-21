@@ -9,17 +9,16 @@ const googleChatModels: AIChatModelCard[] = [
       vision: true,
     },
     contextWindowTokens: 1_048_576 + 65_536,
-    description:
-      'Gemini 2.5 Flash Preview 是 Google 性价比最高的模型，提供全面的功能。',
-    displayName: 'Gemini 2.5 Flash Preview 04-17',
+    description: 'Gemini 2.5 Flash Preview 是 Google 性价比最高的模型，提供全面的功能。',
+    displayName: 'Gemini 2.5 Flash Preview 05-20',
     enabled: true,
-    id: 'gemini-2.5-flash-preview-04-17',
+    id: 'gemini-2.5-flash-preview-05-20',
     maxOutput: 65_536,
     pricing: {
       input: 0.15,
       output: 3.5, // Thinking
     },
-    releasedAt: '2025-04-17',
+    releasedAt: '2025-05-20',
     settings: {
       searchImpl: 'params',
       searchProvider: 'google',
@@ -129,8 +128,7 @@ const googleChatModels: AIChatModelCard[] = [
       vision: true,
     },
     contextWindowTokens: 1_048_576 + 65_536,
-    description:
-      '一个 Gemini 2.0 Flash 模型，针对成本效益和低延迟等目标进行了优化。',
+    description: '一个 Gemini 2.0 Flash 模型，针对成本效益和低延迟等目标进行了优化。',
     displayName: 'Gemini 2.0 Flash-Lite Preview 02-05',
     enabled: true,
     id: 'gemini-2.0-flash-lite-preview-02-05',

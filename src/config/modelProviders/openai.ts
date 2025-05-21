@@ -5,8 +5,7 @@ const OpenAI: ModelProviderCard = {
   chatModels: [
     {
       contextWindowTokens: 1_047_576,
-      description:
-        'GPT-4.1 是我们用于复杂任务的旗舰模型。它非常适合跨领域解决问题。',
+      description: 'GPT-4.1 是我们用于复杂任务的旗舰模型。它非常适合跨领域解决问题。',
       displayName: 'GPT-4.1',
       enabled: true,
       functionCall: true,
@@ -18,7 +17,7 @@ const OpenAI: ModelProviderCard = {
         output: 8,
       },
       releasedAt: '2025-04-14',
-      vision: true
+      vision: true,
     },
     {
       contextWindowTokens: 1_047_576,
@@ -35,7 +34,7 @@ const OpenAI: ModelProviderCard = {
         output: 1.6,
       },
       releasedAt: '2025-04-14',
-      vision: true
+      vision: true,
     },
     {
       contextWindowTokens: 1_047_576,
@@ -52,7 +51,7 @@ const OpenAI: ModelProviderCard = {
         output: 0.4,
       },
       releasedAt: '2025-04-14',
-      vision: true
+      vision: true,
     },
     {
       contextWindowTokens: 200_000,
@@ -164,8 +163,7 @@ const OpenAI: ModelProviderCard = {
     },
     {
       contextWindowTokens: 128_000,
-      description:
-        'ChatGPT-4o 绘图 plus渠道',
+      description: 'ChatGPT-4o 绘图 plus渠道',
       displayName: 'ChatGPT-4o 绘图 plus渠道',
       enabled: true,
       id: 'gpt-4o-image',
@@ -178,8 +176,7 @@ const OpenAI: ModelProviderCard = {
     },
     {
       contextWindowTokens: 128_000,
-      description:
-        'ChatGPT-4o 绘图 pro渠道',
+      description: 'ChatGPT-4o 绘图 pro渠道',
       displayName: 'ChatGPT-4o 绘图 pro渠道',
       enabled: true,
       id: 'gpt-4o-image-vip',
@@ -496,7 +493,8 @@ const OpenAI: ModelProviderCard = {
       enabled: true,
       functionCall: true,
       id: 'deepseek-chat',
-      pricing: { // 2025.2.9 之后涨价
+      pricing: {
+        // 2025.2.9 之后涨价
         cachedInput: 0.1,
         currency: 'CNY',
         input: 1,
@@ -900,6 +898,21 @@ const OpenAI: ModelProviderCard = {
     //gemini
     {
       contextWindowTokens: 1_048_576 + 65_536,
+      description: 'Gemini 2.5 Flash Preview 是 Google 性价比最高的模型，提供全面的功能。',
+      displayName: 'Gemini 2.5 Flash Preview 05-20',
+      enabled: true,
+      functionCall: true,
+      id: 'gemini-2.5-flash-preview-05-20',
+      maxOutput: 65_536,
+      pricing: {
+        input: 0.15,
+        output: 3.5, // Thinking
+      },
+      releasedAt: '2025-04-17',
+      vision: true,
+    },
+    {
+      contextWindowTokens: 1_048_576 + 65_536,
       description:
         'Gemini 2.5 Pro Preview 是 Google 最先进的思维模型，能够对代码、数学和STEM领域的复杂问题进行推理，以及使用长上下文分析大型数据集、代码库和文档。',
       displayName: 'Gemini 2.5 Pro Preview 05-06 (Paid)',
@@ -916,8 +929,7 @@ const OpenAI: ModelProviderCard = {
     },
     {
       contextWindowTokens: 1_048_576 + 65_536,
-      description:
-        'Gemini 2.5 Flash Preview 是 Google 性价比最高的模型，提供全面的功能。',
+      description: 'Gemini 2.5 Flash Preview 是 Google 性价比最高的模型，提供全面的功能。',
       displayName: 'Gemini 2.5 Flash Preview 04-17',
       enabled: true,
       functionCall: true,
@@ -999,8 +1011,7 @@ const OpenAI: ModelProviderCard = {
     },
     {
       contextWindowTokens: 1_048_576 + 8192,
-      description:
-        '一个 Gemini 2.0 Flash 模型，针对成本效益和低延迟等目标进行了优化。',
+      description: '一个 Gemini 2.0 Flash 模型，针对成本效益和低延迟等目标进行了优化。',
       displayName: 'Gemini 2.0 Flash-Lite Preview 02-05',
       enabled: true,
       id: 'gemini-2.0-flash-lite-preview-02-05',
@@ -1287,7 +1298,7 @@ const OpenAI: ModelProviderCard = {
         input: 0,
         output: 0,
       },
-      releasedAt: '2025-04-28'
+      releasedAt: '2025-04-28',
     },
     {
       contextWindowTokens: 32_768,
@@ -1380,7 +1391,8 @@ const OpenAI: ModelProviderCard = {
       enabled: true,
       functionCall: true,
       id: 'deepseek-ai/DeepSeek-V3',
-      pricing: { // 2.9 涨价
+      pricing: {
+        // 2.9 涨价
         currency: 'CNY',
         input: 1,
         output: 2,
