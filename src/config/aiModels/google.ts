@@ -107,8 +107,31 @@ const googleChatModels: AIChatModelCard[] = [
     },
     contextWindowTokens: 1_048_576 + 65_536,
     description: 'Gemini 2.5 Flash Preview 是 Google 性价比最高的模型，提供全面的功能。',
-    displayName: 'Gemini 2.5 Flash Preview 04-17',
+    displayName: 'Gemini 2.5 Flash Preview 05-20',
     enabled: true,
+    id: 'gemini-2.5-flash-preview-05-20',
+    maxOutput: 65_536,
+    pricing: {
+      input: 0.15,
+      output: 3.5, // Thinking
+    },
+    releasedAt: '2025-05-20',
+    settings: {
+      searchImpl: 'params',
+      searchProvider: 'google',
+    },
+    type: 'chat',
+  },
+  {
+    abilities: {
+      functionCall: true,
+      reasoning: true,
+      search: true,
+      vision: true,
+    },
+    contextWindowTokens: 1_048_576 + 65_536,
+    description: 'Gemini 2.5 Flash Preview 是 Google 性价比最高的模型，提供全面的功能。',
+    displayName: 'Gemini 2.5 Flash Preview 04-17',
     id: 'gemini-2.5-flash-preview-04-17',
     maxOutput: 65_536,
     pricing: {
@@ -125,20 +148,23 @@ const googleChatModels: AIChatModelCard[] = [
   {
     abilities: {
       functionCall: true,
+      reasoning: true,
+      search: true,
       vision: true,
     },
     contextWindowTokens: 1_048_576 + 65_536,
-    description: '一个 Gemini 2.0 Flash 模型，针对成本效益和低延迟等目标进行了优化。',
-    displayName: 'Gemini 2.0 Flash-Lite Preview 02-05',
-    enabled: true,
-    id: 'gemini-2.0-flash-lite-preview-02-05',
+    description: 'Gemini 2.5 Flash Preview 是 Google 性价比最高的模型，提供全面的功能。',
+    displayName: 'Gemini 2.5 Flash Preview 04-17 for cursor testing',
+    id: 'gemini-2.5-flash-preview-04-17-thinking',
     maxOutput: 65_536,
     pricing: {
-      cachedInput: 0,
-      input: 0,
-      output: 0,
+      input: 0.15,
+      output: 3.5, // Thinking
     },
-    releasedAt: '2025-02-05',
+    settings: {
+      searchImpl: 'params',
+      searchProvider: 'google',
+    },
     type: 'chat',
   },
   {
@@ -429,6 +455,30 @@ const googleChatModels: AIChatModelCard[] = [
     displayName: 'Gemma 3 12B',
     id: 'gemma-3-12b-it',
     maxOutput: 8192,
+    pricing: {
+      cachedInput: 0,
+      input: 0,
+      output: 0,
+    },
+    type: 'chat',
+  },
+  {
+    contextWindowTokens: 131_072 + 8192,
+    displayName: 'Gemma 3 27B',
+    id: 'gemma-3-27b-it',
+    maxOutput: 8192,
+    pricing: {
+      cachedInput: 0,
+      input: 0,
+      output: 0,
+    },
+    type: 'chat',
+  },
+  {
+    contextWindowTokens: 2048 + 8192,
+    displayName: 'Gemma 3n E4B',
+    id: 'gemma-3n-e4b-it',
+    maxOutput: 2048,
     pricing: {
       cachedInput: 0,
       input: 0,
